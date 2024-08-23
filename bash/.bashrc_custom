@@ -2,7 +2,7 @@
 # git section
 alias g='git'
 alias ga='g add .'
-alias gc='g commit -m "spectre-arch"'
+alias gc='g commit -m "slg-arch"'
 alias gps='g push'
 alias gpl='g pull'
 alias gs='g status'
