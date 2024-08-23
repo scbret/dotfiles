@@ -32,3 +32,15 @@ win+; = focus right
 ## stow notes
  stow folder-name = create the symlinks
  stow -D folder-name  = remove the symlinks
+ 
+## Fedora notes
+
+### Package management
+
+- sudo dnf up   =  update/upgrade
+- sudo dnf check-update   =  rarely needed - dnf updates its package cache automatically
+- sudo dnf install package
+- sudo dnf remove package
+- sudo dnf autoremove
+- sudo dnf search package
+- sudo dnf info package
