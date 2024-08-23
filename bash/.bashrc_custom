@@ -10,6 +10,8 @@ alias gst='g stash'
 alias gsp='g stash; g pull'
 # git section
 
+alias pv='source ~/venv/bin/activate'
+alias snake='python ~/py-scripts/jan-snake-game.py'
 alias vi='nvim'
 alias fh='history | fzf'
 alias df='df -haT --total'

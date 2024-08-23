@@ -15,3 +15,6 @@ deactivate
 
 rm -r <directory>
 
+## Packages
+jupyter lab pandas numpy matplotlib seaborn openpyxl pygame
+
