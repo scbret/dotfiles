@@ -20,11 +20,10 @@ fi
 alias ls='eza -a --icons'
 alias ll='eza -al --icons'
 alias lt='eza -a --tree --level=1 --icons'
+alias la='ll -a'
 alias shutdown='systemctl poweroff'
-alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
-alias la='ll -a'
 
 figlet SwineID
 pfetch
