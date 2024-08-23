@@ -1,0 +1,33 @@
+# $HOME/.config/alacritty/alacritty.toml
+
+live_config_reload = true
+
+[window]
+
+position = { x = 2, y = 2 }
+opacity = 0.8
+padding = { x = 6, y = 6 }
+
+decorations = "None"
+decorations_theme_variant = "None" # "Dark" "Light"
+blur = true
+#dimensions = { columns = 135, lines = 55 }
+
+[font]
+size = 13.0
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "Heavy"
+
+[font.bold_italic]
+family = "JetBrainsMono Nerd Font"
+style = "Heavy Italic"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+style = "Medium Italic"
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Medium"
