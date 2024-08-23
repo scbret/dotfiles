@@ -10,9 +10,9 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
+exec feh --bg-scale ~/wallpaper/stratocaster-wallpaper.jpg
 exec_always --no-startup-id killall polybar
 exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
-exec feh --bg-scale ~/wallpaper/stratocaster-wallpaper.jpg
 #exec_always nitrogen --restore
 bindsym $mod+space exec rofi -show combi 
 
