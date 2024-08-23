@@ -27,3 +27,5 @@ PS1='[\u@\h \W]\$ '
 
 figlet SwineID
 pfetch
+
+eval "$(starship init bash)"
