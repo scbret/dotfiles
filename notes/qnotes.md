@@ -9,6 +9,10 @@ mupdf & mupdf-tools = PDF viewer/editor
 evince = gnome PDF viewer
 bluez bluez-utils blueman
 
+#### Polybar & Bluetooth
+https://git.ferano.io/JosephFerano/dotfiles/commit/97d7dcef98ec569510a0fabacab20857bbeb0a02
+https://github.com/msaitz/polybar-bluetooth
+
 ### i3 keyboard shortcuts
 win+enter = open i3 compliant terminal
 win+shift+q = kill a window
