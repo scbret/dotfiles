@@ -13,6 +13,10 @@ bluez bluez-utils blueman
 https://git.ferano.io/JosephFerano/dotfiles/commit/97d7dcef98ec569510a0fabacab20857bbeb0a02
 https://github.com/msaitz/polybar-bluetooth
 
+#### touchpad and mouse
+xorg-xinput
+https://wiki.archlinux.org/title/Xinput
+
 ### i3 keyboard shortcuts
 win+enter = open i3 compliant terminal
 win+shift+q = kill a window
