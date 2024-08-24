@@ -11,10 +11,11 @@
 
 set $mod Mod4
 exec feh --bg-scale ~/wallpaper/pfback-titles.jpg
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 #exec_always --no-startup-id killall polybar
 #exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
 exec_always --no-startup-id ~/.config/i3/slg_touchpad_tap.sh
-exec polybar &
+#exec polybar &
 #exec_always nitrogen --restore
 bindsym $mod+space exec rofi -show combi 
 
