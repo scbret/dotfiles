@@ -7,6 +7,7 @@ gvfs = automount usb
 stow = managing dotfiles
 mupdf & mupdf-tools = PDF viewer/editor
 evince = gnome PDF viewer
+bluez bluez-utils blueman
 
 ### i3 keyboard shortcuts
 win+enter = open i3 compliant terminal
