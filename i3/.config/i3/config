@@ -10,14 +10,15 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
-exec feh --bg-scale ~/wallpaper/pfback-titles.jpg
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id xrandr --output DP0 --right-of HDMI-0 --auto
+#exec feh --bg-scale ~/wallpaper/pfback-titles.jpg
+#exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 #exec_always --no-startup-id killall polybar
 #exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
-exec_always --no-startup-id ~/.config/i3/slg_touchpad_tap.sh
+#exec_always --no-startup-id ~/.config/i3/slg_touchpad_tap.sh
 #exec polybar &
 #exec_always nitrogen --restore
-bindsym $mod+space exec rofi -show combi 
+#bindsym $mod+space exec rofi -show combi 
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -39,11 +40,11 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
-set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+#set $refresh_i3status killall -SIGUSR1 i3status
+#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+#bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -54,13 +55,14 @@ tiling_drag modifier titlebar
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+t exec alacritty
+bindsym $mod+t exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
+#bindsym $mod+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -187,6 +189,108 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
+
+#######################################
+#### Items from Arco Linux i3 config####
+########################################
+################# menu's in arcolinux
+
+# start dmenu
+bindsym $mod+shift+d exec --no-startup-id dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
+
+# start rofi
+bindsym $mod+d exec --no-startup-id ~/.config/i3/launcher/launcher.sh
+
+# start xfce4-appfinder
+bindsym mod1+F2 exec --no-startup-id xfce4-appfinder --collapsed
+
+# start xfce-appfinder
+bindsym mod1+F3 exec --no-startup-id xfce4-appfinder
+
+# start rofi full
+bindsym $mod+F11 exec --no-startup-id "rofi -font 'Noto Sans 13' -theme-str 'window {width: 100%;height: 100%;}' -show drun"
+
+# start rofi small
+bindsym $mod+F12 exec --no-startup-id rofi -show drun -font "Noto Sans 13"
+
+
+# USER APPLICATIONS TO START AT BOOT
+
+# ArcoLinux Welcome App
+exec --no-startup-id dex $HOME/.config/autostart/arcolinux-welcome-app.desktop
+
+# Authentication dialog
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
+# bluetooth
+exec --no-startup-id blueberry-tray
+
+# network
+exec --no-startup-id nm-applet
+
+# Conky
+exec --no-startup-id conky -c ~/.config/i3/system-overview
+
+# feh sets wallpaper
+#exec --no-startup-id feh --bg-fill /usr/share/backgrounds/archlinux/arch-wallpaper.jpg &
+#exec --no-startup-id feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
+exec --no-startup-id feh --bg-fill ~/wallpaper/pfback-titles.jpg &
+# for other Arch Linux based distros
+# exec --no-startup-id feh --bg-fill /usr/share/archlinux-tweak-tool/data/wallpaper/wallpaper.png &
+
+# Polybar
+exec_always --no-startup-id ~/.config/polybar/launch.sh &
+
+exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
+# ArcoLinux Welcome App
+bindsym control+mod1+w exec --no-startup-id arcolinux-welcome-app
+
+# ArchLinux Tweak Tool
+bindsym control+mod1+e exec --no-startup-id archlinux-tweak-tool
+
+# conky
+bindsym $mod+c exec --no-startup-id conky-toggle
+bindsym $mod+control+c exec --no-startup-id killall conky
+bindsym control+mod1+Next exec --no-startup-id conky-rotate -n
+bindsym control+mod1+Prior exec --no-startup-id conky-rotate -p
+
+# System monitor
+bindsym control+Shift+Escape exec --no-startup-id xfce4-taskmanager;focus
+
+# settings
+bindsym control+mod1+m exec --no-startup-id xfce4-settings-manager
+
+################# audio settings                   
+
+bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer -D pulse sset Master '5%+'"
+bindsym XF86AudioLowerVolume exec --no-startup-id "amixer -D pulse sset Master '5%-'"
+bindsym XF86AudioMute exec --no-startup-id "amixer -D pulse set Master toggle"
+# https://github.com/acrisci/playerctl/
+bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
+bindsym XF86AudioNext exec --no-startup-id playerctl next
+bindsym XF86AudioPrev exec --no-startup-id playerctl previous
+bindsym XF86AudioStop exec --no-startup-id playerctl stop
+# bindsym XF86AudioPlay exec --no-startup-id "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
+# bindsym XF86AudioNext exec --no-startup-id "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
+# bindsym XF86AudioPrev exec --no-startup-id "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
+# bindsym XF86AudioStop exec --no-startup-id "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop"
+
+################# xbacklight                       
+
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10 # increase screen brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10 # decrease screen brightness
+
+################# Popups  control                  
+
+# Popups during fullscreen mode
+popup_during_fullscreen smart
+
+################# picom of i3wm                  
+
+# if you want transparency on non-focused windows, ...
+exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
+
+
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
