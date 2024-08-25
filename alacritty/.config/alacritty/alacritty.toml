@@ -34,6 +34,6 @@ dynamic_padding = false
 dynamic_title = true
 opacity = 0.9
 
-[window.padding]
-x = 0
-y = 0
+[[keyboard.bindings]]
+action = "ToggleFullScreen"
+key = "F11"
