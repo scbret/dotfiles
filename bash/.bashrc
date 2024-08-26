@@ -8,6 +8,7 @@
 # Define Editor
 export EDITOR=nvim
 alias v='$EDITOR'
+alias vi='$EDITOR'
 alias vim='$EDITOR'
 
 # -----------------------------------------------------
