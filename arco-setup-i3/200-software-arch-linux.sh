@@ -106,6 +106,7 @@ func_category Internet
 
 list=(
 brave
+firefox
 # chromium
 # qbittorrent
 )
