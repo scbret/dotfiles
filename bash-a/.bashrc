@@ -1,5 +1,5 @@
 ### EXPORT ###
-export EDITOR='nano'
+#export EDITOR='nano'
 export VISUAL='nano'
 export HISTCONTROL=ignoreboth:erasedups
 export PAGER='most'
@@ -27,8 +27,6 @@ fi
 
 #ignore upper and lowercase when TAB completion
 bind "set completion-ignore-case on"
-
-### ALIASES ###
 
 #list
 alias ls='ls --color=auto'
@@ -241,6 +239,7 @@ alias listaur="sudo pacman -Qqem"
 
 #clear
 alias clean="clear; seq 1 $(tput cols) | sort -R | sparklines | lolcat"
+alias cls="clear; seq 1 $(tput cols) | sort -R | sparklines | lolcat"
 
 #search content with ripgrep
 alias rg="rg --sort path"
