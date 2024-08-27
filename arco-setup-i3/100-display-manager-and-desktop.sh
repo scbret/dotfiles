@@ -57,7 +57,7 @@ arconet-xfce
 arcolinux-local-xfce4-git
 i3-wm
 i3status
-autotiling
+# autotiling
 dmenu
 feh
 arcolinux-i3wm-git

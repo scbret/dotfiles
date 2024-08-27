@@ -68,6 +68,7 @@ nitrogen
 picom
 playerctl
 polybar
+rofi
 python-pywal
 volumeicon
 w3m
