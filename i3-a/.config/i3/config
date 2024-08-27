@@ -11,7 +11,7 @@
 
 set $mod Mod4
 exec --no-startup-id xrandr --output DP0 --right-of HDMI-0 --auto
-#exec feh --bg-scale ~/wallpaper/pfback-titles.jpg
+#exec feh --bg-scale ~/wallpaper/pfback-titles.jpg &
 #exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 #exec_always --no-startup-id killall polybar
 #exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
