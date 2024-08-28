@@ -179,8 +179,8 @@ bindsym $mod+r mode "resize"
 ########################################
 ################# menu's in arcolinux
 
-# start firefox
-bindsym $mod+b exec --no-startup-id firefox
+# start brave
+bindsym $mod+b exec --no-startup-id brave
 
 # start vs code
 bindsym $mod+F3 exec --no-startup-id code
