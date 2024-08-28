@@ -6,6 +6,7 @@ alias ls='eza -a --icons'
 alias ll='ls -al'
 alias lt='ls -a --tree --level=1'
 alias la='ll -a'
+alias sx='startx'
 
 # git section
 alias g='git'
