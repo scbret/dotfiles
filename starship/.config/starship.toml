@@ -9,7 +9,7 @@ $directory\
 [](fg:peach bg:green)\
 $git_branch\
 $git_status\
-[](fg:green bg:teal)\
+[](fg:green bg:green)\
 $c\
 $rust\
 $golang\
@@ -19,9 +19,7 @@ $java\
 $kotlin\
 $haskell\
 $python\
-[](fg:teal bg:blue)\
-$docker_context\
-[](fg:blue bg:purple)\
+[](fg:green bg:purple)\
 $time\
 [ ](fg:purple)\
 $line_break$character"""
