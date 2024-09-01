@@ -2,6 +2,10 @@
 
 ## Arch - i3W Notes
 
+## X1 Carbon notes for Arch
+cp 20-backlight.conf to /usr/share/X11/xorg-confd/
+install intel-media-driver
+
 ### Install packages
 gvfs = automount usb
 stow = managing dotfiles
