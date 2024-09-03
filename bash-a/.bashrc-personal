@@ -7,12 +7,15 @@ alias ll='ls -al'
 alias lt='ls -a --tree --level=1'
 alias la='ll -a'
 alias sx='startx'
+alias sdn='shutdown -h now'
 
 # X1 carbon change screen brightness
 alias bhigh='echo 19000 | sudo tee /sys/class/backlight/intel_backlight/brightness'
 alias blow='echo 4000 | sudo tee /sys/class/backlight/intel_backlight/brightness'
 alias bmed='echo 10000 | sudo tee /sys/class/backlight/intel_backlight/brightness'
 
+# Start WIN11 VM on X1 Carbon
+alias w11='source /home/steve/bin/win11.sh'
 
 # git section
 alias g='git'
@@ -83,3 +86,4 @@ figlet SwineID
 pfetch
 
 eval "$(starship init bash)"
+export LIBVIRT_DEFAULT_URI='qemu:///system'
