@@ -44,6 +44,10 @@ floating_modifier $mod
 # or left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier titlebar
 
+# creat a jrnl entry
+bindsym $mod+mod1+j exec --no-startup-id alacritty -t floating-jrnl -e jrnl --config-override editor ""
+for_window[title="floating *"] floating enable
+
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Return exec kitty
@@ -234,7 +238,9 @@ exec --no-startup-id conky -c ~/.config/i3/system-overview
 # feh sets wallpaper
 #exec --no-startup-id feh --bg-fill /usr/share/backgrounds/archlinux/arch-wallpaper.jpg &
 #exec --no-startup-id feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
-exec --no-startup-id feh --bg-scale ~/wallpaper/pfback-titles.jpg &
+#exec --no-startup-id feh --bg-scale ~/wallpaper/pfback-titles.jpg &
+#exec --no-startup-id feh --bg-scale ~/wallpaper/bridge-water.jpg &
+exec --no-startup-id feh --bg-scale ~/wallpaper/fall-valley.jpg &
 # for other Arch Linux based distros
 # exec --no-startup-id feh --bg-fill /usr/share/archlinux-tweak-tool/data/wallpaper/wallpaper.png &
 
