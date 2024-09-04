@@ -85,7 +85,7 @@ Plug 'nanotech/jellybeans.vim'
 
 " if you don't have node and yarn, use pre build
 " Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 'markdown' }
-" Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+"Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }}
 " do not close the preview tab when switching to other buffers
 let g:mkdp_auto_close = 0
@@ -111,8 +111,10 @@ let NERDTreeShowHidden=1
 " Plugin Shortcuts
   map <Leader>f :NERDTreeToggle<CR>
   nnoremap <C-f> :Files!<CR>
-  nnoremap <S-p> :MarkdownPreview<CR>  "shift+p to see preview
-  nnoremap <S-s> :MarkdownPreviewStop<CR>  "shift+s to stop preview
+  nnoremap <S-p> :MarkdownPreview<CR>
+  "shift+p to see preview
+  nnoremap <S-s> :MarkdownPreviewStop<CR>
+  "shift+s to stop preview
 
   " Tabedit keybinds
   nnoremap <Leader>1 1gt<CR>
@@ -136,7 +138,7 @@ set termguicolors
 set background=dark
 
 " Show character column
-set colorcolumn=100
+set colorcolumn=80
 
 " lightline config - add file 'absolutepath'
 " Delete colorscheme line below if using Dark scheme
