@@ -17,6 +17,10 @@ alias bmed='echo 10000 | sudo tee /sys/class/backlight/intel_backlight/brightnes
 # Start WIN11 VM on X1 Carbon
 alias w11='source /home/steve/bin/win11.sh'
 
+# Update jrnl entries
+alias jpl='source /home/steve/bin/pull_jrnl.sh'
+alias jps='source /home/steve/bin/push_jrnl.sh'
+
 # git section
 alias g='git'
 alias ga='g add .'
