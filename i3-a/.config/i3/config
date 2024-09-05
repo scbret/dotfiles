@@ -45,7 +45,7 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # creat a jrnl entry
-bindsym $mod+mod1+j exec --no-startup-id alacritty -t floating-jrnl -e jrnl --config-override editor ""
+bindsym $mod+mod1+j exec --no-startup-id kitty -t floating-jrnl -e jrnl --config-override editor ""
 for_window[title="floating *"] floating enable
 
 # start a terminal
@@ -196,8 +196,11 @@ bindsym $mod+r mode "resize"
 # start brave
 bindsym $mod+b exec --no-startup-id brave
 
+# start thunderbird
+bindsym $mod+ctrl+t exec --no-startup-id thunderbird
+
 # start vs code
-bindsym $mod+F3 exec --no-startup-id code
+bindsym $mod+F4 exec --no-startup-id code
 
 # start Thunar
 bindsym $mod+shift+Return exec --no-startup-id thunar
