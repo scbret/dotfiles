@@ -17,6 +17,7 @@
 - mod + F4 = code
 - mod = Shift = Enter = Thunar
 - mod + ctrl + t = Thunderbird
+- mod + mod1 + j = Create new jrnl note entry in floating window
 
 ## windows
 - mod + shift + space = toggle floating window
