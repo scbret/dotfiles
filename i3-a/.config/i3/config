@@ -53,7 +53,7 @@ for_window[title="floating *"] floating enable
 for_window [title="~/bin"] floating enable
 
 # enable floating mode for all XTerm windows
-for_window [class="Alacritty"] floating enable
+# for_window [class="Alacritty"] floating enable
 
 # enable floating mode for all XTerm windows
 for_window [class="Xfce4-terminal"] floating enable
@@ -249,9 +249,9 @@ exec --no-startup-id conky -c ~/.config/i3/system-overview
 # feh sets wallpaper
 #exec --no-startup-id feh --bg-fill /usr/share/backgrounds/archlinux/arch-wallpaper.jpg &
 #exec --no-startup-id feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
-exec --no-startup-id feh --bg-scale ~/wallpaper/pfback-titles.jpg &
+# exec --no-startup-id feh --bg-scale ~/wallpaper/pfback-titles.jpg &
 #exec --no-startup-id feh --bg-scale ~/wallpaper/bridge-water.jpg &
-#exec --no-startup-id feh --bg-scale ~/wallpaper/fall-valley.jpg &
+exec --no-startup-id feh --bg-scale ~/wallpaper/fall-valley.jpg &
 #exec --no-startup-id feh --bg-scale ~/wallpaper/fall-color-mountains.jpg &
 # for other Arch Linux based distros
 # exec --no-startup-id feh --bg-fill /usr/share/archlinux-tweak-tool/data/wallpaper/wallpaper.png &
