@@ -5,7 +5,7 @@ colors:
   title: GREEN
 default_hour: 7
 default_minute: 0
-editor: nvim
+editor: nano
 encrypt: false
 highlight: true
 indent_character: '|'
