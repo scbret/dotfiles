@@ -1,5 +1,6 @@
 # my aliases -----------------------------------------
 export EDITOR='nvim'
+export PF_INFO="ascii title os host kernel memory uptime"
 alias v='$EDITOR'
 alias vi='$EDITOR'
 alias ls='eza -a --icons'
