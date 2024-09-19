@@ -13,11 +13,19 @@ mupdf & mupdf-tools = PDF viewer/editor
 evince = gnome PDF viewer
 bluez bluez-utils blueman
 
-### Create list of installed packages
+### Create list of installed packages - pacman
 pacman -Qm = installed locally from AUR
 pacman -Qqe | grep -v "$(pacman -Qqm)" > pacman.lst
 -- reinstall from list
 cat pacman.lst | xargs pacman -S --needed --noconfirm
+## pacman commands
+pacman -Syyu  - update/upgrade system
+pacman -S packagename  - install package
+pacman -R packagename  - remove package
+pacman -Rs packagename  - remove package and unused dependencies
+pacman -Qdt  - list orphaned dependencies
+pacman -Rcs  - remove orphaned dependencies
+pacman -Qi packagename  - check package dependencies and config files
 
 #### Polybar & Bluetooth
 https://git.ferano.io/JosephFerano/dotfiles/commit/97d7dcef98ec569510a0fabacab20857bbeb0a02
