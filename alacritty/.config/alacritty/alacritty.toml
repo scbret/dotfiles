@@ -32,7 +32,7 @@ multiplier = 3
 decorations = "none"
 dynamic_padding = false
 dynamic_title = true
-opacity = 0.9
+#opacity = 0.9
 
 [[keyboard.bindings]]
 action = "ToggleFullScreen"
