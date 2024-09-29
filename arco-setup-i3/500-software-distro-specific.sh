@@ -67,9 +67,10 @@ lxrandr
 nitrogen
 picom
 playerctl
+brightnessctl
 polybar
 rofi
-python-pywal
+python-pywal16
 volumeicon
 w3m
 urxvt-resize-font-git
