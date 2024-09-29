@@ -49,6 +49,7 @@ alias tw='task waiting'
 alias tm='tmux'
 alias lsd='lsd -l'
 alias ff='fastfetch'
+alias nf='neofetch'
 alias pf='pfetch'
 alias zl='zellij'
 alias qn='$EDITOR ~/qnotes.md'
@@ -86,6 +87,10 @@ export MANPAGER="less -R --use-color -Dd+g -Du+b"
 
 # Created by `pipx` on 2024-08-22 00:28:44
 export PATH="$PATH:/home/steve/.local/bin"
+
+(cat ~/.cache/wal/sequences &)
+cat ~/.cache/wal/sequences
+source ~/.cache/wal/colors-tty.sh
 
 figlet SwineID
 pfetch
