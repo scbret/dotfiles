@@ -105,6 +105,14 @@
           "keyColor": "33",
       },
       "break",
+      {
+         "type": "colors",
+        "block": {
+          "range": [0, 15],
+          "width": 4,
+        }
+    },
+      "break",
       "break",
   ]
 }
