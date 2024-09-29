@@ -88,8 +88,16 @@ export MANPAGER="less -R --use-color -Dd+g -Du+b"
 # Created by `pipx` on 2024-08-22 00:28:44
 export PATH="$PATH:/home/steve/.local/bin"
 
+# Import colorscheme from 'wal' asynchronously
+# &   # Run the process in the background.
+# ( ) # Hide shell job control messages.
+# Not supported in the "fish" shell.
 (cat ~/.cache/wal/sequences &)
+
+# Alternative (blocks terminal for 0-3ms)
 cat ~/.cache/wal/sequences
+
+# To add support for TTYs this line can be optionally added.
 source ~/.cache/wal/colors-tty.sh
 
 figlet SwineID
