@@ -55,6 +55,7 @@ tooltip {
 #pulseaudio,
 #network,
 #bluetooth,
+#cpu,
 #temperature,
 #memory,
 #workspaces,
@@ -69,7 +70,7 @@ tooltip {
 }
 
 #temperature {
-    border-radius: 10px 0px 0px 10px;
+    border-radius: 5px 0px 0px 5px;
 }
 
 #temperature.critical {
@@ -141,7 +142,13 @@ tooltip {
 }
 
 #memory {
-    color: #a6e3a1;
+    color: #FFA500;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+#cpu {
+    color: #FF0000;
     border-left: 0px;
     border-right: 0px;
 }

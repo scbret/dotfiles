@@ -8,7 +8,7 @@
     "height": 25,
     "modules-left": ["clock","custom/weather"],
     "modules-center": ["hyprland/workspaces","hyprland/window"],
-    "modules-right": ["network", "bluetooth","temperature","memory","battery","backlight","pulseaudio","pulseaudio#microphone","tray"],
+    "modules-right": ["network", "bluetooth","temperature","memory","cpu","battery","backlight","pulseaudio","pulseaudio#microphone","tray"],
     "hyprland/window": {
         "format": "{}"
     },
@@ -104,6 +104,11 @@
         "on-scroll-up": "pamixer --default-source -i 5",
         "on-scroll-down": "pamixer --default-source -d 5",
         "scroll-step": 5
+    },
+
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": true
     },
     
     "memory": {
