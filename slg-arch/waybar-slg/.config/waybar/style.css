@@ -53,6 +53,7 @@ tooltip {
 #clock,
 #battery,
 #pulseaudio,
+#custom-power_btn,
 #network,
 #bluetooth,
 #cpu,
@@ -126,7 +127,7 @@ tooltip {
     border-right: 0px;
 }
 
-#pulseaudio.microphone {
+#custom-power_btn {
     color: #cba6f7;
     border-left: 0px;
     border-right: 0px;

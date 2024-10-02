@@ -8,7 +8,7 @@
     "height": 25,
     "modules-left": ["clock","custom/weather"],
     "modules-center": ["hyprland/workspaces","hyprland/window"],
-    "modules-right": ["network", "bluetooth","temperature","memory","cpu","battery","backlight","pulseaudio","pulseaudio#microphone","tray"],
+    "modules-right": ["network", "bluetooth","temperature","memory","cpu","battery","backlight","pulseaudio","custom/power_btn","tray"],
     "hyprland/window": {
         "format": "{}"
     },
@@ -45,10 +45,6 @@
         "spacing": 10
     },
 
- //   "clock": {
- //       "format": "{: %I:%M %p   %a, %b %e}",
- //       "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
- //   },
  "clock": {
      "timezone": "America/Chicago",
      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
@@ -104,6 +100,12 @@
         "on-scroll-up": "pamixer --default-source -i 5",
         "on-scroll-down": "pamixer --default-source -d 5",
         "scroll-step": 5
+    },
+
+    "custom/power_btn": {
+        "format": "",
+        "on-click": "sh -c '(sleep 0.5s; wlogout --protocol layer-shell)' & disown",
+        "tooltip": false
     },
 
     "cpu": {
