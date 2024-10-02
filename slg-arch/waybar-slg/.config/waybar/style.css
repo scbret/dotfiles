@@ -143,13 +143,13 @@ tooltip {
 }
 
 #memory {
-    color: #FFA500;
+    color: #FFFF00;
     border-left: 0px;
     border-right: 0px;
 }
 
 #cpu {
-    color: #FF0000;
+    color: #FFA500;
     border-left: 0px;
     border-right: 0px;
 }
