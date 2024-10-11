@@ -21,11 +21,11 @@ cat pacman.lst | xargs pacman -S --needed --noconfirm
 ## pacman commands
 pacman -Syyu  - update/upgrade system
 pacman -S packagename  - install package
-pacman -Ss packagename  - search for packages
+pacman -Ss packagename  - search for packages or software type
 pacman -Si packagename  - search for info about a package before installing
 pacman -Qs packagename  - search for installed packages
 pacman -R packagename  - remove package
-pacman -Rs packagename  - remove package and unused dependencies
+pacman -Rns packagename  - remove package and unused dependencies
 pacman -Qdt  - list orphaned dependencies
 pacman -Rcs  - remove orphaned dependencies
 pacman -Qi packagename  - check package dependencies and config files
