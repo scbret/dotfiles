@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Change directory to /repos/journal
-cd /home/steve/repos/journal || exit
+cd /home/steve/dotfiles || exit
 
 # Add all changes to the staging area
 git add .
@@ -15,4 +15,4 @@ git push
 # cd back to home
 cd /home/steve || exit
 
-echo "Journal push update complete!"
+echo "Dotfiles push update complete!"

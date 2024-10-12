@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Change directory to /repos/journal
-cd /home/steve/repos/journal || exit
+cd /home/steve/dotfiles || exit
 
 # Push changes to the remote repository
 git pull
@@ -9,4 +9,4 @@ git pull
 # cd back to home
 cd  /home/steve || exit
 
-echo "Journal pull update complete!"
+echo "Dotfiles pull update complete!"
