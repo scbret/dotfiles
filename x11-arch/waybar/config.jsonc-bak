@@ -1,4 +1,4 @@
-[
+
 {
     "layer": "top",
     "position": "top",
@@ -179,37 +179,4 @@
         "format-critical": " {temperatureC}°C",
         "on-click": "kitty --start-as=fullscreen --title btop sh -c 'btop'"
     }
-},
-{
-    "layer": "top",
-    "position": "top",
-    "height": 40,
-    "output": "DP-5",
-    "modules-left": ["custom/launch_wofi","hyprland/workspaces","hyprland/window"],
-    "hyprland/window": {
-        "format": "{}"
-    },
-
-    "custom/launch_wofi": {
-        "format": "",
-        "on-click": "pkill wofi; wofi -n",
-        "tooltip": false
-    }
-},
-
-{
-    "layer": "top",
-    "position": "top",
-    "height": 40,
-    "output": "DP-6",
-    "modules-left": ["custom/launch_wofi","hyprland/workspaces","hyprland/window"],
-    "hyprland/window": {
-        "format": "{}"
-    },
-
-    "custom/launch_wofi": {
-        "format": "",
-        "on-click": "pkill wofi; wofi -n",
-        "tooltip": false
-    }
-}]
+}
