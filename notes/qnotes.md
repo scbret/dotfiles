@@ -6,6 +6,9 @@
 cp 20-backlight.conf to /usr/share/X11/xorg-confd/
 install intel-media-driver
 
+## disable bell/beep in terminals
+uncomment "set bell-style none" in /etc/inputrc
+
 ### Install packages
 gvfs = automount usb
 stow = managing dotfiles
