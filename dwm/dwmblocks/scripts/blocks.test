@@ -1,0 +1,27 @@
+//Modify this file to change what commands output to your statusbar, and recompile using the make command.
+static const Block blocks[] = {
+	/*Icon*/	/*Command*/		/*Update Interval*/	/*Update Signal*/
+	{"| ᗧ ", "checkupdates | wc -l ",		1800,		0},
+	
+	{"/ ", "auracle sync | wc -l",          1800,		0},                                                                                                                                                     	
+	
+	{"| ♬ ", "mpc current -h 192.168.1.33 ",       120,              0},
+	
+	{"| 🧠 ", " free -h | awk '/^Mem/ { print $3\"/\"$2 }' | sed s/i//g",	0,	0},
+
+	{"| ☀ ", " xbacklight | sed 's/\\..*//'",		3600,		0},	
+
+	{"| 🌡 ", "sensors | awk '/^temp1:/{print $2}'",	   5,		0},
+	
+	{"|", "battery",	60,		0},
+	
+	{"| ☂ ", "/home/cirrus/scripts/weather.py |  sed -n '2p'",   	1800,	0},
+	
+	{" | ", "/usr/local/bin/statusbar/mailbox",	3600,		0},
+	
+	{"  ", "/usr/local/bin/statusbar/clock",	5,		0},
+
+};
+
+//sets delimeter between status commands. NULL character ('\0') means no delimeter.
+static char delim = ' ';

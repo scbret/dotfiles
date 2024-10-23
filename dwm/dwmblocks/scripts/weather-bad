@@ -1,0 +1,15 @@
+#!/bin/python
+#  API key https://openweathermap.org/appid
+import urllib.request, json
+
+city = "Mason City"
+api_key = "036e0dfa07677fbab9bb06a485e5b54e"
+units = "Imperial"
+unit_key = "F"
+
+weather = eval(str(urllib.request.urlopen("http://api.openweathermap.org/data/2.5/weather?q={}&APPID={}&units={}".format(city, api_key, units)).read())[2:-1])
+
+info = weather["weather"][0]["description"].capitalize()
+temp = int(float(weather["main"]["temp"]))
+print ("Mason City")
+print("%s, %i °%s" % (info, temp, unit_key))
