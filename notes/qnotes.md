@@ -41,6 +41,9 @@ https://github.com/msaitz/polybar-bluetooth
 xorg-xinput
 https://wiki.archlinux.org/title/Xinput
 
+### Arch you-tube
+https://www.youtube.com/watch?v=L8TYWuNn_2c
+
 ### i3 keyboard shortcuts
 win+enter = open i3 compliant terminal
 win+shift+q = kill a window
