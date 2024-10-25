@@ -41,6 +41,10 @@ https://github.com/msaitz/polybar-bluetooth
 xorg-xinput
 https://wiki.archlinux.org/title/Xinput
 
+#### Monitor
+xrandr --output eDP-1 --brightness 0.8 --gamma 1.0:1.0:1.0
+xrandr --output eDP-1 --brightness 0.8 --gamma 1.0:1.0:0.9  -makes it more yellow/less blue
+
 ### Arch you-tube
 https://www.youtube.com/watch?v=L8TYWuNn_2c
 
