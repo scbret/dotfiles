@@ -54,6 +54,7 @@ pipewire-pulse 1:1.2.6-1
 plocate 1.1.22-3
 python-pipx 1.6.0-1
 qalculate-gtk 5.3.0-1
+rclone 1.68.1-1
 sof-firmware 2024.09-1
 starship 1.21.1-1
 stow 2.4.1-1
