@@ -59,6 +59,7 @@ starship 1.21.1-1
 stow 2.4.1-1
 tana 1.0.15-1
 thunar 4.18.11-2
+thunar-archive-plugin 0.5.2-2
 thunderbird 128.3.2-1
 ttf-hack-nerd 3.2.1-2
 ttf-jetbrains-mono 2.304-2
