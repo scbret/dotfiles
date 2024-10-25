@@ -84,9 +84,11 @@ static const struct arg args[] = {
     { ram_used,             " %s",         NULL },
     { ram_total,            "/%s",          NULL },
     { ram_perc,             "(%s%%) ",      NULL },
-    { battery_perc,         "|  %s%%",       "BAT1" },
-    { battery_state,        "(%s) |",        "BAT1" },
-    { run_command,          "  %s%% ",      "xbacklight -get" },
-    { run_command,          "  %s ", "pactl list sinks | gawk '/Volume: front/ {print$5}'"},
-    { datetime,             "|  %s ",         "%a %F %I:%M %p " }, /* Date time with this format: Day name YYYY-MM-DD 11:00 AM */
+    { battery_perc,         " %s%%",       "BAT1" },
+    { battery_state,        "(%s) ",        "BAT1" },
+    { run_command,          " %s%% ",      "xbacklight -get" },
+    { run_command, "VOL: %s", "pactl list sinks | gawk '/Volume: front/ {print$5}'"},
+    { run_command,          " %s ",        vol },
+    { run_command,          " %s ",        mic },
+    { datetime,             " %s",         "%a %F %I:%M %p " }, /* Date time with this format: Day name YYYY-MM-DD 11:00 AM */
 };
