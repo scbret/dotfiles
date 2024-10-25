@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Function to calculate the new date based on input date and number of days
 calculate_new_date() {

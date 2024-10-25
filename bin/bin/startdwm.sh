@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/sh
 
 feh --bg-scale ~/wallpaper/mountain-stream.jpg
 dwmblocks &

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Function to calculate the difference in days between two dates
 date_diff() {

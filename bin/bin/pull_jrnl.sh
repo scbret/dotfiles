@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Change directory to /repos/journal
 cd /home/steve/repos/journal || exit

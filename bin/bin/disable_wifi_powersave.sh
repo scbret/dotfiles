@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 ### Disable wifi powersave mode ###
 read -n1 -rep 'Would you like to disable wifi powersave? (y,n)' WIFI
