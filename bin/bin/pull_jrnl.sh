@@ -9,4 +9,4 @@ git pull
 # cd back to home
 cd  /home/steve || exit
 
-echo "Journal pull update complete!"
+notify-send "Journal pull update complete!"

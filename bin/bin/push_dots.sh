@@ -15,4 +15,4 @@ git push
 # cd back to home
 cd /home/steve || exit
 
-echo "Dotfiles push update complete!"
+notify-send "Dotfiles push update complete!"

@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
 # Change directory to /repos/journal
-cd /home/steve/repos/journal || exit
+cd /home/steve/repos/linux/mdnotes || exit
 
 # Add all changes to the staging area
 git add .
 
 # Commit changes
-git commit -m "spectre-arco"
+git commit -m "slg-arch"
 
 # Push changes to the remote repository
 git push
@@ -15,4 +15,4 @@ git push
 # cd back to home
 cd /home/steve || exit
 
-notify-send "Journal push update complete!"
+notify-send "mdnotes push update complete!"

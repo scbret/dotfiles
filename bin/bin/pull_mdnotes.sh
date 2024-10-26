@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Change directory to /repos/journal
-cd /home/steve/dotfiles || exit
+cd /home/steve/repos/linux/mdnotes || exit
 
 # Push changes to the remote repository
 git pull
@@ -9,4 +9,4 @@ git pull
 # cd back to home
 cd  /home/steve || exit
 
-notify-send "Dotfiles pull update complete!"
+notify-send "mdnotes pull update complete!"
