@@ -14,5 +14,5 @@ fi
 feh --bg-scale ~/wallpaper/pfback-titles.jpg
 #xcompmgr -c &
 picom --config ~/.config/picom/picom.conf &
-
+slstatus &
 exec dwm
