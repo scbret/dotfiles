@@ -4,7 +4,7 @@
 cd /home/steve/repos/journal || exit
 
 # get hostname of device being run on
-hostname=$(hostnamectl | awk -F ': ' /Static hostname/ {print $2}')
+hostname=$(hostnamectl | awk -F ': ' '/Static hostname/ {print $2}')
 
 # Add all changes to the staging area
 git add .
