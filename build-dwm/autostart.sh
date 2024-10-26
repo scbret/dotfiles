@@ -1,5 +1,8 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 sh -c "rclone --vfs-cache-mode writes mount \"onedrive\": ~/OneDrive"
 
-exec wal -n -i "~/wallpaper/valley-sunset.jpg"
+#while true; do
+#	xsetroot -name "**** SwineID ****"
+#	sleep 60
+#done &
