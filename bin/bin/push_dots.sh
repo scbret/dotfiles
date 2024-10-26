@@ -3,11 +3,14 @@
 # Change directory to /repos/journal
 cd /home/steve/dotfiles || exit
 
+# get hostname of device being run on
+hostname=$(hostnamectl | awk -F ': ' '/Static hostname/ {print $2}')
+
 # Add all changes to the staging area
 git add .
 
 # Commit changes
-git commit -m "spectre-arco"
+git commit -m "$hostname"
 
 # Push changes to the remote repository
 git push
