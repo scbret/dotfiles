@@ -35,6 +35,7 @@ static const Rule rules[] = {
 	{ "Gimp",     NULL,       NULL,       1 << 5,       1,           -1 },
 	{ "Inkscape", NULL,       NULL,       1 << 6,       0,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "thunderbird",  NULL,   NULL,       1 << 2,       0,           -1 },
 };
 
 /* layout(s) */
