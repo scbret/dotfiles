@@ -97,11 +97,13 @@ static const char *browser[] = { "brave", NULL };
 static const char *flamcmd[] = { "flameshot", "gui", NULL };
 static const char *notecmd[] = { "/home/steve/.dwm/md-notes.sh", NULL };
 static const char *appscmd[] = { "/home/steve/.dwm/launch_app.sh", NULL };
+static const char *wpcmd[] = { "/home/steve/.dwm/wallpaper.sh", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ ALTKEY|ControlMask,           XK_n,      spawn,          {.v = notecmd } },
 	{ ALTKEY|ControlMask,           XK_a,      spawn,          {.v = appscmd } },
+	{ ALTKEY|ControlMask,           XK_w,      spawn,          {.v = wpcmd } },
 	{ MODKEY,                       XK_space,  spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termkcmd } },
