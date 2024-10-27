@@ -1,7 +1,7 @@
 alacritty
 blueman-manager
 brave
-draw-io
+drawio
 firefox
 flameshot gui
 geany
