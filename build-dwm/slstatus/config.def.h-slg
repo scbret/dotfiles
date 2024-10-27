@@ -80,13 +80,14 @@ static const char mic[] = "muted=`wpctl get-volume @DEFAULT_AUDIO_SOURCE@ | awk 
 static const struct arg args[] = {
 	/* function format          argument */
     { temp, "|  %s° ", "/sys/class/thermal/thermal_zone1/temp" },
+    { run_command,          " %s%% ",      "xbacklight -get" },
     { cpu_perc,             " %s%% ",      NULL },
     { ram_used,             " %s",         NULL },
     { ram_total,            "/%s",          NULL },
     { ram_perc,             "(%s%%) ",      NULL },
-    { battery_perc,         "|  %s%%",       "BAT1" },
-    { battery_state,        "(%s) |",        "BAT1" },
-    { run_command,          "  %s%% ",      "xbacklight -get" },
-    { run_command,          "  %s ", "pactl list sinks | gawk '/Volume: front/ {print$5}'"},
-    { datetime,             "|  %s ",         "%a %F %I:%M %p " }, /* Date time with this format: Day name YYYY-MM-DD 11:00 AM */
+    { battery_perc,         " %s%%",       "BAT1" },
+    { battery_state,        "(%s) ",        "BAT1" },
+    { run_command,          " %s ",        vol },
+    { run_command,          " %s ",        mic },
+    { datetime,             " %s",         "%a %F %T" }, /* Date time with this format: Day name YYYY-MM-DD 18:00:00 */
 };

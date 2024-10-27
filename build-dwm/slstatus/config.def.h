@@ -79,7 +79,7 @@ static const char mic[] = "muted=`wpctl get-volume @DEFAULT_AUDIO_SOURCE@ | awk 
 
 static const struct arg args[] = {
 	/* function format          argument */
-    { temp, "|  %s° ", "/sys/class/thermal/thermal_zone1/temp" },
+    { temp, "  %s° ", "/sys/class/thermal/thermal_zone1/temp" },
     { cpu_perc,             " %s%% ",      NULL },
     { ram_used,             " %s",         NULL },
     { ram_total,            "/%s",          NULL },
