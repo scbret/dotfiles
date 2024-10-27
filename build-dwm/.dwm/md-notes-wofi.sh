@@ -7,7 +7,7 @@ newnote () {
 }
 
 selected () {
-    choice="$(echo -e "New\n$(ls -1 $folder)" | wofi --show dmenu --width=300 --height=200 --cache-file=/dev/null -p "Choose note or create new: ")"
+    choice="$(echo -e "New\n$(ls -1 $folder)" | wofi --show dmenu --width=325 --height=400 --cache-file=/dev/null -p "Choose note or create new: ")"
     case $choice in
         New) newnote ;;
         *md) setsid -f "kitty" -e nvim "$folder$choice" >/dev/null 2>&1 ;;
