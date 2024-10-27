@@ -3,7 +3,6 @@ export EDITOR='nvim'
 export HISTCONTROL=ignoreboth:erasedups
 alias v='$EDITOR'
 alias vi='$EDITOR'
-alias ls='ls'
 alias ll='eza -alh'
 alias lt='eza -a --tree --level=1'
 alias la='ll -ah'
@@ -99,8 +98,6 @@ finder() {
 
 # Colored man
 export MANPAGER="less -R --use-color -Dd+g -Du+b"
-
-export PATH="$PATH:/home/steve/.bin"
 
 ##############################################
 #Delete the double #'s once pywal installed
