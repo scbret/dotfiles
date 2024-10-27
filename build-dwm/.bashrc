@@ -23,8 +23,6 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
-alias cl='clear'
-alias q='exit'
 alias ll='ls -lha'
 alias ez='eza -lha --icons'
 

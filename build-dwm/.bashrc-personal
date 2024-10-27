@@ -17,7 +17,7 @@ alias update='sudo pacman -Syyu'
 # X1 carbon change screen brightness
 alias bhigh='echo 19000 | sudo tee /sys/class/backlight/intel_backlight/brightness'
 alias blow='echo 4000 | sudo tee /sys/class/backlight/intel_backlight/brightness'
-alias bmed='echo 10000 | sudo tee /sys/class/backlight/intel_backlight/brig=htness'
+alias bmed='echo 10000 | sudo tee /sys/class/backlight/intel_backlight/brightness'
 
 # Start WIN11 VM on X1 Carbon
 alias w11='source /home/steve/bin/win11.sh'
@@ -34,6 +34,8 @@ alias nps='source /home/steve/bin/push_mdnotes.sh'
 alias dpl='source /home/steve/bin/pull_dots.sh'
 alias dps='source /home/steve/bin/push_dots.sh'
 
+# kill conky
+alias kc='killall -9 conky'
 
 # git section
 alias g='git'
