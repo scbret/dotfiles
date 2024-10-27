@@ -1,6 +1,7 @@
 # my aliases -----------------------------------------
 export EDITOR='nvim'
 export HISTCONTROL=ignoreboth:erasedups
+HISTIGNORE="$HISTIGNORE:jrnl *"
 alias v='$EDITOR'
 alias vi='$EDITOR'
 alias ll='eza -alh'
