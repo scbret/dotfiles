@@ -26,3 +26,4 @@ yazi
 tmux
 zellij
 code
+qalculate-gtk
