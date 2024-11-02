@@ -1,6 +1,6 @@
 # Linux Notes
 
-## Arch - i3W Notes
+## Arch - Notes
 
 ## X1 Carbon notes for Arch
 - cp 20-backlight.conf to /usr/share/X11/xorg-confd/
@@ -8,6 +8,14 @@
 
 ## disable bell/beep in terminals
 uncomment "set bell-style none" in /etc/inputrc
+
+## wifi list/connect
+nmcli device wifi list
+nmcli device wifi connect ssid password the-password
+nmcli connection show  = list of connections and names
+nmcli device disconnect ifname actual-interface-name
+nmcli device = list of devices and state
+nmcli radio wifi off = turn off wifi
 
 ### Install packages
 - gvfs = automount usb
