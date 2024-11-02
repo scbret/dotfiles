@@ -88,5 +88,6 @@ static const struct arg args[] = {
     { battery_state,        "(%s) |",        "BAT1" },
     { run_command,          "  %s%% ",      "xbacklight -get" },
     { run_command,          "  %s ", "pactl list sinks | gawk '/Volume: front/ {print$5}'"},
+    { wifi_perc,            "  %s%% ",        "wlp0s20f3" },
     { datetime,             "|  %s ",         "%a %F %I:%M %p " }, /* Date time with this format: Day name YYYY-MM-DD 11:00 AM */
 };
