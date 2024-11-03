@@ -1,16 +1,15 @@
-Keybinds for Hyperland - X11
-
 Win + Return = Terminal (kitty)
 Win + A = Alacritty
 Win + T = Xfce4-terminal - floating
 
 Win + Q = killactive window
 Win + W = kill/relaunch waybar
+Win + Shift + M = Quit/Exit Hyperland
 
+Win + K = show these keybinds in wofi
 Win + Space = App Menu
 Win + M = Select/create notes
 Win + Shift + C = start conky
-Win + Shift + M = Exit
 Win + E = File manager
 
 Win + V = toggle floating window
