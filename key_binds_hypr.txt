@@ -1,0 +1,35 @@
+Keybinds for Hyperland - X11
+
+Win + Return = Terminal (kitty)
+Win + A = Alacritty
+Win + T = Xfce4-terminal - floating
+
+Win + Q = killactive window
+Win + W = kill/relaunch waybar
+
+Win + Space = App Menu
+Win + M = Select/create notes
+Win + Shift + C = start conky
+Win + Shift + M = Exit
+Win + E = File manager
+
+Win + V = toggle floating window
+Win + P = pseudo dwindle
+Win + J = toggle split windows horiz/vert
+Win + F = toggle full screen window
+
+Win + C = vscode
+Win + B = browser (brave)
+Win + L = lock screen
+Win + S = screenshot
+
+Win + left = focus left window
+Win + right = focus right window
+Win + up = focus top window
+Win + down = focus bottom window
+
+Switch Workspaces = Win + workspace #
+Move active window to workspace = Win + Shift + workspace #
+
+Move window with mouse = Win + left mouse
+Resize window with mouse = Win + right mouse
