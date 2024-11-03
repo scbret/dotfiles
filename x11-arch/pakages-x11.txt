@@ -1,4 +1,5 @@
 alacritty 0.14.0-1
+arc-icon-theme 20161122-4
 auto-cpufreq 2.4.0-1
 base 3-2
 base-devel 1-2
@@ -14,6 +15,7 @@ conky-cairo-wayland-git 1.21.7.r11.g6a1aa573-1
 cyme 2.1.0-1
 dnsmasq 2.90-1
 dracula-gtk-theme v4.0.0-1
+dracula-icons-theme 4.0.0-1
 drawio-desktop 24.7.17-1
 dunst 1.11.0-1
 efibootmgr 18-3
@@ -68,6 +70,7 @@ obsidian 1.7.4-1
 p7zip 1:17.05-2
 pacman-contrib 1.10.6-2
 pamixer 1.6-3
+papirus-icon-theme 20240501-1
 pavucontrol 1:6.1-1
 pcmanfm 1.3.2-1
 pfetch 1.6.0-1
