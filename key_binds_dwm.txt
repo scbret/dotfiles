@@ -6,12 +6,17 @@ Super + Control + Return --- alacritty
 Super + B --- launch Brave
 Super + q --- Close window
 Super + Space --- Launch dmenu
-
-Alt + Control + N --- Create/Open Note
-Alt + Control + A --- List Apps
-Alt + Control + W --- Change Wallpaper
-Alt + Control + K --- List Key Binds
+----------------
+Alt + Ctrl + N --- Create/Open Note
+Alt + Ctrl + A --- List Apps
+Alt + Ctrl + W --- Change Wallpaper
+Alt + Ctrl + K --- List Key Binds
 Alt + PrtScrn = Lauch screenshot
+Super + Ctrl + B = toggle bar
+Super + J --- Change focus left
+Super + K --- Change focus right
+Super + H --- decrease active window size
+Super + L --- increase active window size
 Super + Right --- Change Focus Right
 Super + Left --- Change Focus Left
 Super + Ctrl + Left --- Resize Left 
@@ -57,8 +62,3 @@ AUDIO
 Super + Insert --- Volume Up
 Super + Delete --- Volume Down
 Super + m --- Muted
-
-SCROT
------
-Super + @Print --- Select Rectangle Screenshot
-@Print --- Fullscreen Screenshot
