@@ -1,8 +1,17 @@
 DWM KEY BINDINGS
 ----------------
-Super + Return --- Launch Tilix
+Super + Return --- st terminal
+Super + Shift + Return --- kitty
+Super + Control + Return --- alacritty
+Super + B --- launch Brave
 Super + q --- Close window
-Super + p --- Launch dmenu
+Super + Space --- Launch dmenu
+
+Alt + Control + N --- Create/Open Note
+Alt + Control + A --- List Apps
+Alt + Control + W --- Change Wallpaper
+Alt + Control + K --- List Key Binds
+Alt + PrtScrn = Lauch screenshot
 Super + Right --- Change Focus Right
 Super + Left --- Change Focus Left
 Super + Ctrl + Left --- Resize Left 
@@ -43,23 +52,6 @@ Ctrl + Shift + 8 --- Gaplessgrid
 Ctrl + Shift + 9 --- Spiral	
 Ctrl + Shift + 0 --- HorizontalGrid
 	
-SXHKD KEY BINDINGS
-------------------
-Super + Space --- Rofi
-Super + Return --- Tilix
-Super + Shift + Return --- Kitty
-Super + b --- Firefox-ESR
-Super + Shift + b --- Firefox-ESR -private-window
-Super + f --- Thunar
-Super + e --- Geany
-Super + g --- Gimp
-Super + d --- Discord
-Super + o --- Obs
-Super + r --- scratchpad (Ranger)
-Super + v --- scratchpad (Pulsemixer)
-Super + x --- Power/Logout
-Super + Escape --- Reload sxhkd
-
 AUDIO
 -----
 Super + Insert --- Volume Up
@@ -70,8 +62,3 @@ SCROT
 -----
 Super + @Print --- Select Rectangle Screenshot
 @Print --- Fullscreen Screenshot
-
-REDSHIFT
---------
-Super + Alt + r --- Redshift On (night)
-Super + Alt + b --- Redshift off (daytime)
