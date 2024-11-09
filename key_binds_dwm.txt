@@ -13,20 +13,21 @@ Alt + Ctrl + W --- Change Wallpaper
 Alt + Ctrl + K --- List Key Binds
 Alt + PrtScrn = Lauch screenshot
 Super + Ctrl + B = toggle bar
-Super + J --- Change focus left
-Super + K --- Change focus right
-Super + H --- decrease active window size
-Super + L --- increase active window size
-Super + Right --- Change Focus Right
-Super + Left --- Change Focus Left
+----------------
+Super + Left --- Change focus left
+Super + Right --- Change focus right
 Super + Ctrl + Left --- Resize Left 
 Super + Ctrl + Right --- Resize Right
 Super + Shift + n --- Toggle WindowFollow
 Super + Shift + Right --- Move Window Right
 Super + Shift + Left --- Move Window Left
 Super + Shift + q --- Quit DWM
-Super + Shift + r --- Restart DWM
 Super + x --- Logout/Reboot/Poweroff
+---------------
+Super + T --- Tile
+Super + F --- Horizontal
+Super + M --- CenteredMaster
+Super + Ctrl + M --- CenteredFloatMaster
 
 DWM TAG BINDINGS
 ----------------
@@ -56,9 +57,4 @@ Ctrl + Shift + 7 --- Bstackhoriz
 Ctrl + Shift + 8 --- Gaplessgrid
 Ctrl + Shift + 9 --- Spiral	
 Ctrl + Shift + 0 --- HorizontalGrid
-	
-AUDIO
------
-Super + Insert --- Volume Up
-Super + Delete --- Volume Down
-Super + m --- Muted
+
