@@ -10,6 +10,7 @@ static const unsigned int gappov    = 4;       /* vert outer gap between windows
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
+static const int focusedontoptiled  = 1;   /* 1 means focused tile client is shown on top of floating */
 static const char *fonts[]          = { "SymbolsNerdFont:size=14" };
 static const char dmenufont[]       = "JetBrainsMono:size=12";
 static const char col_gray1[]       = "#222222";
@@ -36,6 +37,7 @@ static const Rule rules[] = {
 	{ "Inkscape", NULL,       NULL,       1 << 6,       0,           -1 },
 	{ "firefox",  NULL,       NULL,       1 << 3,       0,           -1 },
 	{ "thunderbird",  NULL,   NULL,       1 << 2,       0,           -1 },
+	{ "Galculator",  NULL,   NULL,        0,            1,           -1 },
 };
 
 /* layout(s) */
@@ -113,12 +115,12 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_b,      spawn,          {.v = browser } },
 	{ ALTKEY,                       XK_Print,  spawn,          {.v = flamcmd } },
 	{ MODKEY|ControlMask,           XK_b,      togglebar,      {0} },
-	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
-	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
-	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
-	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
+	{ MODKEY,                       XK_Right,  focusstack,     {.i = +1 } },
+	{ MODKEY,                       XK_Left,   focusstack,     {.i = -1 } },
+	{ MODKEY|ControlMask,           XK_Left,   setmfact,       {.f = -0.05} },
+	{ MODKEY|ControlMask,           XK_Right,  setmfact,       {.f = +0.05} },
 	{ MODKEY|ShiftMask,             XK_h,      setcfact,       {.f = +0.25} },
 	{ MODKEY|ShiftMask,             XK_l,      setcfact,       {.f = -0.25} },
 	{ MODKEY|ShiftMask,             XK_o,      setcfact,       {.f =  0.00} },
