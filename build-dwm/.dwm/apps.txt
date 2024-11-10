@@ -27,3 +27,4 @@ tmux
 zellij
 code
 qalculate-gtk
+galculator

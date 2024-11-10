@@ -9,6 +9,8 @@ feh --bg-scale ~/wallpaper/pfback-titles.jpg &
 
 picom --animations -b &
 
+sxhkd &
+
 # One Drive 
 sh -c "rclone --vfs-cache-mode writes mount \"onedrive\": ~/OneDrive"
 

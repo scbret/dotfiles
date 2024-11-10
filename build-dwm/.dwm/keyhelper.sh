@@ -4,4 +4,4 @@
 kbinds=$(cat ~/dotfiles/key_binds_dwm.txt)
 
 # pipe the list to dmenu
-echo "$kbinds" | dmenu -i -l 30
+echo "$kbinds" | dmenu -i -l 31

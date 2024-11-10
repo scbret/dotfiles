@@ -1,0 +1,52 @@
+#####################
+# Application keybindings #
+#####################
+
+super + b
+    brave
+
+super + c
+	google-chrome-stable
+    
+super + shift + b
+	firefox -private-window
+
+super + shift + Return
+	kitty
+
+super + control + Return
+	alacritty
+
+super + shift + t
+	thunderbird
+
+super + shift + f
+	thunar
+
+super + shift + g
+	gimp
+
+super + shift + i
+	inkscape
+
+# help with shortcuts
+#super + h
+#	tilix -e ~/.config/suckless/sxhkd/keyhelper.sh
+	
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd; notify-send 'sxhkd' 'Reloaded config'
+
+# dedicated volume keys
+#{XF86AudioRaiseVolume,XF86AudioLowerVolume}
+#	pamixer {-i,-d} 2
+
+# dedicated backlight keys
+#{XF86MonBrightnessUp,XF86MonBrightnessDown}
+#	xbacklight {+10,-10}
+	
+#########
+# Scrot #
+#########
+#super + @Print
+#	flameshot gui --path ~/Screenshots/

@@ -1,10 +1,15 @@
 DWM KEY BINDINGS
 ----------------
-Super + Return --- st terminal
+Super + Return --- ST terminal
 Super + Shift + Return --- kitty
 Super + Control + Return --- alacritty
-Super + B --- launch Brave
-Super + q --- Close window
+Super + B --- Brave
+Super + C --- Google Chrome
+Super + Shift + B --- Firefox Private
+Super + Shift + T --- Thunderbird
+Super + Shift + I --- Inkscape
+Super + Shift + G --- Gimp
+Super + Q --- Close window
 Super + Space --- Launch dmenu
 ----------------
 Alt + Ctrl + N --- Create/Open Note
@@ -22,29 +27,21 @@ Super + Ctrl + Right --- Resize Right
 Super + Shift + n --- Toggle WindowFollow
 Super + Shift + Right --- Move Window Right
 Super + Shift + Left --- Move Window Left
-Super + Shift + q --- Quit DWM
-Super + x --- Logout/Reboot/Poweroff
+Super + Shift + Space --- toggle floating
+Super + Shift + Q ---t  Quit DWM
+
+MAIN LAYOUTS
 ---------------
 Super + T --- Tile
 Super + F --- Horizontal
-Super + M --- CenteredMaster
+Super + M --- Monocle
 Super + Ctrl + M --- CenteredFloatMaster
+Super + Tab --- switch to last used Tag
 
 DWM TAG BINDINGS
 ----------------
 Super + (1-9) --- Switch to tag (workspace 1-9)
 Super + Shift + (1-9) ---  Move Window to tag (workspace 1-9)
-Super + 0 --- Switch to tag 10
-Super + minus --- Switch to tag 11
-Super + equal --- Switch to tag 12
-Super + Shift + 0 --- Move to tag 10
-Super + Shift + minus --- Move to tag 11
-Super + Shift + equal --- Move to tag 12
-Super + Tab --- Last Tag
-Ctrl  + Shift + Right --- View Tag to Right
-Ctrl  + Shift + Left --- View Tag to Left
-Ctrl  + Alt + Right --- Move Window to Right Tag
-Ctrl  + Alt + Left --- Move Window to Left Tag
 
 DWM LAYOUTS
 -----------

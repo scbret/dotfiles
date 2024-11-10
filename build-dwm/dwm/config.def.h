@@ -41,7 +41,7 @@ static const Rule rules[] = {
 };
 
 /* layout(s) */
-static const float mfact     = 0.50; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
@@ -93,9 +93,6 @@ static const char *mutevol[]    = { "/usr/bin/wpctl",   "set-mute",   "48",     
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
-static const char *termkcmd[] = { "kitty", NULL };
-static const char *termacmd[] = { "alacritty", NULL };
-static const char *browser[] = { "brave", NULL };
 static const char *flamcmd[] = { "flameshot", "gui", NULL };
 static const char *notecmd[] = { "/home/steve/.dwm/md-notes.sh", NULL };
 static const char *appscmd[] = { "/home/steve/.dwm/launch_app.sh", NULL };
@@ -110,9 +107,6 @@ static const Key keys[] = {
 	{ ALTKEY|ControlMask,           XK_k,      spawn,          {.v = kbcmd } },
 	{ MODKEY,                       XK_space,  spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termkcmd } },
-	{ MODKEY|ControlMask,           XK_Return, spawn,          {.v = termacmd } },
-	{ MODKEY,                       XK_b,      spawn,          {.v = browser } },
 	{ ALTKEY,                       XK_Print,  spawn,          {.v = flamcmd } },
 	{ MODKEY|ControlMask,           XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
