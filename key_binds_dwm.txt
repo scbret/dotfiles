@@ -14,6 +14,7 @@ Alt + Ctrl + K --- List Key Binds
 Alt + PrtScrn = Lauch screenshot
 Super + Ctrl + B = toggle bar
 ----------------
+Alt + Enter --- zoom/switch window focus to master
 Super + Left --- Change focus left
 Super + Right --- Change focus right
 Super + Ctrl + Left --- Resize Left 
