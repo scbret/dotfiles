@@ -8,7 +8,7 @@ Win + Shift + M = Quit/Exit Hyperland
 
 Win + K = show these keybinds in wofi
 Win + Space = App Menu
-Win + M = Select/create notes
+Win + N = Select/create notes
 Win + Shift + C = start conky
 Win + E = File manager
 
