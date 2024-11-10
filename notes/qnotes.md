@@ -10,6 +10,7 @@
 uncomment "set bell-style none" in /etc/inputrc
 
 ## wifi list/connect
+nmtui = ncurses wifi config/connect
 nmcli device wifi list
 nmcli device wifi connect ssid password the-password
 nmcli connection show  = list of connections and names
