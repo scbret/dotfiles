@@ -57,7 +57,8 @@ show_always = true
 format = '[ $user ]($style)'
 
 [directory]
-truncation_length = 4
+format = "[$path ]($style)"
+truncation_length = 0
 truncation_symbol = "…/"
 
 [directory.substitutions]
