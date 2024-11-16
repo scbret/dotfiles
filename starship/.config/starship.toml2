@@ -5,6 +5,7 @@ $directory\
 $git_branch\
 $git_status\
 $python\
+$c\
 $line_break$character"""
 
 # Increase the default command timeout to 2 seconds
@@ -29,7 +30,6 @@ yellow = "#f1fa8c"
 
 [os]
 disabled = false
-style = "bg:surface0 fg:text"
 
 [os.symbols]
 Windows = "󰍲"
@@ -57,6 +57,7 @@ show_always = true
 format = '[ $user ]($style)'
 
 [directory]
+truncation_length = 4
 truncation_symbol = "…/"
 
 [directory.substitutions]
@@ -74,5 +75,9 @@ format = '[ $symbol $branch ]($style)'
 format = '[($all_status$ahead_behind )]($style)'
 
 [python]
-symbol = ""
+symbol = " "
+format = '[ $symbol( $version) ]($style)'
+
+[c]
+symbol = " "
 format = '[ $symbol( $version) ]($style)'
