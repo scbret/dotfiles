@@ -54,9 +54,11 @@ RedHatEnterprise = "󱄛"
 
 [username]
 show_always = true
+style_user = "bold yellow"
 format = '[ $user ]($style)'
 
 [directory]
+style = "bold cyan"
 format = "[$path ]($style)"
 truncation_length = 0
 truncation_symbol = "…/"
@@ -70,15 +72,19 @@ truncation_symbol = "…/"
 
 [git_branch]
 symbol = ""
+style = "bold purple"
 format = '[ $symbol $branch ]($style)'
 
 [git_status]
+style = "bold red"
 format = '[($all_status$ahead_behind )]($style)'
 
 [python]
 symbol = " "
+style = "bold green"
 format = '[ $symbol( $version) ]($style)'
 
 [c]
 symbol = " "
+style = "bold pink"
 format = '[ $symbol( $version) ]($style)'
