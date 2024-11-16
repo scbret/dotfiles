@@ -54,7 +54,7 @@ RedHatEnterprise = "󱄛"
 
 [username]
 show_always = true
-style_user = "bold yellow"
+style_user = "bold purple"
 format = '[ $user ]($style)'
 
 [directory]
@@ -72,7 +72,7 @@ truncation_symbol = "…/"
 
 [git_branch]
 symbol = ""
-style = "bold purple"
+style = "bold orange"
 format = '[ $symbol $branch ]($style)'
 
 [git_status]
