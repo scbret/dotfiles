@@ -41,7 +41,8 @@ alias kc='killall -9 conky'
 alias g='git'
 alias ga='g add .'
 #alias gc='g commit -m "slg-arch"'
-alias gc="hostname=$(hostnamectl | awk -F ': ' '/Static hostname/ {print $2}') g commit -m '$hostname'"
+alias gc="hostname=$(hostnamectl | awk -F ': ' '/Static hostname/ {print $2}') g commit -m $hostname"
+alias hn="hostname=$(hostnamectl | awk -F ': ' '/Static hostname/ {print $2}') echo $hostname"
 alias gps='g push'
 alias gpl='g pull'
 alias gs='g status'
