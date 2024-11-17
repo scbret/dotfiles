@@ -28,3 +28,4 @@ zellij
 code
 qalculate-gtk
 galculator
+obsidian
