@@ -24,6 +24,8 @@ nmcli radio wifi off = turn off wifi
 - mupdf & mupdf-tools = PDF viewer/editor
 - evince = gnome PDF viewer
 - bluez bluez-utils blueman
+- xclip  - on X11
+- wl-clipboard  - on Wayland
 
 ### Create list of installed packages - pacman
 - pacman -Qm = installed locally from AUR
