@@ -40,8 +40,11 @@ alias kc='killall -9 conky'
 # git section
 alias g='git'
 alias ga='g add .'
-alias gc="hostname=$(hostnamectl | awk -F ': ' '/Static hostname/ {print $2}') g commit -m $hostname"
-alias hn="hostname=$(hostnamectl | awk -F ': ' '/Static hostname/ {print $2}') echo $hostname"
+gc() {
+    local hostname=$(hostnamectl | awk -F ': ' '/Static hostname/ {print $2}')
+    g commit -m "$hostname"
+}
+alias hn='hostnamectl | awk -F ": " "/Static hostname/ {print \$2}"'
 alias gps='g push'
 alias gpl='g pull'
 alias gs='g status'
