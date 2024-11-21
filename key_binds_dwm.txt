@@ -28,7 +28,7 @@ Super + Shift + n --- Toggle WindowFollow
 Super + Shift + Right --- Move Window Right
 Super + Shift + Left --- Move Window Left
 Super + Shift + Space --- toggle floating
-Super + Shift + Q ---t  Quit DWM
+Super + Shift + Q --- Quit DWM
 
 MAIN LAYOUTS
 ---------------
