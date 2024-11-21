@@ -60,8 +60,8 @@ alias ht='htop'
 alias bt='btop'
 alias free='free -mt'
 alias cputemp='sensors | grep Core'
-alias fp="\$(fzf --reverse --preview 'batcat --style=numbers --color=always --line-range :500 {}')"
-alias fp1="fzf --reverse --preview='batcat --color=always --line-range :500 {}' --bind shift-up:preview-page-up,shift-down:preview-page-down"
+alias fp="\$(fzf --reverse --preview 'bat --style=numbers --color=always --line-range :500 {}')"
+alias fp1="fzf --reverse --preview='bat --color=always --line-range :500 {}' --bind shift-up:preview-page-up,shift-down:preview-page-down"
 alias fd='finder'
 alias tl='task list'
 alias tw='task waiting'
@@ -85,7 +85,7 @@ alias vrc='vi ~/.config/nvim/init.vim'
 export FZF_DEFAULT_OPTS='--height 75% --layout=reverse --border'
 
 fo() {
-  IFS=$'\n' out=("$(fzf --preview 'batcat --style=numbers --color=always --line-range :500 {}' --query="$1" --exit-0 --expect=ctrl-o,ctrl-e)")
+  IFS=$'\n' out=("$(fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' --query="$1" --exit-0 --expect=ctrl-o,ctrl-e)")
   key=$(head -1 <<< "$out")
   file=$(head -2 <<< "$out" | tail -1)
   if [ -n "$file" ]; then
