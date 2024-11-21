@@ -26,7 +26,7 @@ alias w11='source /home/steve/bin/win11.sh'
 alias jpl='source /home/steve/bin/pull_jrnl.sh'
 alias jps='source /home/steve/bin/push_jrnl.sh'
 
-# Update jrnl entries
+# Update mdnotes entries
 alias npl='source /home/steve/bin/pull_mdnotes.sh'
 alias nps='source /home/steve/bin/push_mdnotes.sh'
 
@@ -40,9 +40,11 @@ alias kc='killall -9 conky'
 # git section
 alias g='git'
 alias ga='g add .'
-#alias gc='g commit -m "slg-arch"'
-alias gc="hostname=$(hostnamectl | awk -F ': ' '/Static hostname/ {print $2}') g commit -m $hostname"
-alias hn="hostname=$(hostnamectl | awk -F ': ' '/Static hostname/ {print $2}') echo $hostname"
+gc() {
+    local hostname=$(hostnamectl | awk -F ': ' '/Static hostname/ {print $2}')
+    g commit -m "$hostname"
+}
+alias hn='hostnamectl | awk -F ": " "/Static hostname/ {print \$2}"'
 alias gps='g push'
 alias gpl='g pull'
 alias gs='g status'
