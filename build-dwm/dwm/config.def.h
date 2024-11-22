@@ -79,6 +79,8 @@ static const Layout layouts[] = {
 
 /* brighness control */
 #include <X11/XF86keysym.h>
+/* go to next/previous tag */
+#include "shiftview.c"
 
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
@@ -149,6 +151,8 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+	{ MODKEY,                       XK_n,      shiftview,      {.i = +1 } },
+	{ MODKEY,                       XK_b,      shiftview,      {.i = -1 } },
 	{ 0, XF86XK_MonBrightnessUp, spawn, SHCMD("brightnessctl set 5%+") },
         { 0, XF86XK_MonBrightnessDown, spawn, SHCMD("brightnessctl set 5%-") },
 	{ 0,                   XF86XK_AudioLowerVolume, spawn, {.v = downvol } },
