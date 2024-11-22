@@ -27,6 +27,11 @@ Win + right = focus right window
 Win + up = focus top window
 Win + down = focus bottom window
 
+Win + Ctrl + left = shrink window
+Win + Ctrl + right = enlarge window
+Win + Ctrl + up = shrink window
+Win + Ctrl + down = enlarge window
+
 Switch Workspaces = Win + workspace #
 Move active window to workspace = Win + Shift + workspace #
 
