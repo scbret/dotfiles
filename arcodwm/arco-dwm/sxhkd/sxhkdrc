@@ -8,7 +8,7 @@
 
 # Vivaldi
 super + F1
-	vivaldi-stable
+	librewolf
 
 # Code
 super + F2
@@ -58,21 +58,21 @@ super + F12
 # SUPER + ... KEYS
 #################################################################
 
-#Code
-super + e
-    code
+#Show keyboard shortcuts
+super + shift + k
+    ~/.dwm/keyhelper.sh
 
 #Browser
 super + w
-    vivaldi-stable
+    brave
 
 #Conky-toggle
 super + c
-    conky-toggle
+    code
 
 #Htop
-#super + h
-#    urxvt 'htop task manager' -e htop
+super + shift + h
+    st -e htop
 
 #archlinux-logout
 super + x
@@ -94,10 +94,6 @@ super + shift + x
 super + r
     rofi-theme-selector
 
-#Urxvt
-#super + t
-#    urxvt
-
 #Pavucontrol
 super + v
     pavucontrol
@@ -106,24 +102,22 @@ super + v
 #super + m
 #    pragha
 
-#alacritty
-super + Return
+#st
+super + control + t
     alacritty
 
+#alacritty
+super + Return
+    st
+
 #kitty
-super + t
+super + shift + t
      kitty
 
 #Xkill
 super + Escape
     xkill
 
-#Keyboard dependent
-#alacritty
-super + KP_Enter
-	alacritty
-
-#################################################################
 # SUPER + SHIFT KEYS
 #################################################################
 
@@ -131,14 +125,9 @@ super + KP_Enter
 super + shift + Return
 	thunar
 
-#Keyboard dependent
-#File-Manager
-super + shift + KP_Enter
-	thunar
-
 #dmenu
 super + shift + d
-	dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
+	dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=18'
 
 #rofi
 super + d

@@ -44,15 +44,6 @@ blur-background-exclude = [
   "window_type = 'desktop'",
 ];
 
-opacity-rule = [
-  "70:class_g = 'st-256color' && focused",
-  "50:class_g = 'st-256color' && !focused",
-  "70:class_g = 'kitty' && focused",
-  "50:class_g = 'kitty' && !focused",
-  "80:class_g = 'Alacritty' && focused",
-  "60:class_g = 'Alacritty' && !focused",
-];
-
 # Specify the backend to use: `xrender`, `glx`, or `xr_glx_hybrid`.
 # `xrender` is the default one.
 
