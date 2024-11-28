@@ -110,11 +110,6 @@ conky.config = {
 conky.text = [[
 ${color1}${alignc}S H O R T C U T    K E Y S${color}
 ${color1}${hr}${color}
-${color1}Host:${alignr}${color2}${nodename}${color}
-${color1}Kernel:${color2}${alignr}$kernel${color}
-${color1}Uptime:${color2}${alignr}${uptime}${color}
-${color1}UTC:${color2}${alignr}${utime %H:%M}${color}
-${color1}${hr}${color}
 ${color1}[Alt]+[Space]${alignr}${color2}Change Layout${color}
 ${color1}[S]+[Shift]+D${alignr}${color2}Main Menu${color}
 ${color1}[S]+[Space]${alignr}${color2}D Menu${color}
@@ -124,6 +119,7 @@ ${color1}${hr}${color}
 ${color1}[S]+Enter${alignr}${color2}ST${color}
 ${color1}[S]+[Shift]+T${alignr}${color2}kitty${color}
 ${color1}[S]+[Ctrl]+T${alignr}${color2}Alacritty${color}
+${color1}${hr}${color}
 ${color1}[S]+[Shift]+Enter${alignr}${color2}Thunar${color}
 ${color1}[S]+C${alignr}${color2}VS Code${color}
 ${color1}[S]+W${alignr}${color2}Brave${color}
@@ -134,10 +130,15 @@ ${color1}[S]+F7${alignr}${color2}Gimp${color}
 ${color1}[S]+F8${alignr}${color2}Inkscape${color}
 ${color1}[S]+F9${alignr}${color2}Lollypop${color}
 ${color1}[PrtSc]${alignr}${color2}Auto Screenshot${color}
+${color1}[S]+[Ctrl]+[PrtSc]${alignr}${color2}Selection Screenshot${color}
+${color1}[Ctrl]+[PrtSc]${alignr}${color2}Timer Screenshot${color}
 ${color1}${hr}${color}
-${color1}[S]+[Shift]+H${alignr}${color2}HTOP${color}
+${color1}[Alt]+[Shift]+U${alignr}${color2}Update Pywal Colors${color}
+${color1}F11${alignr}${color2}HTOP${color}
+${color1}F12${alignr}${color2}BTOP${color}
 ${color1}[S]+[Shift]+R${alignr}${color2}Restart DWM${color}
 ${color1}[S]+[Shift]+S${alignr}${color2}Restart SHXKD${color}
+${color1}[Ctrl]+[Alt]+O${alignr}${color2}Restart Picom${color}
 ${color1}[Ctrl]+[Alt]+U${alignr}${color2}Volume Control${color}
 ${color1}[Ctrl]+[Shift]+Esc${alignr}${color2}Task Manager${color}
 ${color1}[S]+[Shift]+Q${alignr}${color2}Stop application${color}
