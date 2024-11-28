@@ -34,7 +34,7 @@ run "volumeicon"
 run slstatus &
 sxhkd -c ~/.config/arco-dwm/sxhkd/sxhkdrc &
 #run "nitrogen --restore"
-run "conky -c $HOME/.config/arco-dwm/system-overview"
+run "conky -c $HOME/.config/arco-dwm/system-overview-mine"
 #you can set wallpapers in themes as well
 #feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
 feh --bg-fill $HOME/wallpaper/arco-wallpaper.jpg &
@@ -42,7 +42,7 @@ feh --bg-fill $HOME/wallpaper/arco-wallpaper.jpg &
 #feh --bg-fill /usr/share/archlinux-tweak-tool/data/wallpaper/wallpaper.png &
 #run applications from startup
 
-run "conky -c $HOME/.config/arco-dwm/system-overview-orig"
+run "conky -c $HOME/.config/arco-dwm/system-keybinds"
 #run "insync start"
 #run "spotify"
 #run "ckb-next -b"
