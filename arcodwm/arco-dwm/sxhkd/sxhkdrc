@@ -12,15 +12,15 @@ super + F1
 
 # Code
 super + F2
-	code
+	google-chrome-stable -no-default-browser-check
 
 #Inkscape
 super + F3
-    inkscape
+    firefox
 
-#Gimp
+#qemu
 super + F4
-    gimp
+    virtual
 
 #Meld
 super + F5
@@ -30,13 +30,13 @@ super + F5
 super + F6
     vlc --video-on-top
 
-#Virtualbox
+#Gimp
 super + F7
-    virtualbox
+    gimp
 
-#Thunar
+#Inkscape
 super + F8
-    thunar
+    inkscape
 
 #Audio player
 super + F9
@@ -66,7 +66,7 @@ super + shift + k
 super + w
     brave
 
-#Conky-toggle
+#VS Code
 super + c
     code
 
