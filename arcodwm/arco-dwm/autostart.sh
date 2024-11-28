@@ -24,7 +24,6 @@ run xrandr --output eDP1 --primary --mode 2560x1440 --pos 0x0 --rotate normal
 
 run "nm-applet"
 run "pamac-tray"
-run "variety"
 run "xfce4-power-manager"
 run "blueberry-tray"
 run "/usr/lib/xfce4/notifyd/xfce4-notifyd"
