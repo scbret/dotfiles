@@ -2,11 +2,11 @@
 # SUPER + FUNCTION KEYS
 #################################################################
 
-# Vivaldi
+# Librewolf
 super + F1
 	librewolf
 
-# Code
+# Chrome
 super + F2
 	google-chrome-stable -no-default-browser-check
 
@@ -17,10 +17,6 @@ super + F3
 #qemu
 super + F4
     virtual
-
-#Meld
-super + F5
-    meld
 
 #Vlc
 super + F6
@@ -55,8 +51,16 @@ super + F12
 #################################################################
 
 #Show keyboard shortcuts
-super + shift + k
+super + shift + K
     ~/.dwm/keyhelper.sh
+
+#Open/Create Note
+super + shift + N
+    ~/.dwm/md-notes.sh
+
+#Open Apps List
+super + shift + A
+    ~/.dwm/launch_app.sh
 
 #Browser
 super + w
@@ -117,7 +121,6 @@ super + d
 super + shift + s
 	pkill -USR1 -x sxhkd
 
-
 #################################################################
 # CONTROL + ALT KEYS
 #################################################################
@@ -129,10 +132,6 @@ ctrl + alt + w
 #archlinux-tweak-tool
 ctrl + alt + e
     archlinux-tweak-tool
-
-#File-Manager
-ctrl + alt + b
-     thunar
 
 #archlinux-logout
 ctrl + alt + k

@@ -119,6 +119,7 @@ ${color1}${hr}${color}
 ${color1}[S]+Enter${alignr}${color2}ST${color}
 ${color1}[S]+[Shift]+T${alignr}${color2}kitty${color}
 ${color1}[S]+[Ctrl]+T${alignr}${color2}Alacritty${color}
+${color1}[S]+[Shift]+N/A/K${alignr}${color2}Notes/Apps/Key Binds${color}
 ${color1}${hr}${color}
 ${color1}[S]+[Shift]+Enter${alignr}${color2}Thunar${color}
 ${color1}[S]+C${alignr}${color2}VS Code${color}

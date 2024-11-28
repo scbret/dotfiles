@@ -11,8 +11,8 @@ static const int showsystray        = 1;     /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const Bool viewontag         = True;     /* Switch view on tag switch */
-static const char *fonts[]          = { "Noto Sans Mono:size=12" };
-static const char dmenufont[]       = "monospace:size=11";
+static const char *fonts[]          = { "SymbolsNerdFont:size=14" };
+static const char dmenufont[]       = "JetBrainsMono:size=14";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -33,7 +33,7 @@ static const unsigned int alphas[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "", "", "󰛮", "4", "5", "", "", "8", "9" };
 /* static const char *tags[] = { "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX" }; */
 /* static const char *tags[] = { "", "", "", "", "", "", "", "", "" }; */
 /* static const char *tags[] = { "Web", "Chat", "Edit", "Meld", "Vb", "Mail", "Video", "Image", "Files" }; */
@@ -46,13 +46,16 @@ static const Rule rules[] = {
 	 *  use tags mask to point an application to a specific workspace
 	 */
 	/* class                       instance    title      tags mask      isfloating   monitor */
-	{ "Gimp",                      NULL,       NULL,       1 << 4,            0,           -1 },
-	{ "Inkscape",                  NULL,       NULL,       1 << 5,            0,           -1 },
-	{ "Xfce4-terminal",            NULL,       NULL,       0,            1,           -1 },
-	{ "firefox",                   NULL,       NULL,       0,            0,           -1 },
-	{ "Arcolinux-welcome-app.py",  NULL,       NULL,       0,            1,           -1 },
-	{ "Arcolinux-calamares-tool.py",  NULL,    NULL,       0,            1,           -1 },
-    { "Nlogout",  				   NULL,       NULL,       0,            1,           -1 },	
+	{ "Gimp",                      NULL,       NULL,       1 << 5,            0,           -1 },
+	{ "Inkscape",                  NULL,       NULL,       1 << 6,            0,           -1 },
+	{ "Xfce4-terminal",            NULL,       NULL,       0,                 1,           -1 },
+        { "firefox",                   NULL,       NULL,       1 << 4,            0,           -1 },
+	{ "thunderbird",               NULL,       NULL,       1 << 2,            0,           -1 },
+	{ "Galculator",                NULL,       NULL,         0,               1,           -1 },
+	{ "Spotify",                   NULL,       NULL,       1 << 8,            1,           -1 },
+	{ "Arcolinux-welcome-app.py",  NULL,       NULL,         0,               1,           -1 },
+	{ "Arcolinux-calamares-tool.py",  NULL,    NULL,         0,               1,           -1 },
+        { "Nlogout",  			 NULL,     NULL,         0,               1,           -1 },	
 };
 
 /* layout(s) */
@@ -114,10 +117,10 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,				XK_q,      killclient,     {0} },
 	{ MODKEY,						XK_q,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
-	{ MODKEY,                       XK_g,      setlayout,      {.v = &layouts[1]} },
+	{ MODKEY,                       XK_h,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[2]} },
-	{ MODKEY|ControlMask,			XK_comma,  cyclelayout,    {.i = -1 } },
+	{ MODKEY|ControlMask,		XK_comma,  cyclelayout,    {.i = -1 } },
 	{ MODKEY|ControlMask,           XK_period, cyclelayout,    {.i = +1 } },
 	{ Mod1Mask,                     XK_space,  cyclelayout,    {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
@@ -132,10 +135,10 @@ static Key keys[] = {
 	{ Mod1Mask|ControlMask,         XK_Left,   shiftview,      {.i = -1 } },
 	{ Mod1Mask|ControlMask,         XK_Up,     shiftview,      {.i =  1 } },
 	{ Mod1Mask|ControlMask,         XK_Down,   shiftview,      {.i = -1 } },	
-	{ Mod1Mask,						XK_Tab,    shiftview,      {.i =  1 } },
+	{ Mod1Mask,			XK_Tab,    shiftview,      {.i =  1 } },
 	{ Mod1Mask|ShiftMask,	        XK_Tab,	   shiftview,	   {.i = -1 } },
-	{ MODKEY,		        		XK_Tab,    shiftview,	   {.i =  1 } },
-	{ MODKEY|ShiftMask,		        XK_Tab,	   shiftview,	   {.i = -1 } },
+	/*{ MODKEY,		        XK_Tab,    shiftview,	   {.i =  1 } },*/
+	/*{ MODKEY|ShiftMask,		XK_Tab,	   shiftview,	   {.i = -1 } },*/
 
 
 	TAGKEYS(                        XK_1,                      0)
