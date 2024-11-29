@@ -41,6 +41,8 @@ Super + Tab --- switch to last used Tag
 DWM TAG BINDINGS
 ----------------
 Super + (1-9) --- Switch to tag (workspace 1-9)
+Super + N  -- Switch to the next tag
+Super + B  -- Switch to the tag before
 Super + Shift + (1-9) ---  Move Window to tag (workspace 1-9)
 
 DWM LAYOUTS
