@@ -65,6 +65,7 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
+        { run_command, "[ Spotify: %s ]  ", "$HOME/.dwm/get_spotify.sh" },
 	        { run_command, "[BL %s%%] ",   "xbacklight -get" },
 		{ battery_perc, "[BAT %s%% ",   "BAT0"  },
 		{ battery_state, "(%s)] ",         "BAT0"  },
