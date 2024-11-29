@@ -67,7 +67,7 @@ super + w
     brave
 
 #VS Code
-super + c
+super + shift + c
     code
 
 #archlinux-logout
@@ -81,10 +81,6 @@ super + shift + x
 #Rofi theme selector
 super + r
     rofi-theme-selector
-
-#Pavucontrol
-super + v
-    pavucontrol
 
 #st
 super + control + t
@@ -154,11 +150,6 @@ ctrl + alt + r
   rofi-theme-selector
 
 #################################################################
-# ALT + ... KEYS
-#################################################################
-
-
-#################################################################
 #VARIETY KEYS WITH PYWAL
 #################################################################
 
@@ -173,7 +164,6 @@ alt + shift + u
 #Xcfe4-TaskManager
 ctrl + shift + Escape
     xfce4-taskmanager
-
 
 #################################################################
 #     SCREENSHOTS
@@ -202,8 +192,6 @@ F12
 #xfce4-terminal dropdown - HTOP
 F11
     xfce4-terminal --drop-down -e htop
-
-
 
 #################################################################
 #     MULTIMEDIA KEYS
@@ -234,25 +222,41 @@ XF86AudioMute
 XF86AudioPlay
     playerctl play-pause
 
+#PLAY
+ctrl + shift + P
+    playerctl play-pause
+
 #Next
 XF86AudioNext
+    playerctl next
+
+#Next
+ctrl + shift + N
     playerctl next
 
 #previous
 XF86AudioPrev
     playerctl previous
 
+#Previous
+ctrl + shift + B
+    playerctl previous
+
 #Stop
 XF86AudioStop
     playerctl stop
 
+#Stop
+ctrl + shift + S
+    playerctl stop
+
 #Brightness up
 XF86MonBrightnessUp
-    xbacklight -inc 10
+    xbacklight -inc 5
 
 #Brightness down
 XF86MonBrightnessDown
-    xbacklight -dec 10
+    xbacklight -dec 5
 
 #################################################################
 # CTRL + ALT KEYS
