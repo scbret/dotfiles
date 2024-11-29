@@ -79,7 +79,7 @@ broadcom-wl-dkms 6.30.223.271-38
 btop 1.4.0-4
 btrfs-progs 6.11-1
 clonezilla 5.6.13-1
-conky 1.21.5-1
+conky-lua-archers 1.19.6-1
 cronie 1.7.2-1
 cryptsetup 2.7.5-1
 cups 2:2.4.11-1
@@ -169,7 +169,7 @@ inkscape 1.4-2
 intel-ucode 20241112-1
 inxi 3.3.36.1-1
 iw 6.9-1
-iwd 3.1-1
+iwd 3.2-1
 jfsutils 1.1.15-9
 jq 1.7.1-2
 kitty 0.37.0-1
@@ -249,7 +249,7 @@ nvidia-settings 565.57.01-1
 nvidia-utils 565.57.01-2
 nvme-cli 2.11-1
 obsidian 1.7.7-1
-oh-my-zsh-git r7436.366d25435-1
+oh-my-zsh-git r7437.69a6359f7-1
 open-iscsi 2.1.10-1
 openconnect 1:9.12-2
 openssh 9.9p1-2
