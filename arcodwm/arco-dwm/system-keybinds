@@ -132,8 +132,8 @@ ${color1}[S]+F7${alignr}${color2}Gimp${color}
 ${color1}[S]+F8${alignr}${color2}Inkscape${color}
 ${color1}[S]+F9${alignr}${color2}Lollypop${color}
 ${color1}[S]+F10${alignr}${color2}Spotify${color}
-${color1}[PrtSc]${alignr}${color2}Auto Screenshot${color}
-${color1}[S]+[Ctrl]+[PrtSc]${alignr}${color2}Selection Screenshot${color}
+${color1}[PrtSc]${alignr}${color2}Selection Screenshot${color}
+${color1}[S]+[Ctrl]+[PrtSc]${alignr}${color2}Auto Screenshot${color}
 ${color1}[Ctrl]+[PrtSc]${alignr}${color2}Timer Screenshot${color}
 ${color1}${hr}${color}
 ${color1}[Alt]+[Shift]+U${alignr}${color2}Update Pywal Colors${color}
