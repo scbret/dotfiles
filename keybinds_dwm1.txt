@@ -63,6 +63,8 @@ Alt + Space --- Cycle Layouts
 Super + Ctrl + . --- Cycle Layouts
 Super + Ctrl + , --- Cycle Layouts
 Super + Shift + Space --- toggle floating
+Super + Left Mouse --- Move window
+Super + Ctrl + Left Mouse --- Resize window
 Ctrl + B = toggle bar
 Super + Shift + Q --- Quit App
 Alt + Tab --- Switch to next Tag
