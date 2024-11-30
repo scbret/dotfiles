@@ -12,10 +12,10 @@ Super + Shift + G --- Gimp
 Super + Q --- Close window
 Super + Space --- Launch dmenu
 ----------------
-Alt + Ctrl + N --- Create/Open Note
-Alt + Ctrl + A --- List Apps
-Alt + Ctrl + W --- Change Wallpaper
-Alt + Ctrl + K --- List Key Binds
+Alt + Shift + N --- Create/Open Note
+Alt + Shift + A --- List Apps
+Alt + Shift + W --- Change Wallpaper
+Alt + Shift + K --- List Key Binds
 Alt + PrtScrn = Lauch screenshot
 Super + Ctrl + B = toggle bar
 ----------------
