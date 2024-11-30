@@ -23,7 +23,6 @@ run xrandr --output eDP1 --primary --mode 2560x1440 --pos 0x0 --rotate normal
 #autorandr horizontal
 
 run "nm-applet"
-run "pamac-tray"
 run "xfce4-power-manager"
 run "blueberry-tray"
 run "/usr/lib/xfce4/notifyd/xfce4-notifyd"
@@ -33,7 +32,6 @@ run "numlockx on"
 run "volumeicon"
 run slstatus &
 sxhkd -c ~/.config/arco-dwm/sxhkd/sxhkdrc &
-#run "nitrogen --restore"
 run "conky -c $HOME/.config/arco-dwm/system-overview-mine"
 #you can set wallpapers in themes as well
 #feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
