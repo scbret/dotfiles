@@ -38,6 +38,8 @@ nmcli radio wifi off = turn off wifi
 - pacman -Ss packagename  - search for packages or software type
 - pacman -Si packagename  - search for info about a package before installing
 - pacman -Qs packagename  - search for installed packages
+- pacman -Qq  - list all installed packages by name only
+- pacman -Qe  - list exclusively installed packages by name/version
 - pacman -R packagename  - remove package
 - pacman -Rns packagename  - remove package and unused dependencies
 - pacman -Qdt  - list orphaned dependencies
