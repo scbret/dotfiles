@@ -41,6 +41,10 @@ feh --bg-fill $HOME/wallpaper/arco-wallpaper.jpg &
 #run applications from startup
 
 run "conky -c $HOME/.config/arco-dwm/system-keybinds"
+
+#Auto mount OneDrive
+sh -c "rclone --vfs-cache-mode writes mount \"onedrive\": ~/OneDrive"
+
 #run "insync start"
 #run "spotify"
 #run "ckb-next -b"
