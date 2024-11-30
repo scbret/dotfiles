@@ -7,6 +7,6 @@ while true; do
    else
        printf "%s\n" "Not Currently Playing"
    fi
-   sleep 10
+   sleep 5
    clear
 done
