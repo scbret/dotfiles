@@ -1,0 +1,40 @@
+2024-11-28 20:07:37.684 [info] Extension host with pid 28851 started
+2024-11-28 20:07:37.749 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2024-11-28 20:07:37.753 [info] ExtensionService#_doActivateExtension adamwalzer.string-converter, startup: true, activationEvent: '*'
+2024-11-28 20:07:37.770 [info] ExtensionService#_doActivateExtension johnpapa.vscode-peacock, startup: true, activationEvent: '*'
+2024-11-28 20:07:37.807 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2024-11-28 20:07:37.869 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2024-11-28 20:07:37.979 [info] Eager extensions activated
+2024-11-28 20:07:37.992 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2024-11-28 20:07:37.994 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2024-11-28 20:07:38.011 [info] ExtensionService#_doActivateExtension esbenp.prettier-vscode, startup: false, activationEvent: 'onStartupFinished'
+2024-11-28 20:07:38.078 [info] ExtensionService#_doActivateExtension Gruntfuggly.todo-tree, startup: false, activationEvent: 'onStartupFinished'
+2024-11-28 20:07:38.123 [info] ExtensionService#_doActivateExtension ms-dotnettools.vscode-dotnet-runtime, startup: false, activationEvent: 'onStartupFinished'
+2024-11-28 20:07:38.207 [info] ExtensionService#_doActivateExtension ms-vscode-remote.remote-wsl, startup: false, activationEvent: 'onStartupFinished'
+2024-11-28 20:07:38.304 [info] ExtensionService#_doActivateExtension streetsidesoftware.code-spell-checker, startup: false, activationEvent: 'onStartupFinished'
+2024-11-28 20:07:38.448 [info] ExtensionService#_doActivateExtension usernamehw.todo-md, startup: false, activationEvent: 'onStartupFinished'
+2024-11-28 20:07:38.461 [info] ExtensionService#_doActivateExtension vscode-icons-team.vscode-icons, startup: false, activationEvent: 'onStartupFinished'
+2024-11-28 20:07:38.708 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2024-11-28 20:07:38.924 [warning] DiagnosticCollection with name 'cSpell' does already exist.
+2024-11-28 20:07:39.366 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-11-28 20:07:39.374 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-11-28 20:07:39.415 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-11-28 20:07:39.455 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2024-11-28 20:07:41.799 [info] Extension host terminating: renderer closed the MessagePort
+2024-11-28 20:07:41.831 [error] An error occurred when disposing the subscriptions for extension 'Gruntfuggly.todo-tree':
+2024-11-28 20:07:41.833 [error] AggregateError: Encountered errors while disposing of store
+	at ci (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:24:775)
+	at file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:118:14992
+	at file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:24:1009
+	at Object.dispose (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:7:2146)
+	at z_.eb (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:118:11919)
+	at file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:118:9874
+	at Array.map (<anonymous>)
+	at z_.$ (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:118:9862)
+	at z_.terminate (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:118:10105)
+	at EC.terminate (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:119:1424)
+	at Zi (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:174:15084)
+	at MessagePortMain.<anonymous> (file:///opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:174:11632)
+	at MessagePortMain.emit (node:events:519:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2949)
+2024-11-28 20:07:41.875 [info] Extension host with pid 28851 exiting with code 0

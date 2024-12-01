@@ -1,0 +1,9 @@
+2024/12/01-09:18:44.522 98cc Reusing MANIFEST /home/steve/.config/google-chrome/Default/Local Extension Settings/gighmmpiobklfepjocnamgkkbiglidom/MANIFEST-000001
+2024/12/01-09:18:44.522 98cc Recovering log #11
+2024/12/01-09:18:44.523 98cc Reusing old log /home/steve/.config/google-chrome/Default/Local Extension Settings/gighmmpiobklfepjocnamgkkbiglidom/000011.log 
+2024/12/01-09:20:05.072 98ce Compacting 1@1 + 1@2 files
+2024/12/01-09:20:05.083 98ce Generated table #14@1: 30 keys, 329051 bytes
+2024/12/01-09:20:05.083 98ce Compacted 1@1 + 1@2 files => 329051 bytes
+2024/12/01-09:20:05.090 98ce compacted to: files[ 0 0 1 0 0 0 0 ]
+2024/12/01-09:20:05.090 98ce Delete type=2 #12
+2024/12/01-09:20:05.090 98ce Delete type=2 #9

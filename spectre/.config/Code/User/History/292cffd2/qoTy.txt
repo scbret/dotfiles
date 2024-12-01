@@ -1,0 +1,60 @@
+DWM KEY BINDINGS
+----------------
+Super + Return --- ST terminal
+Super + Shift + Return --- kitty
+Super + Control + Return --- alacritty
+Super + B --- Brave
+Super + C --- Google Chrome
+Super + Shift + B --- Firefox Private
+Super + Shift + T --- Thunderbird
+Super + Shift + I --- Inkscape
+Super + Shift + G --- Gimp
+Super + Q --- Close window
+Super + Space --- Launch dmenu
+----------------
+Alt + Ctrl + N --- Create/Open Note
+Alt + Ctrl + A --- List Apps
+Alt + Ctrl + W --- Change Wallpaper
+Alt + Ctrl + K --- List Key Binds
+Alt + PrtScrn = Lauch screenshot
+Super + Ctrl + B = toggle bar
+----------------
+Alt + Enter --- zoom/switch window focus to master
+Super + Left --- Change focus left
+Super + Right --- Change focus right
+Super + Ctrl + Left --- Resize Left 
+Super + Ctrl + Right --- Resize Right
+Super + Shift + n --- Toggle WindowFollow
+Super + Shift + Right --- Move Window Right
+Super + Shift + Left --- Move Window Left
+Super + Shift + Space --- toggle floating
+Super + Shift + Q --- Quit DWM
+
+MAIN LAYOUTS
+---------------
+Super + T --- Tile
+Super + F --- Horizontal
+Super + M --- Monocle
+Super + Ctrl + M --- CenteredFloatMaster
+Super + Tab --- switch to last used Tag
+
+DWM TAG BINDINGS
+----------------
+Super + (1-9) --- Switch to tag (workspace 1-9)
+Super + N  -- Switch to the next tag
+Super + B  -- Switch to the tag before
+Super + Shift + (1-9) ---  Move Window to tag (workspace 1-9)
+
+DWM LAYOUTS
+-----------
+Ctrl + Shift + 1 --- Dwindle
+Ctrl + Shift + 2 --- CenteredFloatingMaster
+Ctrl + Shift + 3 --- CenteredMaster
+Ctrl + Shift + 4 --- Tile
+Ctrl + Shift + 5 --- Bstack
+Ctrl + Shift + 6 --- Nrowgrid
+Ctrl + Shift + 7 --- Bstackhoriz
+Ctrl + Shift + 8 --- Gaplessgrid
+Ctrl + Shift + 9 --- Spiral	
+Ctrl + Shift + 0 --- HorizontalGrid
+

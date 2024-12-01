@@ -1,0 +1,71 @@
+DWM KEY BINDINGS
+---------------- FUNCTION KEYS
+super + F1 --- librewolf
+super + F2 --- google-chrome-stable
+super + F3 --- firefox
+super + F4 --- virtual
+super + F6 --- vlc
+super + F7 --- gimp
+super + F8 --- inkscape
+super + F9 --- lollypop
+super + F10 --- spotify
+super + F11 --- rofi
+super + F12 --- rofi -show drun
+F11  --- htop
+F12  --- btop
+---------------- SCRIPTS
+Super + Shift + K/N/A = Keybinds, Notes, Apps List
+---------------- MAIN
+Super + W --- Brave
+Super + Shift + Return = Thunar
+Super + Return --- ST terminal
+Super + Shift + T --- kitty
+Super + Control + T --- alacritty
+Super + Shift + M --- Thunderbird
+Super + Shift + C --- VS Code
+Super + Q --- Close window
+Super + Space --- Launch dmenu 
+Super + D --- App Launcher
+Super + Shift + D --- Dmenu run
+Super + X --- Logout
+Super + Shift + X --- Powermenu
+----------------- UTLITIES
+PrtScrn --- Screenshot -selection
+Ctrl + Super + PrtScr --- Screenshot -auto
+Ctrl + PrtScr --- Screenshot -timer
+Ctrl + Shift + Esc --- Task Manager
+Alt + Shift + U --- Update pywal colors
+Super + Shift + S --- relaunch sxhkd
+Ctrl + Alt + E --- Arch Tweak Tool
+----------------- MUSIC
+Ctrl + Shift + P --- Play
+Ctrl + Shift + N --- Next
+Ctrl + Shift + B --- Previous
+Ctrl + Shift + S --- Stop
+Ctrl + Alt + U ---- Pulse Audio Control
+----------------- DWM WINDOWS - LAYOUTS
+Alt + Enter --- zoom/switch window focus to master
+Super + J --- Change focus
+Super + K --- Change focus
+Super + Left --- Change focus left
+Super + Right --- Change focus right
+Super + Alt + J --- Move window in stack
+Super + Alt + K --- Move window in stack
+Super + H --- Resize Left 
+Super + L --- Resize Right
+Super + I --- Increment window in stack
+Super + Shift + I - Decrement window in stack
+Super +T --- Tile Layout
+Super + G --- Grid Layout
+Super + M --- Monacle Layout
+Super + F --- Floating Layout
+Alt + Space --- Cycle Layouts
+Super + Ctrl + . --- Cycle Layouts
+Super + Ctrl + , --- Cycle Layouts
+Super + Shift + Space --- toggle floating
+Ctrl + B = toggle bar
+Super + Shift + Q --- Quit App
+Alt + Tab --- Switch to next Tag
+Ctrl + Alt + Arrow Keys --- Switch Tags
+Super + (1-9) --- Switch to tag (workspace 1-9)
+Super + Shift + (1-9) ---  Move Window to tag (workspace 1-9)

@@ -1,0 +1,22 @@
+2024-11-28 14:44:50.441 [info] Started local extension host with pid 21258.
+2024-11-28 14:44:50.828 [info] Creating lazy extension host (LocalWebWorker). Reason: contains 1 extension(s): blinkshellinc.blink-fs.
+2024-11-28 14:44:51.144 [info] Settings Sync: Updating due to initialize
+2024-11-28 14:44:51.144 [info] Settings Sync: Updating authentication providers. Authentication Providers from store: [{"id":"github","scopes":["user:email"]},{"id":"microsoft","scopes":["openid","profile","email","offline_access"]}]
+2024-11-28 14:44:51.145 [info] Settings Sync: Authentication providers updated []
+2024-11-28 14:44:51.216 [info] Settings Sync: Updating authentication providers. Authentication Providers from store: [{"id":"github","scopes":["user:email"]},{"id":"microsoft","scopes":["openid","profile","email","offline_access"]}]
+2024-11-28 14:44:51.216 [info] Settings Sync: Authentication providers updated ["github"]
+2024-11-28 14:44:51.216 [info] Settings Sync: Updating authentication providers. Authentication Providers from store: [{"id":"github","scopes":["user:email"]},{"id":"microsoft","scopes":["openid","profile","email","offline_access"]}]
+2024-11-28 14:44:51.217 [info] Settings Sync: Authentication providers updated ["github"]
+2024-11-28 14:44:51.217 [info] Settings Sync: Updating authentication providers. Authentication Providers from store: [{"id":"github","scopes":["user:email"]},{"id":"microsoft","scopes":["openid","profile","email","offline_access"]}]
+2024-11-28 14:44:51.217 [info] Settings Sync: Authentication providers updated ["github","microsoft"]
+2024-11-28 14:44:51.217 [info] Settings Sync: Updating authentication providers. Authentication Providers from store: [{"id":"github","scopes":["user:email"]},{"id":"microsoft","scopes":["openid","profile","email","offline_access"]}]
+2024-11-28 14:44:51.217 [info] Settings Sync: Authentication providers updated ["github","microsoft"]
+2024-11-28 14:44:51.242 [info] Settings Sync: Updating due to declared authentication providers changed
+2024-11-28 14:44:51.242 [info] Settings Sync: Updating authentication providers. Authentication Providers from store: [{"id":"github","scopes":["user:email"]},{"id":"microsoft","scopes":["openid","profile","email","offline_access"]}]
+2024-11-28 14:44:51.243 [info] Settings Sync: Authentication providers updated ["github","microsoft"]
+2024-11-28 14:44:51.243 [info] Settings Sync: Updating due to declared authentication providers changed
+2024-11-28 14:44:51.243 [info] Settings Sync: Updating authentication providers. Authentication Providers from store: [{"id":"github","scopes":["user:email"]},{"id":"microsoft","scopes":["openid","profile","email","offline_access"]}]
+2024-11-28 14:44:51.243 [info] Settings Sync: Authentication providers updated ["github","microsoft"]
+2024-11-28 14:44:51.979 [info] Settings Sync: Updating authentication providers. Authentication Providers from store: [{"id":"github","scopes":["user:email"]},{"id":"microsoft","scopes":["openid","profile","email","offline_access"]}]
+2024-11-28 14:44:51.979 [info] Settings Sync: Authentication providers updated ["github","microsoft"]
+2024-11-28 14:44:53.215 [info] [perf] Render performance baseline is 29ms

@@ -1,0 +1,58 @@
+{
+   "checksum": "c9e3c836e6aa420212970c6ed28c96f1",
+   "roots": {
+      "bookmark_bar": {
+         "children": [  ],
+         "date_added": "13377391027226230",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Bookmarks",
+         "type": "folder"
+      },
+      "other": {
+         "children": [ {
+            "date_added": "13377391356667286",
+            "date_last_used": "0",
+            "guid": "e5bb6816-f50e-4d55-a6a0-685532b4141f",
+            "id": "5",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "QIV - Quick Image Viewer - Homepage (for Linux, Sun, FreeBSD and HP-UX)",
+            "type": "url",
+            "url": "https://spiegl.de/qiv/"
+         }, {
+            "date_added": "13377546118478014",
+            "date_last_used": "0",
+            "guid": "c1716890-6660-47e9-b5f7-d782b9dc4dc4",
+            "id": "7",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Post-installation | ArcoLinux",
+            "type": "url",
+            "url": "https://arcolinux.com/post-installation/"
+         } ],
+         "date_added": "13377391027226234",
+         "date_last_used": "0",
+         "date_modified": "13377546118478014",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13377391027226237",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

@@ -1,0 +1,58 @@
+{
+    "injected_packages": {},
+    "main_package": {
+        "app_paths": [
+            {
+                "__Path__": "/home/steve/.local/share/pipx/venvs/jrnl/bin/jrnl",
+                "__type__": "Path"
+            }
+        ],
+        "app_paths_of_dependencies": {
+            "keyring": [
+                {
+                    "__Path__": "/home/steve/.local/share/pipx/venvs/jrnl/bin/keyring",
+                    "__type__": "Path"
+                }
+            ],
+            "markdown-it-py": [
+                {
+                    "__Path__": "/home/steve/.local/share/pipx/venvs/jrnl/bin/markdown-it",
+                    "__type__": "Path"
+                }
+            ],
+            "pygments": [
+                {
+                    "__Path__": "/home/steve/.local/share/pipx/venvs/jrnl/bin/pygmentize",
+                    "__type__": "Path"
+                }
+            ]
+        },
+        "apps": [
+            "jrnl"
+        ],
+        "apps_of_dependencies": [
+            "keyring",
+            "markdown-it",
+            "pygmentize"
+        ],
+        "include_apps": true,
+        "include_dependencies": false,
+        "man_pages": [],
+        "man_pages_of_dependencies": [],
+        "man_paths": [],
+        "man_paths_of_dependencies": {},
+        "package": "jrnl",
+        "package_or_url": "jrnl",
+        "package_version": "4.2",
+        "pinned": false,
+        "pip_args": [],
+        "suffix": ""
+    },
+    "pipx_metadata_version": "0.5",
+    "python_version": "Python 3.12.7",
+    "source_interpreter": {
+        "__Path__": "/usr/bin/python3.12",
+        "__type__": "Path"
+    },
+    "venv_args": []
+}

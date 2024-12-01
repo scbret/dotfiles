@@ -1,0 +1,6 @@
+2024-11-30 07:37:14.315 [info] Started local extension host with pid 3290.
+2024-11-30 07:37:14.755 [info] Creating lazy extension host (LocalWebWorker). Reason: contains 1 extension(s): blinkshellinc.blink-fs.
+2024-11-30 07:37:14.789 [info] Settings Sync: Updating due to initialize
+2024-11-30 07:37:14.790 [info] Settings Sync: Updating authentication providers. Authentication Providers from store: [{"id":"github","scopes":["user:email"]},{"id":"microsoft","scopes":["openid","profile","email","offline_access"]}]
+2024-11-30 07:37:14.790 [info] Settings Sync: Authentication providers updated ["github","microsoft"]
+2024-11-30 07:37:17.034 [info] [perf] Render performance baseline is 22ms
