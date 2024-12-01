@@ -58,7 +58,9 @@ WEATHER_CODES = {
 data = {}
 
 
-weather = requests.get("https://wttr.in/mason+city?format=j1").json()
+#weather = requests.get("https://wttr.in/43.167126,-93.210754?format=j1").json()
+weather = requests.get("https://wttr.in/~mason+city+ia?format=j1").json()
+
 
 def format_time(time):
     return time.replace("00", "").zfill(2)

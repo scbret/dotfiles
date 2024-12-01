@@ -9,7 +9,7 @@
     "gtk-layer-shell": true,
     "height": 40,
     "modules-left": ["custom/launch_wofi","hyprland/workspaces","cpu","memory","disk","hyprland/window"],
-    "modules-center": ["custom/lock_screen","custom/updates","clock","custom/power_btn"],
+    "modules-center": ["custom/lock_screen","custom/updates","clock","custom/power_btn", "custom/song"],
     "modules-right": ["temperature","battery","backlight","pulseaudio","pulseaudio#microphone","tray","custom/weather","custom/light_dark"],
     
     "hyprland/window": {
@@ -32,6 +32,11 @@
         "format": "󰐾",
         "on-click": "~/.config/waybar/scripts/baraction light",
         "tooltip": false
+    },
+
+     "custom/song": {
+         "format": "{}",
+        "exec": "~/.config/waybar/scripts/get_spotify.sh"
     },
 
     "custom/power_btn": {
