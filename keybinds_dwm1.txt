@@ -14,7 +14,7 @@ super + F12 --- rofi -show drun
 F11  --- htop
 F12  --- btop
 ---------------- SCRIPTS
-Super + Shift + K/N/A/S = Keybinds, Notes, Apps List, Monitor
+Super + Shift + K/N/A/R = Keybinds, Notes, Apps List, Resolution
 ---------------- MAIN
 Super + W --- Brave
 Super + Shift + Return = Thunar
