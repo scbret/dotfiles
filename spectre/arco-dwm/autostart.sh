@@ -13,11 +13,15 @@ run "dex $HOME/.config/autostart/arcolinux-welcome-app.desktop"
 
 #run xrandr --output VGA-1 --primary --mode 1360x768 --pos 0x0 --rotate normal
 #run xrandr --output HDMI2 --mode 1920x1080 --pos 1920x0 --rotate normal --output HDMI1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off
-
 #run xrandr --output eDP-1 --primary --mode 1368x768 --pos 0x0 --rotate normal --output DP-1 --off --output HDMI-1 --off --output DP-2 --off --output HDMI-2 --off
-###run xrandr --output eDP1 --primary --mode 2560x1440 --pos 0x0 --rotate normal
-##run xrandr --output eDP1 --primary --mode 2560x1440 --pos 0x0 --rotate normal --output DP2 --mode 2560x1440 --pos 0x0 --rotate normal --above eDP1
 
+## Laptop by itself
+#run xrandr --output eDP1 --primary --mode 2560x1440 --pos 0x0 --rotate normal
+
+## Laptop open with external monitor
+#run xrandr --output eDP1 --primary --mode 2560x1440 --pos 0x0 --rotate normal --output DP1 --off --output DP2 --mode 3840x2160 --pos 0x0 --rotate normal --above eDP1 --ouput VIRTUAL1 --off
+
+## Laptop closed with external monitor
 run xrandr --output eDP1 --off --output DP1 --off --output DP2 --primary --mode 3840x2160 --pos 0x0 --rotate normal --output VIRTUAL1 --off
 
 #run xrandr --output LVDS1 --mode 1366x768 --output DP3 --mode 1920x1080 --right-of LVDS1
