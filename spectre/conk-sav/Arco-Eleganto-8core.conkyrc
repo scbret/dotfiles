@@ -66,7 +66,7 @@ conky.config = {
 
 	--Placement
 
-	alignment = 'middle_right',		            -- top_left,top_middle,top_right,bottom_left,bottom_middle,bottom_right,
+	alignment = 'bottom_left',		            -- top_left,top_middle,top_right,bottom_left,bottom_middle,bottom_right,
 												-- middle_left,middle_middle,middle_right,none
 	--Arch Duoscreen
 	--gap_x = -1910,
@@ -114,14 +114,14 @@ conky.config = {
 	--Windows
 
 	own_window = true,							-- create your own window to draw
-	own_window_argb_value = 150,			    -- real transparency - composite manager required 0-255
+	own_window_argb_value = 0,			    -- real transparency - composite manager required 0-255
 	own_window_argb_visual = true,				-- use ARGB - composite manager required
 	own_window_class = 'Conky',					-- manually set the WM_CLASS name for use with xprop
 	own_window_colour = '#000000',				-- set colour if own_window_transparent no
 	own_window_hints = 'undecorated,below,above,sticky,skip_taskbar,skip_pager',  -- if own_window true - just hints - own_window_type sets it
 	own_window_transparent = false,				-- if own_window_argb_visual is true sets background opacity 0%
 	own_window_title = 'system_conky',			-- set the name manually  - default conky "hostname"
-	own_window_type = 'desktop',				-- if own_window true options are: normal/override/dock/desktop/panel
+	own_window_type = 'override',				-- if own_window true options are: normal/override/dock/desktop/panel
 
 
 	--Colours
@@ -181,20 +181,20 @@ ${cpugraph cpu6 25,150 000000 757575} ${alignr}${cpugraph cpu7 25,150 000000 757
 ${font xirod:Bold:size=10}${color1}LOAD ${hr 2}$font${color}
 
 ${font Droid Sans:bold:size=8}CPU ${hr 1}
-       ${running_processes} / $processes ${goto 195}(%) PID${goto 275}CPU $alignr MEM$font
-       ${font Droid Sans:bold:size=8}${color2}${top name 1}${goto 200}${top pid 1}${goto 270}${top cpu 1}$alignr${top mem 1}${color}$font
-       ${color3}${top name 2}${goto 200}${top pid 2}${goto 270}${top cpu 2}$alignr${top mem 2}${color}
-       ${color4}${top name 3}${goto 200}${top pid 3}${goto 270}${top cpu 3}$alignr${top mem 3}${color}
-       ${top name 4}${goto 200}${top pid 4}${goto 270}${top cpu 4}$alignr${top mem 4}
-       ${top name 5}${goto 200}${top pid 5}${goto 270}${top cpu 5}$alignr${top mem 5}
+       ${running_processes} / $processes ${goto 195}(%) PID${goto 255}CPU $alignr MEM$font
+       ${font Droid Sans:bold:size=8}${color2}${top name 1}${goto 200}${top pid 1}${goto 255}${top cpu 1}$alignr${top mem 1}${color}$font
+       ${color3}${top name 2}${goto 200}${top pid 2}${goto 255}${top cpu 2}$alignr${top mem 2}${color}
+       ${color4}${top name 3}${goto 200}${top pid 3}${goto 255}${top cpu 3}$alignr${top mem 3}${color}
+       ${top name 4}${goto 200}${top pid 4}${goto 255}${top cpu 4}$alignr${top mem 4}
+       ${top name 5}${goto 200}${top pid 5}${goto 255}${top cpu 5}$alignr${top mem 5}
 
 ${font Droid Sans:bold:size=8}MEM  ${hr 1}
-${goto 195}(%) PID${goto 275}MEM${alignr}CPU$font
-       ${font Droid Sans:bold:size=8}${color2}${top_mem name 1}${goto 200}${top_mem pid 1}${goto 270}${top_mem mem 1}${alignr}${top_mem cpu 1}$font
-       ${color3}${top_mem name 2}${goto 200}${top_mem pid 2}${goto 270}${top_mem mem 2}${alignr}${top_mem cpu 2}$color
-       ${color4}${top_mem name 3}${goto 200}${top_mem pid 3}${goto 270}${top_mem mem 3}${alignr}${top_mem cpu 3}$color
-       ${color5}${top_mem name 4}${goto 200}${top_mem pid 4}${goto 270}${top_mem mem 4}${alignr}${top_mem cpu 4}$color
-       ${top_mem name 5}${goto 200}${top_mem pid 5}${goto 270}${top_mem mem 5}${alignr}${top_mem cpu 5}
+${goto 195}(%) PID${goto 255}MEM${alignr}CPU$font
+       ${font Droid Sans:bold:size=8}${color2}${top_mem name 1}${goto 200}${top_mem pid 1}${goto 255}${top_mem mem 1}${alignr}${top_mem cpu 1}$font
+       ${color3}${top_mem name 2}${goto 200}${top_mem pid 2}${goto 255}${top_mem mem 2}${alignr}${top_mem cpu 2}$color
+       ${color4}${top_mem name 3}${goto 200}${top_mem pid 3}${goto 255}${top_mem mem 3}${alignr}${top_mem cpu 3}$color
+       ${color5}${top_mem name 4}${goto 200}${top_mem pid 4}${goto 255}${top_mem mem 4}${alignr}${top_mem cpu 4}$color
+       ${top_mem name 5}${goto 200}${top_mem pid 5}${goto 255}${top_mem mem 5}${alignr}${top_mem cpu 5}
 
 # MEMORY
 
