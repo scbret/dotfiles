@@ -5,6 +5,8 @@ Win + T = Xfce4-terminal - floating
 Win + Q = killactive window
 Win + W = kill/relaunch waybar
 Win + Shift + M = Quit/Exit Hyperland
+Win + Shift + C = Start conky
+Win + Ctrl + C = Quit conky
 
 Win + K = show these keybinds in wofi
 Win + Space = App Menu
