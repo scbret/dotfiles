@@ -121,6 +121,10 @@ super + shift + s
 # CONTROL + ALT KEYS
 #################################################################
 
+#Set the monitor for Spectre
+ctrl + alt + c
+    ~/.dwm/setmonitor.sh
+
 #arcolinux-welcome-app
 ctrl + alt + w
      arcolinux-welcome-app
