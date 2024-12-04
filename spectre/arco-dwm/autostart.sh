@@ -41,7 +41,7 @@ run "numlockx on"
 run "volumeicon"
 run slstatus &
 sxhkd -c ~/.config/arco-dwm/sxhkd/sxhkdrc &
-run "conky -c $HOME/.config/arco-dwm/system-overview-mine"
+#run "conky -c $HOME/.config/arco-dwm/system-overview-mine"
 #you can set wallpapers in themes as well
 #feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
 feh --bg-fill $HOME/wallpaper/arco-wallpaper.jpg &

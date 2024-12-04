@@ -127,7 +127,7 @@ conky.config = {
 	--Colours
 
 	default_color = '#bbbbbb',  				-- default color and border color
-	color1 = '#5294e2',
+	color1 = '#F68516',
 	color2 = '#8C8C8C',
 	color3 = '#ABABAB',
 	color4 = '#C9C9C9',
@@ -153,7 +153,7 @@ $font${execi 6000 lsb_release -a | grep 'Release'|awk {'print $2""$3""$4""$5'}}$
 ${color5}System Uptime $alignr $uptime${color5}
 $sysname $kernel $alignr $machine
 System Temp $alignr${exec sensors | grep Core\ 3 | awk '{print $3}'}
-${color1}You can install ${color0}${execpi 3000 checkupdates | wc -l} ${color1}Update(s)${color}
+
 
 # CPU
 ${font xirod:Bold:size=10}${color1}CPU ${hr 2}$font$color
