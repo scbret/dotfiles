@@ -91,9 +91,9 @@ static const Layout layouts[] = {
 
 /* If you use pipewire add somewhere in your constants definition section. Use "wpctl status" to
    find out the real sink ID, 0 is a placeholder here. */
-static const char *upvol[]      = { "/usr/bin/wpctl",   "set-volume", "48",      "5%+",      NULL };
-static const char *downvol[]    = { "/usr/bin/wpctl",   "set-volume", "48",      "5%-",      NULL };
-static const char *mutevol[]    = { "/usr/bin/wpctl",   "set-mute",   "48",      "toggle",   NULL };
+static const char *upvol[]      = { "/usr/bin/wpctl",   "set-volume", "56",      "5%+",      NULL };
+static const char *downvol[]    = { "/usr/bin/wpctl",   "set-volume", "56",      "5%-",      NULL };
+static const char *mutevol[]    = { "/usr/bin/wpctl",   "set-mute",   "56",      "toggle",   NULL };
 
 
 /* commands */
