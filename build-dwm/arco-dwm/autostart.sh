@@ -32,7 +32,7 @@ picom -b  --config ~/.config/arco-dwm/picom.conf &
 #run "volumeicon"
 run slstatus &
 sxhkd -c ~/.config/arco-dwm/sxhkd/sxhkdrc &
-run "conky -c $HOME/.config/arco-dwm/system-overview-mine"
+#run "conky -c $HOME/.config/arco-dwm/system-overview-mine"
 #you can set wallpapers in themes as well
 #feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
 feh --bg-fill $HOME/wallpaper/arco-wallpaper.jpg &
@@ -41,7 +41,8 @@ feh --bg-fill $HOME/wallpaper/arco-wallpaper.jpg &
 #feh --bg-fill /usr/share/archlinux-tweak-tool/data/wallpaper/wallpaper.png &
 #run applications from startup
 
-run "conky -c $HOME/.config/arco-dwm/system-keybinds"
+#run "conky -c $HOME/.config/arco-dwm/system-keybinds"
+run "conky -c $HOME/.config/arco-dwm/system-monitor"
 
 #Auto mount OneDrive
 sh -c "rclone --vfs-cache-mode writes mount \"onedrive\": ~/OneDrive"
