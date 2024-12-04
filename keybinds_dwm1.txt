@@ -14,7 +14,7 @@ super + F12 --- rofi -show drun
 F11  --- htop
 F12  --- btop
 ---------------- SCRIPTS
-Super + Shift + K/N/A/R = Keybinds, Notes, Apps List, Resolution
+Super + Shift + K/N/A = Keybinds, Notes, Apps List
 ---------------- MAIN
 Super + W --- Brave
 Super + Shift + Return = Thunar
@@ -37,6 +37,7 @@ Ctrl + Shift + Esc --- Task Manager
 Alt + Shift + U --- Update pywal colors
 Super + Shift + S --- relaunch sxhkd
 Ctrl + Alt + E --- Arch Tweak Tool
+Ctrl + Alt + C --- Change resolution of monitor
 ----------------- MUSIC
 Ctrl + Shift + P --- Play
 Ctrl + Shift + N --- Next
