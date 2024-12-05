@@ -81,6 +81,9 @@ alias sb='source ~/.bashrc'
 alias brc='vi ~/.bashrc-personal'
 alias vrc='vi ~/.config/nvim/init.vim'
 
+#weather forecast in terminal
+alias wf='curl wttr.in/mason+city?u'
+
 # <<< open or edit previewed files with fzf >>> #
 export FZF_DEFAULT_OPTS='--height 75% --layout=reverse --border'
 
