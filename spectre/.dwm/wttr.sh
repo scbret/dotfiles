@@ -8,7 +8,7 @@ ck_curl() {
 ck_curl
 if [ $? -eq 0 ]					# $? means "output of the last command"
 then
-	curl -s "wttr.in/mason+city?u&format=%m,+%C,+H:%h,+A:%t,+F:%f,+W:%w\n" > /tmp/wttr
+	curl -s "wttr.in/mason+city?u&format=%m+%C,+H:%h,+A:%t,+F:%f,+W:%w\n" > /tmp/wttr
 	wttr_net=1
 else						# Non-zero output would appear both when the site \
 	for (( cntr = 0; cntr < 3; cntr++ ))	#   is down and when you're physically offline
@@ -24,5 +24,5 @@ else						# Non-zero output would appear both when the site \
 fi						#   In case you're using wifi, and the cron job runs before \
 						#   it authenticates
 if ! [ $wttr_net ]
-then echo "Offline fr :'( " > /tmp/wttr
+then echo "Weather Offline" > /tmp/wttr
 fi
