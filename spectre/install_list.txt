@@ -78,7 +78,6 @@ arcolinux-systemd-services-git
 arcolinux-volumeicon-git
 arcolinux-wallpapers-git
 arcolinux-welcome-app-git
-arcolinux-zsh-git
 arconet-variety-config
 arconet-wallpapers
 arconet-xfce
@@ -224,7 +223,6 @@ file
 file-roller
 filesystem
 findutils
-firefox
 fish
 flac
 flameshot-git
@@ -802,7 +800,6 @@ nvme-cli
 oath-toolkit
 obsidian
 ocl-icd
-oh-my-zsh-git
 onetbb
 oniguruma
 open-iscsi
@@ -1263,15 +1260,13 @@ yazi
 yt-dlp
 yyjson
 zbar
+zellij
 zenity
 zeromq
 zimg
 zip
 zix
 zlib
-zsh
-zsh-completions
-zsh-syntax-highlighting
 zstd
 zvbi
 zxing-cpp
