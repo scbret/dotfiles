@@ -1,28 +1,31 @@
 #!/bin/bash
 
-# This function checks if wttr.in is available before the weather info is fetched
-ck_curl() {
-	curl -sf wttr.in > /dev/null
+# Configuration
+WEATHER_URL="wttr.in"
+CITY="mason+city"
+OUTPUT_FILE="/tmp/wttr"
+TIMEOUT=5  # Timeout in seconds for the availability check
+
+# Function to check if a host is available
+check_host_availability() {
+    local host=$1
+    nc -z -w $TIMEOUT $host 80 2>/dev/null
+    return $?
 }
 
-ck_curl
-if [ $? -eq 0 ]					# $? means "output of the last command"
-then
-	curl -s "wttr.in/mason+city?u&format=%m+%C,+H:%h,+A:%t,+F:%f,+W:%w\n" > /tmp/wttr
-	wttr_net=1
-else						# Non-zero output would appear both when the site \
-	for (( cntr = 0; cntr < 3; cntr++ ))	#   is down and when you're physically offline
-	do
-		echo "Probing.  " > /tmp/wttr
-		sleep 0.5
-		echo "Probing.. " > /tmp/wttr
-		sleep 0.5
-		echo "Probing..." > /tmp/wttr
-		sleep 0.5			# A wee bit of animation
-	done
-	ck_curl					# Online check is rerun only once, if the first check fails.
-fi						#   In case you're using wifi, and the cron job runs before \
-						#   it authenticates
-if ! [ $wttr_net ]
-then echo "Weather Offline" > /tmp/wttr
+# Function to fetch weather data
+fetch_weather() {
+    curl -s "wttr.in/${CITY}?u&format=%m+%C,+H:%h,+A:%t,+F:%f,+W:%w\n" > "$OUTPUT_FILE"
+    if [ $? -ne 0 ]; then
+        echo "Weather Offline" > "$OUTPUT_FILE"
+        return 1
+    fi
+    return 0
+}
+
+# Main execution
+if check_host_availability "$WEATHER_URL"; then
+    fetch_weather
+else
+    echo "Weather Offline" > "$OUTPUT_FILE"
 fi
