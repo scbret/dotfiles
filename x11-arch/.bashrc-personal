@@ -34,6 +34,9 @@ alias dps='source /home/steve/bin/push_dots.sh'
 alias npl='source /home/steve/bin/pull_mdnotes.sh'
 alias nps='source /home/steve/bin/push_mdnotes.sh'
 
+# cheat sheet function
+function cheat { curl cheat.sh/$1; }
+
 # kill conky
 alias kc='killall -9 conky'
 
@@ -54,6 +57,7 @@ alias gsp='g stash; g pull'
 
 alias pv='source ~/venv/bin/activate'
 alias snake='python ~/py-scripts/jan-snake-game.py'
+alias fc='python ~/py-scripts/file_counter.py'
 alias fh='history | fzf'
 alias df='df -haT --total'
 alias ht='htop'
@@ -81,8 +85,8 @@ alias sb='source ~/.bashrc'
 alias brc='vi ~/.bashrc-personal'
 alias vrc='vi ~/.config/nvim/init.vim'
 
-#weather forecast in terminal
-alias wf='curl wttr.in/mason+city?u'
+#weather
+alias wf='curl v2.wttr.in/mason+city?u'
 
 # <<< open or edit previewed files with fzf >>> #
 export FZF_DEFAULT_OPTS='--height 75% --layout=reverse --border'
@@ -110,6 +114,7 @@ export MANPAGER="less -R --use-color -Dd+g -Du+b"
 # Created by `pipx` on 2024-08-22 00:28:44
 export PATH="$PATH:/home/steve/.local/bin"
 export PATH="$PATH:/home/steve/.bin"
+export PATH="$PATH:/home/steve/go/bin"
 
 ##############################################
 #Delete the double #'s once pywal installed
@@ -128,6 +133,7 @@ source ~/.cache/wal/colors-tty.sh
 
 figlet SwineID
 pfetch
+curl "wttr.in/mason+city?u&format=%c+%m+H:%h+A:%t+F:%f+W:%w"
 
 eval "$(starship init bash)"
 export LIBVIRT_DEFAULT_URI='qemu:///system'
