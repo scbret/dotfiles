@@ -154,6 +154,7 @@ ${color5}System Uptime $alignr $uptime${color5}
 $sysname $kernel $alignr $machine
 System Temp $alignr${exec sensors | grep Core\ 12 | awk '{print $3}'}
 ${color1}You can install ${color0}${execpi 3000 checkupdates | wc -l} ${color1}Update(s)${color}
+${color1}UTC TIME: ${color0}${utime %H:%M} ${color1}
 
 # CPU
 ${font xirod:Bold:size=10}${color1}CPU ${hr 2}$font$color
