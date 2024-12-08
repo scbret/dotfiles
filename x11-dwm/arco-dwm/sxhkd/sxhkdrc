@@ -1,0 +1,271 @@
+#################################################################
+# SUPER + FUNCTION KEYS
+#################################################################
+
+# Librewolf
+super + F1
+	librewolf
+
+# Chrome
+super + F2
+	google-chrome-stable -no-default-browser-check
+
+#Inkscape
+super + F3
+    firefox
+
+#qemu
+super + F4
+    virtual
+
+#Vlc
+super + F6
+    vlc --video-on-top
+
+#Gimp
+super + F7
+    gimp
+
+#Inkscape
+super + F8
+    inkscape
+
+#Audio player
+super + F9
+    lollypop
+
+#Spotify
+super + F10
+    spotify
+
+#Rofi Fullscreen
+super + F11
+    rofi -theme-str 'window \{width: 100%;height: 100%;\}' -show drun
+
+#Rofi
+super + F12
+    rofi -show drun
+
+#################################################################
+# SUPER + ... KEYS
+#################################################################
+
+#Show keyboard shortcuts
+super + shift + K
+    ~/.dwm/keyhelper.sh
+
+#Open/Create Note
+super + shift + N
+    ~/.dwm/md-notes.sh
+
+#Open Apps List
+super + shift + A
+    ~/.dwm/launch_app.sh
+
+#Browser
+super + w
+    brave
+
+#VS Code
+super + shift + c
+    code
+
+#archlinux-logout
+super + x
+    archlinux-logout
+
+#powermenu
+super + shift + x
+    arcolinux-powermenu
+
+#Rofi theme selector
+super + r
+    rofi-theme-selector
+
+#st
+super + control + t
+    alacritty
+
+#alacritty
+super + Return
+    st
+
+#kitty
+super + shift + t
+     kitty
+
+#Xkill
+super + Escape
+    xkill
+
+# SUPER + SHIFT KEYS
+#################################################################
+
+#File-Manager
+super + shift + Return
+	thunar
+
+#dmenu
+super + shift + d
+	dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=18'
+
+#rofi
+super + d
+    ~/.config/arco-dwm/launcher/launcher.sh
+
+#reload sxhkd:
+super + shift + s
+	pkill -USR1 -x sxhkd
+
+#################################################################
+# CONTROL + ALT KEYS
+#################################################################
+
+#Set the monitor for Spectre
+ctrl + alt + c
+    ~/.dwm/setmonitor.sh
+
+#arcolinux-welcome-app
+ctrl + alt + w
+     arcolinux-welcome-app
+
+#archlinux-tweak-tool
+ctrl + alt + e
+    archlinux-tweak-tool
+
+#archlinux-logout
+ctrl + alt + k
+     archlinux-logout
+
+#archlinux-logout
+ctrl + alt + l
+    archlinux-logout
+
+#Xfce4-settings-manager
+ctrl + alt + m
+     xfce4-settings-manager
+
+#Pulse Audio Control
+ctrl + alt + u
+     pavucontrol
+
+#Rofi theme selector
+ctrl + alt + r
+  rofi-theme-selector
+
+#################################################################
+#VARIETY KEYS WITH PYWAL
+#################################################################
+
+#Wallpaper update pywal colors
+alt + shift + u
+    wal -i -n $(cat $HOME/wallpaper/wallpaper.jpg.txt)&
+
+#################################################################
+# CONTROL + SHIFT KEYS
+#################################################################
+
+#Xcfe4-TaskManager
+ctrl + shift + Escape
+    xfce4-taskmanager
+
+#################################################################
+#     SCREENSHOTS
+#################################################################
+
+#Scrot
+ctrl + super + Print
+    scrot 'ArcoLinux-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'
+
+#screeenshooter
+ctrl + Print
+     xfce4-screenshooter
+
+#flameshot
+Print
+     flameshot gui
+
+#################################################################
+#     FUNCTION KEYS
+#################################################################
+
+#xfce4-terminal dropdown - BTOP
+F12
+    xfce4-terminal --drop-down -e btop
+
+#xfce4-terminal dropdown - HTOP
+F11
+    xfce4-terminal --drop-down -e htop
+
+#################################################################
+#     MULTIMEDIA KEYS
+#################################################################
+
+#Raises volume
+XF86AudioRaiseVolume
+    amixer -D pulse set Master 10%+
+
+#Lowers volume
+XF86AudioLowerVolume
+    amixer -D pulse set Master 10%-
+
+#Mute
+XF86AudioMute
+    amixer -D pulse set Master 1+ toggle
+
+#Playerctl works for Pragha, Spotify and others
+#Delete the line for playerctl if you want to use mpc
+#and replace it with the corresponding code
+#mpc works for e.g.ncmpcpp
+#mpc toggle
+#mpc next
+#mpc prev
+#mpc stop
+
+#PLAY
+XF86AudioPlay
+    playerctl play-pause
+
+#PLAY
+ctrl + shift + P
+    playerctl play-pause
+
+#Next
+XF86AudioNext
+    playerctl next
+
+#Next
+ctrl + shift + N
+    playerctl next
+
+#previous
+XF86AudioPrev
+    playerctl previous
+
+#Previous
+ctrl + shift + B
+    playerctl previous
+
+#Stop
+XF86AudioStop
+    playerctl stop
+
+#Stop
+ctrl + shift + S
+    playerctl stop
+
+#Brightness up
+XF86MonBrightnessUp
+    xbacklight -inc 5
+
+#Brightness down
+XF86MonBrightnessDown
+    xbacklight -dec 5
+
+#################################################################
+# CTRL + ALT KEYS
+#################################################################
+
+#Picom Toggle
+ctrl + alt + o
+    ~/.config/suckless/dwm/scripts/picom-toggle.sh
