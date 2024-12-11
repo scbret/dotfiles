@@ -33,7 +33,7 @@ static const unsigned int alphas[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "", "", "󰛮", "4", "5", "6", "", "", "󰓇" };
+static const char *tags[] = { "", "", "󰛮", "", "5", "6", "", "", "󰓇" };
 /* static const char *tags[] = { "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX" }; */
 /* static const char *tags[] = { "", "", "", "", "", "", "", "", "" }; */
 /* static const char *tags[] = { "Web", "Chat", "Edit", "Meld", "Vb", "Mail", "Video", "Image", "Files" }; */
@@ -50,8 +50,9 @@ static const Rule rules[] = {
 	{ "Inkscape",                  NULL,       NULL,       1 << 7,            0,           -1 },
 	{ "Xfce4-terminal",            NULL,       NULL,       0,                 1,           -1 },
     { "Alacritty",                 NULL,       NULL,       1 << 1,            0,           -1 },
-    { "Code",                      NULL,       NULL,       1 << 3,            0,           -1 },
+    { "Code",                      NULL,       NULL,       1 << 5,            0,           -1 },
     { "firefox",                   NULL,       NULL,       1 << 4,            0,           -1 },
+    { "Virt-manager",              NULL,       NULL,       1 << 3,            0,           -1 },
 	{ "thunderbird",               NULL,       NULL,       1 << 2,            0,           -1 },
 	{ "Galculator",                NULL,       NULL,         0,               1,           -1 },
 	{ "Spotify",                   NULL,       NULL,       1 << 8,            1,           -1 },
