@@ -16,7 +16,7 @@ super + F3
 
 #qemu
 super + F4
-    virt-manager
+    virtualbox
 
 #Vlc
 super + F6
