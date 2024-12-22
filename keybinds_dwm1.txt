@@ -56,7 +56,7 @@ Super + H --- Resize Left
 Super + L --- Resize Right
 Super + I --- Increment window in stack
 Super + Shift + I - Decrement window in stack
-Super +T --- Tile Layout
+Super + T --- Tile Layout
 Super + G --- Grid Layout
 Super + M --- Monacle Layout
 Super + F --- Floating Layout
