@@ -45,6 +45,9 @@ Ctrl + Shift + B --- Previous
 Ctrl + Shift + S --- Stop
 Ctrl + Alt + U ---- Pulse Audio Control
 ----------------- DWM WINDOWS - LAYOUTS
+Ctrl + Shift + K --- zoom+ font size
+Ctrl + Shift + J --- zoom- font size
+Ctrl + Shift + Home - zoom font size reset
 Alt + Enter --- zoom/switch window focus to master
 Super + J --- Change focus
 Super + K --- Change focus
