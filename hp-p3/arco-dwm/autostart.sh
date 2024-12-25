@@ -24,6 +24,9 @@ run "dex $HOME/.config/autostart/arcolinux-welcome-app.desktop"
 ## Laptop closed with external monitor
 #run xrandr --output eDP1 --off --output DP1 --off --output DP2 --primary --mode 3840x2160 --pos 0x0 --rotate normal --output VIRTUAL1 --off
 
+# Lenovo P3 Tower
+xrandr --output DP-4 --mode 3440x1440 --rate 119.99
+
 #run xrandr --output LVDS1 --mode 1366x768 --output DP3 --mode 1920x1080 --right-of LVDS1
 #run xrandr --output DVI-I-0 --right-of HDMI-0 --auto
 #run xrandr --output DVI-1 --right-of DVI-0 --auto
@@ -32,7 +35,7 @@ run "dex $HOME/.config/autostart/arcolinux-welcome-app.desktop"
 #autorandr horizontal
 
 run "nm-applet"
-run "xfce4-power-manager"
+#run "xfce4-power-manager"
 run "blueberry-tray"
 run "/usr/lib/xfce4/notifyd/xfce4-notifyd"
 run "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"

@@ -2,9 +2,9 @@
 # SUPER + FUNCTION KEYS
 #################################################################
 
-# Librewolf
+# Thunderbird
 super + F1
-	librewolf
+	thunderbird
 
 # Chrome
 super + F2
@@ -14,9 +14,9 @@ super + F2
 super + F3
     firefox
 
-#qemu
+#KVM
 super + F4
-    virtualbox
+    virt-manager
 
 #Vlc
 super + F6

@@ -54,11 +54,12 @@ static const Rule rules[] = {
     { "firefox",                   NULL,       NULL,       1 << 4,            0,           -1 },
     { "Virt-manager",              NULL,       NULL,       1 << 3,            0,           -1 },
     { "VirtualBox",        NULL,       NULL,       1 << 3,            0,           -1 },
-	{ "thunderbird",               NULL,       NULL,       1 << 2,            0,           -1 },
+	{ "thunderbird",               NULL,       NULL,       1 << 2,            1,           -1 },
 	{ "Galculator",                NULL,       NULL,         0,               1,           -1 },
 	{ "Spotify",                   NULL,       NULL,       1 << 8,            1,           -1 },
 	{ "Arcolinux-welcome-app.py",  NULL,       NULL,         0,               1,           -1 },
 	{ "Arcolinux-calamares-tool.py",  NULL,    NULL,         0,               1,           -1 },
+    { "meteo-qt",                  NULL,       NULL,       0,                 1,           -1,   0,    0,     350,     686 },
 };
 
 /* layout(s) */
