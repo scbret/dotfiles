@@ -96,7 +96,7 @@
       },
       {
           "type": "disk",
-          "key": " ├ 󰋊 ",
+          "key": " ├ 󰋊 {name}",
           "keyColor": "33",
       },
       {
