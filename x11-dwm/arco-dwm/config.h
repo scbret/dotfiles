@@ -58,6 +58,7 @@ static const Rule rules[] = {
 	{ "Spotify",                   NULL,       NULL,       1 << 8,            1,           -1 },
 	{ "Arcolinux-welcome-app.py",  NULL,       NULL,         0,               1,           -1 },
 	{ "Arcolinux-calamares-tool.py",  NULL,    NULL,         0,               1,           -1 },
+	{ "meteo-qt",                   NULL,    NULL,         0,               1,           -1,  0,  0,  359, 648 },
 };
 
 /* layout(s) */
