@@ -4,15 +4,15 @@
 
 # Librewolf
 super + F1
-	thunderbird
+	librewolf
 
 # Chrome
 super + F2
 	google-chrome-stable -no-default-browser-check
 
-#Inkscape
+#thunderbird
 super + F3
-    firefox
+    thunderbird
 
 #qemu
 super + F4
