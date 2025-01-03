@@ -133,4 +133,4 @@ figlet SwineID
 pfetch
 
 eval "$(starship init bash)"
-echo "export LIBVIRT_DEFAULT_URI='qemu:///system'" >> ~/.bashrc
+export LIBVIRT_DEFAULT_URI='qemu:///system'
