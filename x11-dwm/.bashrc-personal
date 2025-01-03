@@ -23,7 +23,10 @@ alias bmed='echo 10000 | sudo tee /sys/class/backlight/intel_backlight/brightnes
 alias ar='cd ~/.config/arco-dwm'
 
 #start openwebui with conda
-alias start_owu='conda activate openwebui && open-webui serve'
+#alias start_owu='conda activate openwebui && open-webui serve'
+#alias start_owu='conda activate openwebui && (open-webui serve & OWU_PID=$!) && sleep 6 && brave --new-window http://localhost:8080; killall open-webui'
+alias start_owu='conda activate openwebui && (open-webui serve &) && sleep 6 && brave --new-window http://localhost:8080; killall open-webui'
+alias cond='conda deactivate'
 
 # Start WIN11 VM on X1 Carbon
 alias w11='source /home/steve/bin/win11.sh'
