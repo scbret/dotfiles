@@ -5,6 +5,7 @@ $directory\
 $git_branch\
 $git_status\
 $python\
+$conda\
 $c\
 $line_break$character"""
 
@@ -83,6 +84,10 @@ format = '[($all_status$ahead_behind )]($style)'
 symbol = " "
 style = "bold green"
 format = '[ $symbol( $version) ]($style)'
+
+[conda]
+symbol = "🅒 🐍 "
+style = "bold green"
 
 [c]
 symbol = " "
