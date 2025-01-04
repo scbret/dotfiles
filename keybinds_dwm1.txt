@@ -2,7 +2,7 @@ DWM KEY BINDINGS
 ---------------- FUNCTION KEYS
 super + F1 --- librewolf
 super + F2 --- google-chrome-stable
-super + F3 --- firefox
+super + F3 --- thunderbird
 super + F4 --- virtual
 super + F6 --- vlc
 super + F7 --- gimp
@@ -69,7 +69,7 @@ Super + Ctrl + , --- Cycle Layouts
 Super + Shift + Space --- toggle floating
 Super + Left Mouse --- Move window
 Super + Ctrl + Left Mouse --- Resize window
-Ctrl + B = toggle bar
+Super + B = toggle bar
 Super + Shift + Q --- Quit App
 Alt + Tab --- Switch to next Tag
 Alt + Shift + Tab --- Switch to next Tag
