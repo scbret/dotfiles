@@ -55,7 +55,7 @@ feh --bg-fill $HOME/wallpaper/baloon.jpg &
 run "conky -c $HOME/.config/arco-dwm/system-monitor"
 
 #Auto mount OneDrive
-sh -c "rclone --vfs-cache-mode writes mount \"onedrive\": ~/OneDrive"
+#sh -c "rclone --vfs-cache-mode writes mount \"onedrive\": ~/OneDrive"
 
 #run "insync start"
 #run "spotify"

@@ -2,9 +2,9 @@
 # SUPER + FUNCTION KEYS
 #################################################################
 
-# Librewolf
+#mount OneDrive
 super + F1
-	librewolf
+    ~/bin/mount-od.sh
 
 # Chrome
 super + F2
