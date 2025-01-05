@@ -35,7 +35,7 @@ xrandr --output DP-4 --mode 3440x1440 --rate 119.99
 #autorandr horizontal
 
 run "nm-applet"
-#run "xfce4-power-manager"
+run "xfce4-power-manager"
 run "blueberry-tray"
 run "/usr/lib/xfce4/notifyd/xfce4-notifyd"
 run "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
@@ -57,7 +57,7 @@ feh --bg-fill $HOME/wallpaper/arco-wallpaper.jpg &
 run "conky -c $HOME/.config/arco-dwm/system-monitor"
 
 #Auto mount OneDrive
-sh -c "rclone --vfs-cache-mode writes mount \"onedrive\": ~/OneDrive"
+#sh -c "rclone --vfs-cache-mode writes mount \"onedrive\": ~/OneDrive"
 
 #run "insync start"
 #run "spotify"

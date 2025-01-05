@@ -2,23 +2,27 @@
 # SUPER + FUNCTION KEYS
 #################################################################
 
-# Thunderbird
+#mount OneDrive
 super + F1
-	thunderbird
+    ~/bin/mount-od.sh	
 
-# Chrome
+#Chrome
 super + F2
 	google-chrome-stable -no-default-browser-check
 
-#Inkscape
+#Thunderbird
 super + F3
-    firefox
+    thunderbird
 
 #KVM
 super + F4
     virt-manager
 
-#Vlc
+#virtualbox
+super + F5
+    virtualbox
+
+#VLC
 super + F6
     vlc --video-on-top
 
