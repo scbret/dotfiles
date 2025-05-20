@@ -87,6 +87,13 @@ https://www.youtube.com/watch?v=L8TYWuNn_2c
 ## stow notes
 - stow folder-name = create the symlinks
 - stow -D folder-name  = remove the symlinks
+
+## Battery info from command line
+- To display the battery percentage from the command line in Arch Linux, you can use several tools and commands:
+    - Use the acpi command to get a quick overview of the battery status. For example, acpi -b will show the battery percentage and time remaining.
+    - Use the upower command to get detailed information about the battery. For instance, upower -i /org/freedesktop/UPower/devices/battery_BAT0 will display a comprehensive report on the battery status.
+    - Alternatively, you can directly read from the /sys/class/power_supply/BAT0 directory. For example, cat /sys/class/power_supply/BAT0/capacity will show the current battery percentage.
+    - Another method is to use the battop tool, which provides a more detailed and formatted output of the battery status. You can install it from AUR or GitHub and run it in your terminal.
  
 ## Fedora notes
 
