@@ -1,0 +1,139 @@
+# my aliases -----------------------------------------
+export EDITOR='nvim'
+export HISTCONTROL=ignoreboth:erasedups
+HISTIGNORE="$HISTIGNORE:jrnl *"
+alias v='$EDITOR'
+alias vi='$EDITOR'
+alias ll='eza -alh --icons'
+# alias lt='eza -a --tree --level=1'
+alias la='ll -ah'
+alias hy='source /home/steve/start-hypr'
+alias sdn='shutdown -h now'
+alias sdr='shutdown -r now'
+
+alias update='sudo pacman -Syyu'
+
+# X1 carbon change screen brightness
+alias bhigh='echo 19000 | sudo tee /sys/class/backlight/intel_backlight/brightness'
+alias blow='echo 4000 | sudo tee /sys/class/backlight/intel_backlight/brightness'
+alias bmed='echo 10000 | sudo tee /sys/class/backlight/intel_backlight/brightness'
+
+#start openwebui with conda
+#alias start_owu='conda activate openwebui && open-webui serve'
+#alias start_owu='conda activate openwebui && (open-webui serve & OWU_PID=$!) && sleep 6 && brave --new-window http://localhost:8080; killall open-webui'
+alias start_owu='conda activate openwebui && (open-webui serve &) && sleep 6 && brave --new-window http://localhost:8080; killall open-webui'
+alias cond='conda deactivate'
+
+# Start WIN11 VM on X1 Carbon
+alias w11='source /home/steve/bin/win11.sh'
+
+# Update jrnl entries
+alias jpl='source /home/steve/bin/pull_jrnl.sh'
+alias jps='source /home/steve/bin/push_jrnl.sh'
+
+# Update dotfiles
+alias dpl='source /home/steve/bin/pull_dots.sh'
+alias dps='source /home/steve/bin/push_dots.sh'
+
+# Update mdnotes entries
+alias npl='source /home/steve/bin/pull_mdnotes.sh'
+alias nps='source /home/steve/bin/push_mdnotes.sh'
+
+# kill conky
+alias kc='killall -9 conky'
+
+# git section
+alias g='git'
+alias ga='g add .'
+gc() {
+    local hostname=$(hostnamectl | awk -F ': ' '/Static hostname/ {print $2}')
+    g commit -m "$hostname"
+}
+alias hn='hostnamectl | awk -F ": " "/Static hostname/ {print \$2}"'
+alias gps='g push'
+alias gpl='g pull'
+alias gs='g status'
+alias gst='g stash'
+alias gsp='g stash; g pull'
+# git section
+
+alias pv='source ~/venv/bin/activate'
+alias snake='python ~/py-scripts/jan-snake-game.py'
+alias fh='history | fzf'
+alias df='df -haT --total'
+alias ht='htop'
+alias bt='btop'
+alias free='free -mt'
+alias cputemp='sensors | grep Core'
+alias fp="\$(fzf --reverse --preview 'batcat --style=numbers --color=always --line-range :500 {}')"
+alias fp1="fzf --reverse --preview='batcat --color=always --line-range :500 {}' --bind shift-up:preview-page-up,shift-down:preview-page-down"
+alias fd='finder'
+alias tl='task list'
+alias tw='task waiting'
+alias tm='tmux'
+alias lsd='lsd -l'
+alias ftf='fastfetch'
+alias nf='neofetch'
+alias pf='pfetch'
+alias zl='zellij'
+alias qn='$EDITOR ~/qnotes.md'
+alias yy='yazi'
+alias gt='python3 ~/repos/tasks/getTagIDsV3.py'
+alias hx='helix'
+
+alias q='exit'
+alias cl='clear'
+alias sb='source ~/.bashrc'
+alias brc='vi ~/.bashrc-personal'
+alias vrc='vi ~/.config/nvim/init.vim'
+
+#weather in terminal
+alias wf='curl wttr.in/mason+city?u'
+
+# <<< open or edit previewed files with fzf >>> #
+export FZF_DEFAULT_OPTS='--height 75% --layout=reverse --border'
+
+fo() {
+  IFS=$'\n' out=("$(fzf --preview 'batcat --style=numbers --color=always --line-range :500 {}' --query="$1" --exit-0 --expect=ctrl-o,ctrl-e)")
+  key=$(head -1 <<< "$out")
+  file=$(head -2 <<< "$out" | tail -1)
+  if [ -n "$file" ]; then
+    [ "$key" = ctrl-o ] && open "$file" || ${EDITOR:-nvim} "$file"
+  fi
+}
+
+finder() {
+    local dir
+    dir=$(find /home/$USER -maxdepth 3 -type d,l | fzf)
+    if [[ -n "$dir" ]]; then
+        cd "$dir" || return
+    fi
+}
+
+# Colored man
+export MANPAGER="less -R --use-color -Dd+g -Du+b"
+
+# Created by `pipx` on 2024-08-22 00:28:44
+export PATH="$PATH:/home/steve/.local/bin"
+export PATH="$PATH:/home/steve/.bin"
+
+##############################################
+#Delete the double #'s once pywal installed
+# Import colorscheme from 'wal' asynchronously
+# &   # Run the process in the background.
+# ( ) # Hide shell job control messages.
+# Not supported in the "fish" shell.
+#(cat ~/.cache/wal/sequences &)
+
+# Alternative (blocks terminal for 0-3ms)
+#cat ~/.cache/wal/sequences
+
+# To add support for TTYs this line can be optionally added.
+#source ~/.cache/wal/colors-tty.sh
+#################################################
+
+figlet SwineID
+pfetch
+
+eval "$(starship init bash)"
+export LIBVIRT_DEFAULT_URI='qemu:///system'
