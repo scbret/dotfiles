@@ -25,4 +25,3 @@ if ! [ $wttr_net ]; then
   echo "Weather Offline" >/tmp/wttr
 fi
 
-printf "%s" "$(</tmp/wttr)"
