@@ -26,6 +26,7 @@ nmcli radio wifi off = turn off wifi
 - bluez bluez-utils blueman
 - xclip  - on X11
 - wl-clipboard  - on Wayland
+- cronie for cron jobs
 
 ### Create list of installed packages - pacman
 - pacman -Qm = installed locally from AUR
