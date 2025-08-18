@@ -11,11 +11,11 @@ if [ $? -eq 0 ]; then # $? means "output of the last command"
   wttr_net=1
 else                                     # Non-zero output would appear both when the site \
   for ((cntr = 0; cntr < 3; cntr++)); do #   is down and when you're physically offline
-    echo "Probing.  " >/tmp/wttr
+    echo "Probing weather.  " >/tmp/wttr
     sleep 0.5
-    echo "Probing.. " >/tmp/wttr
+    echo "Probing weather.. " >/tmp/wttr
     sleep 0.5
-    echo "Probing..." >/tmp/wttr
+    echo "Probing weather..." >/tmp/wttr
     sleep 0.5 # A wee bit of animation
   done
   ck_curl # Online check is rerun only once, if the first check fails.
