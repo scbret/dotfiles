@@ -7,7 +7,7 @@ alias vi='$EDITOR'
 alias ll='eza -alh --icons'
 # alias lt='eza -a --tree --level=1'
 alias la='ll -ah'
-alias hy='source /home/steve/start-hypr'
+# alias hy='source /home/steve/start-hypr'
 alias sdn='shutdown -h now'
 alias sdr='shutdown -r now'
 
@@ -65,8 +65,8 @@ alias ht='htop'
 alias bt='btop'
 alias free='free -mt'
 alias cputemp='sensors | grep Core'
-alias fp="\$(fzf --reverse --preview 'batcat --style=numbers --color=always --line-range :500 {}')"
-alias fp1="fzf --reverse --preview='batcat --color=always --line-range :500 {}' --bind shift-up:preview-page-up,shift-down:preview-page-down"
+alias fp="\$(fzf --reverse --preview 'bat --style=numbers --color=always --line-range :500 {}')"
+alias fp1="fzf --reverse --preview='bat --color=always --line-range :500 {}' --bind shift-up:preview-page-up,shift-down:preview-page-down"
 alias fd='finder'
 alias tl='task list'
 alias tw='task waiting'

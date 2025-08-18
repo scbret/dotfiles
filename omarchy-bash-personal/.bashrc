@@ -6,8 +6,6 @@ source ~/.local/share/omarchy/default/bash/rc
 #
 # Make an alias for invoking commands you use constantly
 # alias p='python'
-alias q='exit'
-alias cl='clear'
 [[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
 
 if [ -d "$HOME/.bin" ]; then
