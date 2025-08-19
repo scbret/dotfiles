@@ -71,7 +71,7 @@
   "custom/weather": {
     "format": " {}",
     "exec": "~/bin/sl_wttr.sh",
-    "interval": 300,
+    "interval": 60,
     "tooltip": false,
     "format-fail": " weather"
   },
