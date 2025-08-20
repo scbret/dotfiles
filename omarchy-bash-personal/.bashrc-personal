@@ -23,6 +23,7 @@ alias bmed='echo 10000 | sudo tee /sys/class/backlight/intel_backlight/brightnes
 #alias start_owu='conda activate openwebui && (open-webui serve & OWU_PID=$!) && sleep 6 && brave --new-window http://localhost:8080; killall open-webui'
 alias start_owu='conda activate openwebui && (open-webui serve &) && sleep 6 && brave --new-window http://localhost:8080; killall open-webui'
 alias cond='conda deactivate'
+alias cona='conda activate'
 
 # Start WIN11 VM on X1 Carbon
 alias w11='source /home/steve/bin/win11.sh'
@@ -94,7 +95,7 @@ alias wf='curl wttr.in/mason+city?u'
 export FZF_DEFAULT_OPTS='--height 75% --layout=reverse --border'
 
 fo() {
-  IFS=$'\n' out=("$(fzf --preview 'batcat --style=numbers --color=always --line-range :500 {}' --query="$1" --exit-0 --expect=ctrl-o,ctrl-e)")
+  IFS=$'\n' out=("$(fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' --query="$1" --exit-0 --expect=ctrl-o,ctrl-e)")
   key=$(head -1 <<< "$out")
   file=$(head -2 <<< "$out" | tail -1)
   if [ -n "$file" ]; then
