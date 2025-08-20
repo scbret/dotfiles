@@ -2,7 +2,7 @@
 # (don't mess with these directly, just overwrite them here!)
 source ~/.local/share/omarchy/default/bash/rc
 
-# set -h # turn hash on for miniconda3
+set -h # turn hash on for miniconda3
 
 # Add your own exports, aliases, and functions here.
 #
