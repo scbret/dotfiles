@@ -11,7 +11,8 @@ alias la='ll -ah'
 alias sdn='shutdown -h now'
 alias sdr='shutdown -r now'
 
-alias update='sudo pacman -Syyu'
+#alias update='sudo pacman -Syyu'
+alias update='yay -Syu'
 
 # X1 carbon change screen brightness
 alias bhigh='echo 19000 | sudo tee /sys/class/backlight/intel_backlight/brightness'
