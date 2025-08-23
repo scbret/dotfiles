@@ -1,0 +1,14 @@
+Using System File Checker (SFC) and DISM
+
+This method uses built-in command-line tools to scan and repair system files. 
+1. Open Command Prompt as Administrator:
+Search for "cmd" in the start menu, right-click on Command Prompt, and select "Run as administrator". 
+
+2. Run SFC:
+Type sfc /scannow into the command prompt and press Enter. This will scan for and attempt to repair corrupted system files. 
+
+3. Run DISM:
+If SFC finds issues or doesn't fully resolve them, type DISM /Online /Cleanup-Image /RestoreHealth and press Enter. 
+
+4. Reboot:
+Restart your computer after the commands have finished. 
