@@ -27,6 +27,8 @@ nmcli radio wifi off = turn off wifi
 - xclip  - on X11
 - wl-clipboard  - on Wayland
 - cronie for cron jobs
+- ncdu  for system file sizes
+- below  - similar to htop
 
 ### Create list of installed packages - pacman
 - pacman -Qm = installed locally from AUR
