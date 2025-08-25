@@ -6,7 +6,8 @@
   "height": 26,
   "modules-left": [
     "custom/omarchy",
-    "hyprland/workspaces"
+    "hyprland/workspaces",
+    "custom/spotify"
   ],
   "modules-center": [
     "clock",
@@ -68,6 +69,15 @@
     "format-alt": "{:%d %B W%V %Y}",
     "tooltip": false,
     "on-click-right": "omarchy-cmd-tzupdate"
+  },
+  "custom/spotify": {
+    "format": " {} ",
+    "exec": "~/bin/get_spotify-waybar.sh",
+    "interval": 10,
+    "tooltip": false,
+    "on-click": "playerctl -p spotify play-pause",
+    "on-scroll-up": "playerctl -p spotify next",
+    "on-scroll-down": "playerctl -p spotify previous"
   },
   "custom/weather": {
     "format": " {}",
