@@ -73,7 +73,7 @@
   "custom/spotify": {
     "format": " {} ",
     "exec": "~/bin/get_spotify-waybar.sh",
-    "interval": 10,
+    "interval": 5,
     "tooltip": false,
     "on-click": "playerctl -p spotify play-pause",
     "on-scroll-up": "playerctl -p spotify next",
