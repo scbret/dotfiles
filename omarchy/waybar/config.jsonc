@@ -71,7 +71,7 @@
     "on-click-right": "omarchy-cmd-tzupdate"
   },
   "custom/spotify": {
-    "format": " {} ",
+    "format": " |  {} ",
     "exec": "~/bin/get_spotify-waybar.sh",
     "interval": 5,
     "tooltip": false,
@@ -80,7 +80,7 @@
     "on-scroll-down": "playerctl -p spotify previous"
   },
   "custom/weather": {
-    "format": " {}",
+    "format": " {} ",
     "exec": "~/bin/sl_wttr.sh",
     "interval": 60,
     "tooltip": false,
