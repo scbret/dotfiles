@@ -29,6 +29,7 @@ nmcli radio wifi off = turn off wifi
 - cronie for cron jobs
 - ncdu  for system file sizes
 - below  - similar to htop
+- fcitx5-configtool  - input config program
 
 ### Create list of installed packages - pacman
 - pacman -Qm = installed locally from AUR
