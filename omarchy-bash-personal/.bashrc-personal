@@ -5,6 +5,7 @@ HISTIGNORE="$HISTIGNORE:jrnl *"
 alias v='$EDITOR'
 alias vi='$EDITOR'
 alias ll='eza -alh --icons'
+alias rm='rm -i'
 # alias lt='eza -a --tree --level=1'
 alias la='ll -ah'
 # alias hy='source /home/steve/start-hypr'
