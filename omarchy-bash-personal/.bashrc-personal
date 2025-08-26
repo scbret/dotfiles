@@ -28,19 +28,19 @@ alias cond='conda deactivate'
 alias cona='conda activate'
 
 # Start WIN11 VM on X1 Carbon
-alias w11='source /home/steve/bin/win11.sh'
+alias w11='source /home/steve/.scripts/win11.sh'
 
 # Update jrnl entries
-alias jpl='source /home/steve/bin/pull_jrnl.sh'
-alias jps='source /home/steve/bin/push_jrnl.sh'
+alias jpl='source /home/steve/.scripts/pull_jrnl.sh'
+alias jps='source /home/steve/.scripts/push_jrnl.sh'
 
 # Update dotfiles
-alias dpl='source /home/steve/bin/pull_dots.sh'
-alias dps='source /home/steve/bin/push_dots.sh'
+alias dpl='source /home/steve/.scripts/pull_dots.sh'
+alias dps='source /home/steve/.scripts/push_dots.sh'
 
 # Update mdnotes entries
-alias npl='source /home/steve/bin/pull_mdnotes.sh'
-alias nps='source /home/steve/bin/push_mdnotes.sh'
+alias npl='source /home/steve/.scripts/pull_mdnotes.sh'
+alias nps='source /home/steve/.scripts/push_mdnotes.sh'
 
 # kill conky
 alias kc='killall -9 conky'
@@ -60,7 +60,7 @@ alias gst='g stash'
 alias gsp='g stash; g pull'
 # git section
 
-alias pv='source ~/venv/bin/activate'
+alias pv='source ~/venv/.scripts/activate'
 alias snake='python ~/py-scripts/jan-snake-game.py'
 alias fh='history | fzf'
 alias df='df -haT --total'
@@ -69,7 +69,7 @@ alias bt='btop'
 alias free='free -mt'
 alias cputemp='sensors | grep Core'
 alias fp="\$(fzf --reverse --preview 'bat --style=numbers --color=always --line-range :500 {}')"
-alias fp1="fzf --reverse --preview='bat --color=always --line-range :500 {}' --bind shift-up:preview-page-up,shift-down:preview-page-down"
+alias fp1="fzf --reverse --preview='bat --color=always --line-range :500 {}' --.scriptsd shift-up:preview-page-up,shift-down:preview-page-down"
 alias fd='finder'
 alias tl='task list'
 alias tw='task waiting'
