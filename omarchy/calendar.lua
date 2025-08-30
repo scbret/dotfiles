@@ -15,6 +15,7 @@ return {
       vim.g.calendar_height = 15
       -- if you want Monday as the first day:
       vim.g.calendar_week_number = 1
+      vim.g.calendar_weeknm = 1
     end,
   },
 }
