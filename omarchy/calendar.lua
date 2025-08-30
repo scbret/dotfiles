@@ -10,7 +10,7 @@ return {
     },
     init = function()
       -- optional settings for appearance
-      vim.g.calendar_frame = "rightbelow" -- or "topleft" / "botright"
+      vim.g.calendar_frame = "topleft" -- "rightbelow" -- or "topleft" / "botright"
       vim.g.calendar_width = 40
       vim.g.calendar_height = 15
       -- if you want Monday as the first day:
