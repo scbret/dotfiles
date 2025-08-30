@@ -1,7 +1,7 @@
 return {
   {
     "vimwiki/vimwiki",
-    ft = { "markdown", "vimwiki" }, -- load when you open .md or vimwiki buffers
+    cmd = { "VimwikiIndex", "VimwikiTabIndex", "VimwikiDiaryIndex", "VimwikiMakeDiaryNote", "VimwikiUISelect" },
     init = function()
       -- use Markdown-based wiki
       vim.g.vimwiki_list = {
