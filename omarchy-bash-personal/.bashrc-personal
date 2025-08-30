@@ -30,6 +30,9 @@ alias cona='conda activate'
 # Start WIN11 VM on X1 Carbon
 alias w11='source /home/steve/.scripts/win11.sh'
 
+# start neovim with vimwiki
+alias vw='nvim -c "VimwikiIndex"'
+
 # Update jrnl entries
 alias jpl='source /home/steve/.scripts/pull_jrnl.sh'
 alias jps='source /home/steve/.scripts/push_jrnl.sh'
