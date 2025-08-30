@@ -8,6 +8,7 @@ return {
         { path = "~/repos/vimwiki", syntax = "markdown", ext = ".md" },
       }
       vim.g.vimwiki_global_ext = 0 -- only treat files under listed paths as wiki
+      vim.g.calendar_weeknm = 1
     end,
     keys = {
       { "<leader>ww", "<cmd>VimwikiIndex<cr>", desc = "Vimwiki index" },
