@@ -34,6 +34,10 @@ alias w11='source /home/steve/.scripts/win11.sh'
 alias jpl='source /home/steve/.scripts/pull_jrnl.sh'
 alias jps='source /home/steve/.scripts/push_jrnl.sh'
 
+# Update jrnl entries
+alias vpl='source /home/steve/.scripts/pull_vwiki.sh'
+alias vps='source /home/steve/.scripts/push_vwiki.sh'
+
 # Update dotfiles
 alias dpl='source /home/steve/.scripts/pull_dots.sh'
 alias dps='source /home/steve/.scripts/push_dots.sh'
