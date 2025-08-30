@@ -5,7 +5,7 @@ return {
     init = function()
       -- use Markdown-based wiki
       vim.g.vimwiki_list = {
-        { path = "~/vimwiki", syntax = "markdown", ext = ".md" },
+        { path = "~/repos/vimwiki", syntax = "markdown", ext = ".md" },
       }
       vim.g.vimwiki_global_ext = 0 -- only treat files under listed paths as wiki
     end,
