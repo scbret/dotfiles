@@ -1,0 +1,41 @@
+/* Make the Eww window fully transparent */
+.eww-window,
+#conky_panel,      /* window id equals your defwindow name */
+window {
+  background: transparent;
+  background-color: transparent;
+  box-shadow: none;
+  font-size: 16px;
+}
+
+/* Keep the panel and its children transparent too */
+.panel, .panel * {
+  background: transparent;
+  background-color: transparent;
+  font-size: 16px;
+}
+
+.bar {
+  min-width: 200px;
+  min-height: 10px;
+  border-radius: 8px;
+}
+
+/* The trough (background of the bar) */
+.bar progressbar,
+.bar progressbar trough {
+  background: rgba(255, 255, 255, 0.15); /* faint grey, visible on wallpaper */
+  border-radius: 8px;
+}
+
+/* The actual fill of the bar */
+.bar progressbar progress {
+  border-radius: 8px;
+}
+
+/* Colored variants */
+.bar-blue   progressbar progress { background: #5294e2; }   /* CPU */
+.bar-green  progressbar progress { background: #1F7411; }   /* RAM */
+.bar-orange progressbar progress { background: #FFA726; }   /* SWAP */
+
+

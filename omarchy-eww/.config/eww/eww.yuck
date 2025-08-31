@@ -1,0 +1,71 @@
+;; ======== POLLS (summary) ========
+(defpoll osinfo :interval "3000s" "bash ~/.config/eww/scripts/osinfo.sh")
+(defpoll uptime   :interval "15s"   "bash ~/.config/eww/scripts/uptime.sh")
+(defpoll utctime  :interval "10s"   "bash ~/.config/eww/scripts/utctime.sh")
+
+(defpoll cpuavg   :interval "2s"    "bash ~/.config/eww/scripts/cpu_avg.sh 1200")
+(defpoll pkgtemp  :interval "5s"    "bash ~/.config/eww/scripts/package_temp.sh")
+
+;; Memory fields as simple polls (no list parsing in yuck)
+(defpoll mem_used   :interval "2s" "bash ~/.config/eww/scripts/mem_field.sh mem_used")
+(defpoll mem_total  :interval "2s" "bash ~/.config/eww/scripts/mem_field.sh mem_total")
+(defpoll mem_perc   :interval "2s" "bash ~/.config/eww/scripts/mem_field.sh mem_perc")
+(defpoll swap_used  :interval "5s" "bash ~/.config/eww/scripts/mem_field.sh swap_used")
+(defpoll swap_total :interval "5s" "bash ~/.config/eww/scripts/mem_field.sh swap_total")
+(defpoll swap_perc  :interval "5s" "bash ~/.config/eww/scripts/mem_field.sh swap_perc")
+
+;; ======== WIDGETS ========
+(defwidget line-kv [k v]
+  (box :spacing 8
+    (label :class "label" :text k)
+    (label :class "value" :text v)
+  )
+)
+
+(defwidget summary []
+  (box :class "panel" :orientation "v" :spacing 10
+    ;; Header
+    (box :orientation "v" :spacing 2
+     (label :class "title" :text osinfo)
+    )
+
+    ;; Time/Uptime
+    (line-kv :k "UTC"    :v utctime)
+    (line-kv :k "Uptime" :v uptime)
+
+    ;; CPU
+    (label :class "section-title" :text "CPU")
+    (box :spacing 8
+      (label :class "label" :text "Avg")
+      (label :class "value" :text cpuavg)
+      (label :class "value" :text "%")
+    )
+    (progress :class "bar bar-blue" :value (or cpuavg "0"))
+    (box :spacing 8
+      (label :class "label" :text "CPU Temp")
+      (label :class "value" :text pkgtemp)
+      (label :class "value" :text "°C")
+    )
+
+    ;; MEMORY (simple values only)
+    (label :class "section-title" :text "MEMORY")
+    (line-kv :k "RAM"  :v mem_used)
+    (line-kv :k "Tot"  :v mem_total)
+    (line-kv :k "Used %" :v mem_perc)
+    (progress :class "bar bar-green" :value (or mem_perc "0"))
+
+    (line-kv :k "SWAP" :v swap_used)
+    (line-kv :k "Tot"  :v swap_total)
+    (line-kv :k "Used %" :v swap_perc)
+    (progress :class "bar bar-orange" :value (or swap_perc "0"))
+  )
+)
+
+;; ======== WINDOW ========
+(defwindow conky_panel
+  :monitor 0
+  :geometry (geometry :width "350px" :height "300px" :x "10px" :y "20px" :anchor "bottom right")
+  :stacking "bg"     ;; backround (under apps)
+  :focusable false
+  (summary))
+
