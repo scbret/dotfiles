@@ -31,7 +31,7 @@ alias cona='conda activate'
 alias w11='source /home/steve/.scripts/win11.sh'
 
 # start neovim with vimwiki
-alias vw='nvim -c "VimwikiIndex"'
+alias vw='kitty --class=VW -e nvim -c "VimwikiIndex" &'
 
 # Update jrnl entries
 alias jpl='source /home/steve/.scripts/pull_jrnl.sh'
