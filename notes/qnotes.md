@@ -30,6 +30,7 @@ nmcli radio wifi off = turn off wifi
 - ncdu  for system file sizes
 - below  - similar to htop
 - fcitx5-configtool  - input config program
+- eww    = puts widget on desktop in hyprland
 
 ### Create list of installed packages - pacman
 - pacman -Qm = installed locally from AUR
