@@ -23,7 +23,7 @@ alias bmed='echo 10000 | sudo tee /sys/class/backlight/intel_backlight/brightnes
 #start openwebui with conda
 #alias start_owu='conda activate openwebui && open-webui serve'
 #alias start_owu='conda activate openwebui && (open-webui serve & OWU_PID=$!) && sleep 6 && brave --new-window http://localhost:8080; killall open-webui'
-alias start_owu='conda activate openwebui && (open-webui serve &) && sleep 6 && brave --new-window http://localhost:8080; killall open-webui'
+#alias start_owu='conda activate openwebui && (open-webui serve &) && sleep 6 && brave --new-window http://localhost:8080; killall open-webui'
 alias cond='conda deactivate'
 alias cona='conda activate'
 
@@ -31,7 +31,20 @@ alias cona='conda activate'
 alias w11='source /home/steve/.scripts/win11.sh'
 
 # start neovim with vimwiki
-alias vw='kitty --class=VW -e nvim -c "VimwikiIndex" &'
+# alias vw='kitty --class=VW -e nvim -c "VimwikiIndex" &'
+# Smart Vimwiki launcher
+vw() {
+    if command -v kitty >/dev/null 2>&1; then
+        if [ -n "$DISPLAY" ]; then
+            kitty --class VW nvim -c VimwikiIndex & disown
+            return
+        else
+            printf '%s\n' 'Kitty is installed but no GUI session detected. Falling back to nvim.'
+        fi
+    fi
+    nvim -c VimwikiIndex
+}
+
 
 # Update jrnl entries
 alias jpl='source /home/steve/.scripts/pull_jrnl.sh'
