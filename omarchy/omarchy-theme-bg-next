@@ -45,5 +45,6 @@ else
   # Relaunch swaybg
   pkill -x swaybg
   setsid uwsm app -- swaybg -i "$CURRENT_BACKGROUND_LINK" -m fill >/dev/null 2>&1 &
-  eww reload && eww open conky_panel
+  # eww reload && eww open conky_panel
+  eww reload
 fi
