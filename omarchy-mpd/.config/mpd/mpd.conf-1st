@@ -1,0 +1,13 @@
+# See: /usr/share/doc/mpd/mpdconf.example
+
+pid_file "/home/steve/.config/mpd/mpd.pid"
+db_file "/home/steve/.config/mpd/mpd.db"
+state_file "/home/steve/.config/mpd/mpdstate"
+playlist_directory "/home/steve/.config/mpd/playlists"
+sticker_file "/home/steve/.config/mpd/sticker.sql"
+music_directory "/home/steve/Music/"
+auto_update "yes"
+audio_output {
+        type            "pipewire"
+        name            "PipeWire Sound Server"
+}
