@@ -1,5 +1,5 @@
 #!/bin/bash
-# get_spotify.sh — one-shot for Waybar
+# get_spotify-waybar.sh — one-shot for Waybar
 
 # Prefer the specific Spotify player; fall back to any MPRIS player named spotify
 PLAYER="spotify"
