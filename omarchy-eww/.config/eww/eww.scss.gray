@@ -1,0 +1,98 @@
+/* =========================
+   Eww / GTK-SAFE "GLASS" PANEL
+   ========================= */
+
+/* Uniform, light frosted panel */
+.eww-window,
+#conky_panel,
+window {
+  background-color: rgba(255, 255, 255, 0.08);  /* much lighter, more see-through */
+  border: 1px solid rgba(255, 255, 255, 0.25);  /* faint edge highlight */
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);    /* soft float */
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* Keep content transparent so only the panel shows the "glass" */
+.panel, .panel * {
+  background-color: transparent;
+  color: #ffffff;   /* bright text for legibility */
+  font-size: 16px;
+}
+
+/* Optional: separators (if you use them) — subtle, not stripy */
+separator,
+.hr,
+.rule {
+  min-height: 1px;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 1px;
+}
+
+/* -------------------------
+   Bars (no grey troughs)
+   ------------------------- */
+.bar {
+  min-width: 200px;
+  min-height: 10px;
+  border-radius: 8px;
+  background-color: transparent;
+  padding: 4px;
+}
+
+/* Remove trough backgrounds so it doesn’t look stripy */
+.bar progressbar,
+.bar progressbar trough {
+  background-color: transparent;
+  border-radius: 8px;
+}
+
+/* Fill only */
+.bar progressbar progress {
+  border-radius: 8px;
+}
+
+/* Colored variants */
+.bar-blue   progressbar progress { background: #5294e2; }  /* CPU */
+.bar-green  progressbar progress { background: #1F7411; }  /* RAM */
+.bar-orange progressbar progress { background: #FFA726; }  /* SWAP */
+
+/* -------------------------
+   Headings & small labels
+   ------------------------- */
+.title, .heading, .section-title {
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.small, .dim {
+  opacity: 0.85;
+}
+
+/* --- FINAL OVERRIDES (place at end) --- */
+
+/* Target the actual Eww window by id & class to win specificity */
+window#conky_panel,
+window.eww-window {
+  background: none;
+  background-color: rgba(255, 255, 255, 0.08);  /* lighter & more translucent */
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+
+/* Make every child transparent so only the window paints the glass */
+window#conky_panel > * {
+  background: none;
+  background-color: transparent;
+  color: #ffffff;   /* bright text on light glass */
+}
+
+/* Kill dark separator bars, if any */
+window#conky_panel separator {
+  background: none;
+  background-color: rgba(255, 255, 255, 0.10);
+  min-height: 1px;
+}
+
