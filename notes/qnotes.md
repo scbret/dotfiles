@@ -31,6 +31,8 @@ nmcli radio wifi off = turn off wifi
 - below  - similar to htop
 - fcitx5-configtool  - input config program
 - eww    = puts widget on desktop in hyprland
+- pastel  = terminal color picker
+- cava   = terminal EQ display for music
 
 ### Create list of installed packages - pacman
 - pacman -Qm = installed locally from AUR
@@ -39,6 +41,7 @@ nmcli radio wifi off = turn off wifi
 - cat pacman.lst | xargs pacman -S --needed --noconfirm
 ## pacman commands
 - pacman -Syyu  - update/upgrade system
+- pacman -Syyup  - print out what would be updated/upgraded for the system
 - pacman -S packagename  - install package
 - pacman -Ss packagename  - search for packages or software type
 - pacman -Si packagename  - search for info about a package before installing
