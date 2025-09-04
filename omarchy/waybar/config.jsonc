@@ -73,7 +73,7 @@
     "on-scroll-down": "playerctl -p spotify previous"
   },
   "custom/weather": {
-    "format": " | {} ",
+    "format": " | {}",
     "exec": "~/.scripts/sl_wttr.sh",
     "interval": 60,
     "tooltip": false,
