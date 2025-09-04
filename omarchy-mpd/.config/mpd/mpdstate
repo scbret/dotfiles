@@ -1,8 +1,8 @@
 sw_volume: 100
 audio_device_state:1:PipeWire Sound Server
 state: pause
-current: 5
-time: 19.504
+current: 7
+time: 167.096
 random: 0
 repeat: 0
 single: 0
@@ -19,4 +19,6 @@ playlist_begin
 4:Crosby, Stills & Nash/Greatest Hits (US Release)/15 - Wasted On The Way.mp3
 5:Frankie Valli & The Four Seasons/The Very Best Of Frankie Valli & The 4 Seasons (US Release)/01-15- Cant Take My Eyes Off You.mp3
 6:Frankie Valli & The Four Seasons/The Very Best Of Frankie Valli & The 4 Seasons (US Release)/01-16- My Eyes Adored You.mp3
+7:Bill Withers/Greatest Hits Lean On Me/01-04- Use Me.mp3
+8:Bill Withers/Greatest Hits Lean On Me/01-18- Just the Two of Us.mp3
 playlist_end
