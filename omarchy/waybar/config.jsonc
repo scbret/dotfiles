@@ -5,7 +5,7 @@
   "spacing": 0,
   "height": 26,
   "modules-left": ["custom/omarchy", "hyprland/workspaces", "custom/spotify"],
-  "modules-center": ["clock", "custom/update", "custom/weather"],
+  "modules-center": ["clock", "custom/update", "custom/weather", "custom/sysinfo"],
   "modules-right": [
     "group/tray-expander",
     "bluetooth",
@@ -73,11 +73,17 @@
     "on-scroll-down": "playerctl -p spotify previous"
   },
   "custom/weather": {
-    "format": " {} ",
+    "format": " | {} ",
     "exec": "~/.scripts/sl_wttr.sh",
     "interval": 60,
     "tooltip": false,
     "format-fail": " weather"
+  },
+  "custom/sysinfo": {
+    "format": " | Uptime: {} ",
+    "exec": "~/.scripts/uptime.sh",
+    "interval": 300,
+    "tooltip": false,
   },
   "network": {
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
