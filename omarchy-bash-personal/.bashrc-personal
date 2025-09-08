@@ -126,8 +126,10 @@ finder() {
     fi
 }
 
-# Colored man
-export MANPAGER="less -R --use-color -Dd+g -Du+b"
+# Colored man with bat
+#export MANPAGER="less -R --use-color -Dd+g -Du+b"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
 
 # Created by `pipx` on 2024-08-22 00:28:44
 export PATH="$PATH:/home/steve/.local/bin"
