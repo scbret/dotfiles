@@ -39,6 +39,22 @@ vw() {
     nvim -c VimwikiIndex
 }
 
+# MD Notes
+mdnotes() {
+    if command -v kitty >/dev/null 2>&1; then
+        if [ -n "$DISPLAY" ]; then
+            # Run kitty detached so it won't block the shell
+            setsid -f kitty --class MDNOTES -e /home/steve/.scripts/mdnotes.sh >/dev/null 2>&1
+        else
+            echo "Error: no DISPLAY found (are you running in a GUI session?)" >&2
+        fi
+    else
+        echo "Error: kitty not installed, running in current terminal." >&2
+        /home/steve/.scripts/mdnotes.sh &
+    fi
+}
+
+
 # Update jrnl entries
 alias jpl='source /home/steve/.scripts/pull_jrnl.sh'
 alias jps='source /home/steve/.scripts/push_jrnl.sh'
