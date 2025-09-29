@@ -40,7 +40,7 @@ vw() {
 }
 
 # MD Notes
-mdnotes() {
+mdn() {
     if command -v kitty >/dev/null 2>&1; then
         if [ -n "$DISPLAY" ]; then
             # Run kitty detached so it won't block the shell
