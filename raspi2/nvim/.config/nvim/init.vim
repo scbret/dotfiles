@@ -42,6 +42,8 @@ set relativenumber
 set number
 set cursorline
 
+let g:vimwiki_list = [{'path': '~/repos/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
+
 " Plugins, syntax, and colors
 " ---------------------------------------------------------------------------
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
@@ -83,6 +85,8 @@ Plug 'macguirerintoul/night_owl_light.vim'
 
 " https://github.com/nanotech/jellybeans.vim
 Plug 'nanotech/jellybeans.vim'
+
+Plug 'vimwiki/vimwiki'
 
 " if you don't have node and yarn, use pre build
 " Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 'markdown' }
