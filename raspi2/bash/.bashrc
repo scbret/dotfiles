@@ -112,14 +112,7 @@ if ! shopt -oq posix; then
   fi
 fi
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/usr/local/share/pkgconfig:$PKG_CONFIG_PATH
-export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/usr/local/share/pkgconfig:$PKG_CONFIG_PATH
 export PATH="/usr/local/bin:$PATH"
-export PATH="/usr/local/bin:$PATH"
-export PATH="/usr/local/bin:$PATH"
-export PATH=/usr/local/go/bin:$PATH
-export PATH="/usr/local/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="/usr/local/bin:$PATH"
-export PATH="/usr/local/bin:$PATH"
+
+# Created by `pipx` on 2025-10-04 14:26:45
+export PATH="$PATH:/home/steve/.local/bin"
