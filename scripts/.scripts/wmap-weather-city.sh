@@ -3,10 +3,28 @@
 # Your OpenWeatherMap API key
 API_KEY="036e0dfa07677fbab9bb06a485e5b54e"
 
-# City for which you want the weather forecast
-CITY="Mason%20City"
-STATE="IA"
+# --- DEFAULT LOCATION ---
+DEFAULT_CITY="Mason City"
+DEFAULT_STATE="IA"
 COUNTRY_CODE="US"
+
+# --- USER INPUT SECTION ---
+echo "----------------------------------------"
+echo " Weather & Air Quality Report"
+echo "----------------------------------------"
+echo "Press ENTER to use default: ${DEFAULT_CITY}, ${DEFAULT_STATE}"
+read -p "Enter city name (or leave blank for default): " CITY_INPUT
+
+if [ -z "$CITY_INPUT" ]; then
+  CITY_INPUT="$DEFAULT_CITY"
+  STATE="$DEFAULT_STATE"
+  echo "Using default city: ${CITY_INPUT}, ${STATE}"
+else
+  read -p "Enter state code (e.g. IA): " STATE
+fi
+
+# URL encode the city name (replace spaces with %20)
+CITY=$(echo "$CITY_INPUT" | sed 's/ /%20/g')
 
 # Base URL for the OpenWeatherMap API
 BASE_URL="http://api.openweathermap.org/data/2.5/weather?"
@@ -65,7 +83,7 @@ MAGENTA="\033[35m"
 WHITE="\033[97m"
 
 # Display the weather information
-echo -e "${BOLD}${WHITE}Weather in ${CYAN}${city_name}, ${STATE}:${RESET}"
+echo -e "\n${BOLD}${WHITE}Weather in ${CYAN}${city_name}, ${STATE}:${RESET}"
 echo -e "${BLUE}Temperature:${RESET} ${BOLD}${temperature}°F${RESET}"
 echo -e "${GREEN}Description:${RESET} ${weather_description}"
 echo -e "${MAGENTA}Humidity:${RESET} ${humidity}%"
