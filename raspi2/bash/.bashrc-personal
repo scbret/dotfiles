@@ -121,7 +121,7 @@ alias vrc='vi ~/.config/nvim/init.vim'
 
 #weather in terminal
 alias wf='curl wttr.in/mason+city?u'
-aalias gw='bash ~/.scripts/wmap-weather.sh'
+alias gw='bash ~/.scripts/wmap-weather.sh'
 alias gwc='bash ~/.scripts/wmap-weather-city.sh'
 
 # <<< open or edit previewed files with fzf >>> #
