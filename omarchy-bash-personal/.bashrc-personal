@@ -146,7 +146,8 @@ finder() {
 
 # Colored man with bat
 #export MANPAGER="less -R --use-color -Dd+g -Du+b"
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+#export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MANPAGER="bat -l man -p --color=always"
 
 
 # Created by `pipx` on 2024-08-22 00:28:44
