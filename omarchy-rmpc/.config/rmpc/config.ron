@@ -38,7 +38,7 @@
             monstercat: false,
             waves: false,
         ),
-    ),
+   ),
 
     keybinds: (
         global: {

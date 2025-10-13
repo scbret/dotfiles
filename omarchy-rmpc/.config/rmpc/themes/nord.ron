@@ -188,5 +188,26 @@
                 ]),
             default: (kind: Property(Filename))
         ),
-    ],
+      ],
+     cava: (
+    // optional tweaks
+      bar_symbols: ['▁','▂','▃','▄','▅','▆','▇','█'],
+      bar_width: 2,
+      bar_spacing: 1,
+      orientation: Bottom,   // Bottom | Top | Horizontal
+
+    // choose ONE color mode: Single(...), Rows([...]) or Gradient({...})
+    // Example: gradient using your hex colors (hex is allowed here)
+      bar_color: Gradient({
+      0:   "#5E81AC",   // Nord blue (low freq)
+     20:  "#88C0D0",   // Nord light blue
+     40:  "#8FBCBB",   // Nord teal
+     60:  "#A3BE8C",   // Nord green
+     80:  "#EBCB8B",   // Nord yellow
+     90:  "#D08770",   // Nord orange
+     100: "#BF616A",   // Nord red (high freq)
+            }),
+  // Or: a simple 3-color gradient
+  // bar_color: Gradient({ 0: "rgb(255,0,0)", 50: "rgb(255,255,0)", 100: "rgb(0,255,0)" }),
+),
 )
