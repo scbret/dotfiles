@@ -35,7 +35,7 @@ choose_and_open() {
         printf '%s\n' "New"
         printf '%s\n' "$files"
       ) |
-        fzf --prompt="Choose note or create new: " --height=40% --reverse --tac || true)
+        fzf --prompt="Choose note or create new: " --height=55% --reverse --tac || true)
       case "${choice:-}" in
       "") break ;;
       "New") new_note ;;
