@@ -22,24 +22,6 @@
         vertical_align: Center,
         horizontal_align: Center,
     ),
-  
-  cava: (
-        framerate: 60,
-        autosens: true,
-        input: (
-            method: Fifo,
-            source: "/tmp/mpd.fifo",
-            sample_rate: 44100,
-            channels: 2,
-            sample_bits: 16,
-        ),
-        smoothing: (
-            noise_reduction: 77,
-            monstercat: false,
-            waves: false,
-        ),
-    ),
-
     keybinds: (
         global: {
             ":":       CommandMode,
@@ -126,42 +108,25 @@
         album_display_mode: SplitByDate,
         album_sort_by: Date,
     ),
-
-tabs: [
-    (
-        name: "Playing",
-        pane: Split(
-            direction: Horizontal,
-            panes: [
-                (
-                    size: "65%",
-                    pane: Pane(Queue)
-                ),
-                (
-                    size: "35%",
-                    pane: Split(
-                        direction: Vertical,
-                        panes: [
-                            (size: "66%", pane: Pane(AlbumArt)),
-                            (size: "34%", pane: Pane(Cava)),
-                        ],
-                    ),
-                ),
-            ],
+    tabs: [
+        (
+            name: "Playing",
+            pane: Split(
+                direction: Horizontal,
+                panes: [(size: "65%", pane: Pane(Queue)), (size: "35%", pane: Pane(AlbumArt))],
+            ),
         ),
-    ),
-    (
-        name: "Find",
-        pane: Pane(Search),
-    ),
-    (
-        name: "Lists",
-        pane: Pane(Playlists),
-    ),
-    (
-        name: "Dir",
-        pane: Pane(Directories),
-    ),
-],
+        (
+            name: "Find",
+            pane: Pane(Search),
+        ),
+       (
+            name: "Lists",
+            pane: Pane(Playlists),
+        ),
+       (
+            name: "Dir",
+            pane: Pane(Directories),
+        ),
+    ],
 )
-
