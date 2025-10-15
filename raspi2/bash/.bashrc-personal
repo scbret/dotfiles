@@ -53,6 +53,7 @@ mdn() {
     fi
 }
 
+alias sshot='grim -g "$(slurp)" - | satty --filename -'
 
 # Update jrnl entries
 alias jpl='source /home/steve/.scripts/pull_jrnl.sh'

@@ -41,6 +41,7 @@ set magic               " Use 'magic' patterns (extended regular expressions).
 set relativenumber
 set number
 set cursorline
+set clipboard=unnamedplus
 
 let g:vimwiki_list = [{'path': '~/repos/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
 
