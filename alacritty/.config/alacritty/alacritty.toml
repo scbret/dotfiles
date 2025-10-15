@@ -30,6 +30,10 @@ dynamic_padding = false
 dynamic_title = true
 opacity = 0.8
 
+[window.padding]
+x = 8  # Example: 10 pixels of horizontal padding
+y = 8  # Example: 10 pixels of vertical padding
+
 [[keyboard.bindings]]
 action = "ToggleFullScreen"
 key = "F11"
