@@ -24,6 +24,7 @@ config.keys = {}
 -- Pane management
 for _, v in ipairs({
 	{ "Enter", act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+	{ "\\", act.SplitVertical({ domain = "CurrentPaneDomain" }) },
 	{ "w", act.CloseCurrentPane({ confirm = true }) },
 	{ "LeftArrow", act.ActivatePaneDirection("Left") },
 	{ "RightArrow", act.ActivatePaneDirection("Right") },
@@ -41,10 +42,16 @@ for _, v in ipairs({
 end
 
 -- ALT+SHIFT combinations
-table.insert(
-	config.keys,
-	{ mods = "ALT|SHIFT", key = "Enter", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) }
-)
+for _, v in ipairs({
+	{ "j", act.DecreaseFontSize },
+	{ "k", act.IncreaseFontSize },
+}) do
+	table.insert(config.keys, { mods = "ALT|SHIFT", key = v[1], action = v[2] })
+end
+
+-- table.insert(config.keys, {mods="ALT|SHIFT", key="Enter", action=act.SplitVertical{domain='CurrentPaneDomain'}})
+-- table.insert(config.keys, {mods="ALT|SHIFT", key="j", action=act.DecreaseFontSize})
+-- table.insert(config.keys, {mods="ALT|SHIFT", key="k", action=act.IncreaseFontSize})
 
 -- Tab navigation (ALT+1-8)
 for i = 0, 7 do
@@ -75,7 +82,7 @@ config.font_size = 10
 config.line_height = 1.1
 config.window_frame = {
 	font = wezterm.font({ family = "Lilex Nerd Font Mono", weight = "Regular", style = "Italic" }),
-	font_size = 12.0,
+	font_size = 10.0,
 	active_titlebar_bg = colors.bg,
 }
 
@@ -87,15 +94,19 @@ config.enable_scroll_bar = false
 config.use_fancy_tab_bar = true
 config.term = "xterm-256color"
 config.warn_about_missing_glyphs = false
--- Auto-detect Wayland based on environment
-local is_wayland = os.getenv("WAYLAND_DISPLAY") ~= nil or os.getenv("XDG_SESSION_TYPE") == "wayland"
-config.enable_wayland = is_wayland
+config.enable_wayland = true
 config.front_end = "OpenGL"
 config.webgpu_power_preference = "HighPerformance"
 config.prefer_egl = true
 config.freetype_load_target = "Light"
 config.freetype_render_target = "HorizontalLcd"
 config.hide_tab_bar_if_only_one_tab = false
+
+-- Inactive pane look
+config.inactive_pane_hsb = {
+	saturation = 0.8,
+	brightness = 0.6,
+}
 
 -- Color scheme
 config.colors = {
