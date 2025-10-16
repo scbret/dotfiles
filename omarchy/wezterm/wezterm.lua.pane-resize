@@ -70,13 +70,6 @@ for _, v in ipairs({
 }) do
 	table.insert(config.keys, { mods = "ALT|SHIFT", key = v[1], action = v[2] })
 end
-<<<<<<< HEAD
-
--- table.insert(config.keys, {mods="ALT|SHIFT", key="Enter", action=act.SplitVertical{domain='CurrentPaneDomain'}})
--- table.insert(config.keys, {mods="ALT|SHIFT", key="j", action=act.DecreaseFontSize})
--- table.insert(config.keys, {mods="ALT|SHIFT", key="k", action=act.IncreaseFontSize})
-=======
->>>>>>> 8240910 (HP3)
 
 -- Tab navigation (ALT+1-8)
 for i = 0, 7 do
@@ -139,21 +132,13 @@ config.freetype_load_target = "Light"
 config.freetype_render_target = "HorizontalLcd"
 config.hide_tab_bar_if_only_one_tab = false
 
-<<<<<<< HEAD
--- Inactive pane look
-=======
 -- === Inactive pane look ===
->>>>>>> 8240910 (HP3)
 config.inactive_pane_hsb = {
 	saturation = 0.8,
 	brightness = 0.6,
 }
 
-<<<<<<< HEAD
--- Color scheme
-=======
 -- === Colors ===
->>>>>>> 8240910 (HP3)
 config.colors = {
 	foreground = colors.fg,
 	background = colors.bg,
