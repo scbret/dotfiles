@@ -3,7 +3,9 @@
 slstatus &
 
 # polkit
-/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+#/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+lxpolkit &
+
 
 # background
 #feh --bg-scale ~/.config/suckless/wallpaper/wallhaven-218x7m_3440x1440.png &
