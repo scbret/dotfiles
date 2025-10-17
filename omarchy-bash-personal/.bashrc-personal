@@ -1,6 +1,7 @@
 # my aliases -----------------------------------------
 # export EDITOR='nvim'
 export HISTCONTROL=ignoreboth:erasedups
+
 HISTIGNORE="$HISTIGNORE:jrnl *"
 alias v='$EDITOR'
 alias vi='$EDITOR'
@@ -20,8 +21,57 @@ alias bhigh='echo 19000 | sudo tee /sys/class/backlight/intel_backlight/brightne
 alias blow='echo 4000 | sudo tee /sys/class/backlight/intel_backlight/brightness'
 alias bmed='echo 10000 | sudo tee /sys/class/backlight/intel_backlight/brightness'
 
+# CONDA
 alias cond='conda deactivate'
 alias cona='conda activate'
+
+# ============================================================================
+# SYSTEM INFO
+# ============================================================================
+alias df='df -haT --total'
+alias du='du -h'
+alias free='free -h'
+alias ps='ps auxf'
+alias psg='ps aux | grep -v grep | grep -i -e VSZ -e'
+#alias top='btop || htop || top'
+alias mem='free -h && echo && ps aux | head -1 && ps aux | sort -rnk 4 | head -5'
+alias cpu='ps aux | head -1 && ps aux | sort -rnk 3 | head -5'
+alias cputemp='sensors | grep Core'
+
+# ============================================================================
+# NETWORK
+# ============================================================================
+alias myip="hostname -i | awk '{print \$1}' && echo -n 'External: ' && curl -s ifconfig.me && echo"
+alias ports='netstat -tulanp'
+alias listening='lsof -P -i -n'
+
+# ============================================================================
+# UTILITIES
+# ============================================================================
+#alias x='exit'
+#alias c='clear'
+alias h='history'
+alias j='jobs -l'
+alias which='type -a'
+alias now='date +"%Y-%m-%d %T"'
+alias week='date +%V'
+
+# File search and grep
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+# Disk usage
+alias biggest='du -h --max-depth=1 | sort -h'
+
+# Process management
+alias k9='kill -9'
+alias killall='killall -v'
+
+# Archive extraction
+alias untar='tar -xvf'
+alias ungz='tar -xzvf'
+alias unbz2='tar -xjvf'
 
 # Start WIN11 VM on X1 Carbon
 alias w11='source /home/steve/.scripts/win11.sh'
@@ -92,11 +142,8 @@ alias gsp='g stash; g pull'
 alias pv='source ~/venv/.scripts/activate'
 alias snake='python ~/py-scripts/jan-snake-game.py'
 alias fh='history | fzf'
-alias df='df -haT --total'
 alias ht='htop'
 alias bt='btop'
-alias free='free -mt'
-alias cputemp='sensors | grep Core'
 alias fp="\$(fzf --reverse --preview 'bat --style=numbers --color=always --line-range :500 {}')"
 alias fp1="fzf --reverse --preview='bat --color=always --line-range :500 {}' --.scriptsd shift-up:preview-page-up,shift-down:preview-page-down"
 alias fd='finder'
