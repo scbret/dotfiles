@@ -19,11 +19,34 @@ local colors = {
 	invisibles = "#2f363d",
 }
 
--- Keybindings
-config.keys = {}
--- Pane management
+-- Leader is a prefix: tap Ctrl+Space, then the next key within the timeout.
+config.leader = { key = "Space", mods = "CTRL", timeout_milliseconds = 1000 }
+
+-- === Keys ===
+config.keys = {
+	-- Leader + h/j/k/l (single resize hits)
+	{ key = "h", mods = "LEADER", action = act.AdjustPaneSize({ "Left", 5 }) },
+	{ key = "j", mods = "LEADER", action = act.AdjustPaneSize({ "Down", 5 }) },
+	{ key = "k", mods = "LEADER", action = act.AdjustPaneSize({ "Up", 5 }) },
+	{ key = "l", mods = "LEADER", action = act.AdjustPaneSize({ "Right", 5 }) },
+
+	-- Enter "resize mode": Ctrl+Space, r  → then h/j/k/l repeat until Esc/Enter
+	{
+		key = "r",
+		mods = "LEADER",
+		action = act.ActivateKeyTable({
+			name = "resize",
+			one_shot = false,
+			replace_current = false,
+			until_unknown = false,
+		}),
+	},
+}
+
+-- Pane management (ALT+…)
 for _, v in ipairs({
 	{ "Enter", act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+	{ "\\", act.SplitVertical({ domain = "CurrentPaneDomain" }) },
 	{ "w", act.CloseCurrentPane({ confirm = true }) },
 	{ "LeftArrow", act.ActivatePaneDirection("Left") },
 	{ "RightArrow", act.ActivatePaneDirection("Right") },
@@ -41,10 +64,12 @@ for _, v in ipairs({
 end
 
 -- ALT+SHIFT combinations
-table.insert(
-	config.keys,
-	{ mods = "ALT|SHIFT", key = "Enter", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) }
-)
+for _, v in ipairs({
+	{ "j", act.DecreaseFontSize },
+	{ "k", act.IncreaseFontSize },
+}) do
+	table.insert(config.keys, { mods = "ALT|SHIFT", key = v[1], action = v[2] })
+end
 
 -- Tab navigation (ALT+1-8)
 for i = 0, 7 do
@@ -64,7 +89,19 @@ for i = 0, 7 do
 	table.insert(config.keys, { mods = "CTRL|ALT", key = tostring(i + 1), action = act.MoveTab(i) })
 end
 
--- Font configuration
+-- === Key Tables ===
+config.key_tables = {
+	resize = {
+		{ key = "h", action = act.AdjustPaneSize({ "Left", 5 }) },
+		{ key = "j", action = act.AdjustPaneSize({ "Down", 5 }) },
+		{ key = "k", action = act.AdjustPaneSize({ "Up", 5 }) },
+		{ key = "l", action = act.AdjustPaneSize({ "Right", 5 }) },
+		{ key = "Escape", action = "PopKeyTable" },
+		{ key = "Enter", action = "PopKeyTable" },
+	},
+}
+
+-- === Fonts ===
 config.font = wezterm.font_with_fallback({
 	{ family = "Lilex Nerd Font Mono", weight = "Regular" },
 	{ family = "SauceCodePro Nerd Font Mono", weight = "Regular" },
@@ -75,11 +112,11 @@ config.font_size = 10
 config.line_height = 1.1
 config.window_frame = {
 	font = wezterm.font({ family = "Lilex Nerd Font Mono", weight = "Regular", style = "Italic" }),
-	font_size = 12.0,
+	font_size = 10.0,
 	active_titlebar_bg = colors.bg,
 }
 
--- Performance settings
+-- === Performance / platform ===
 config.max_fps = 120
 config.animation_fps = 1
 config.window_background_opacity = 0.98
@@ -87,9 +124,7 @@ config.enable_scroll_bar = false
 config.use_fancy_tab_bar = true
 config.term = "xterm-256color"
 config.warn_about_missing_glyphs = false
--- Auto-detect Wayland based on environment
-local is_wayland = os.getenv("WAYLAND_DISPLAY") ~= nil or os.getenv("XDG_SESSION_TYPE") == "wayland"
-config.enable_wayland = is_wayland
+config.enable_wayland = true
 config.front_end = "OpenGL"
 config.webgpu_power_preference = "HighPerformance"
 config.prefer_egl = true
@@ -97,7 +132,13 @@ config.freetype_load_target = "Light"
 config.freetype_render_target = "HorizontalLcd"
 config.hide_tab_bar_if_only_one_tab = false
 
--- Color scheme
+-- === Inactive pane look ===
+config.inactive_pane_hsb = {
+	saturation = 0.8,
+	brightness = 0.6,
+}
+
+-- === Colors ===
 config.colors = {
 	foreground = colors.fg,
 	background = colors.bg,
@@ -139,15 +180,19 @@ config.colors = {
 	},
 }
 
--- Mouse bindings
+-- === Mouse ===
 config.mouse_bindings = {
 	{ event = { Down = { streak = 1, button = "Right" } }, mods = "NONE", action = act.CopyTo("Clipboard") },
-	{ event = { Down = { streak = 1, button = "Middle" } }, mods = "NONE", action = act.SplitHorizontal({
-		domain = "CurrentPaneDomain",
-	}) },
-	{ event = { Down = { streak = 1, button = "Middle" } }, mods = "SHIFT", action = act.CloseCurrentPane({
-		confirm = false,
-	}) },
+	{
+		event = { Down = { streak = 1, button = "Middle" } },
+		mods = "NONE",
+		action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+	},
+	{
+		event = { Down = { streak = 1, button = "Middle" } },
+		mods = "SHIFT",
+		action = act.CloseCurrentPane({ confirm = false }),
+	},
 }
 
 return config
