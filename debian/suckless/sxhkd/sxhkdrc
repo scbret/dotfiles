@@ -4,11 +4,12 @@
 
 # Launch Browser (Firefox-esr)
 super + b
-    firefox-esr
+    ~/Applications/HeliumBrowser.AppImage
     
 # Launch Private Browser (Firefox Incognito Mode)
 super + shift + b
-	firefox-esr -private-window
+#	firefox-esr -private-window
+  firefox-esr
 
 # Launch Rofi Application Menu
 super + space
@@ -48,7 +49,7 @@ super + i
 
 # Launch Chromium
 super + c
-	chromium
+	chromium --password-store=basic
 
 # Launch Spotify	
 super + m
