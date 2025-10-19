@@ -4,7 +4,7 @@ Type=Application
 Name=Grok
 Comment=Grok
 TryExec=chromium
-Exec=chromium --new-window --ozone-platform=x11 --app=https://grok.com/ --class=Grok
+Exec=chromium --password-store=basic --new-window --ozone-platform=x11 --app=https://grok.com/ --class=Grok
 Terminal=false
 Icon=/home/steve/.local/share/applications/icons/Grok.png
 StartupNotify=true
