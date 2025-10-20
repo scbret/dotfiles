@@ -1,0 +1,43 @@
+# ~/.config/yazi/yazi.toml
+[mgr]
+ratio = [2, 3, 3]
+sort_by = "natural"
+sort_dir_first = true
+show_hidden = true
+linemode = "size" # or "mtime", "permissions" etc.
+
+[opener]
+# Edit: Open any file with your preferred text editor
+edit = [
+	{ run = 'nvim "$@"', block = true, for = "unix" },
+]
+
+# Text: Specifically open text files
+# This uses the mimetype to apply a rule to common text files
+# Yazi relies on the `file` command to determine the file type.
+text = [
+	{ run = 'nvim "$@"', block = true, for = "unix", orphan = false, mime = "text/*" },
+]
+
+# Image: Open images with a graphical viewer like feh or sxiv
+image = [
+	{ run = 'imv "$@"', block = false, orphan = true, for = "unix", mime = "image/*" },
+]
+
+# Video: Open videos with a media player like mpv
+video = [
+	{ run = 'mpv "$@"', block = false, orphan = true, for = "unix", mime = "video/*" },
+]
+
+# PDF: Open PDF documents with a document viewer
+pdf = [
+	{ run = 'evince "$@"', block = false, orphan = true, for = "unix", mime = "application/pdf" },
+]
+
+# General Open: Fallback to the system's default program for other files
+# The `xdg-open` command is standard on most Linux distributions for this purpose.
+open = [
+	{ run = 'xdg-open "$@"', desc = "Open", for = "linux" },
+]
+
+
