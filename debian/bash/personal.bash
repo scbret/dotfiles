@@ -4,6 +4,7 @@ HISTIGNORE="$HISTIGNORE:jrnl *"
 alias v='$EDITOR'
 alias vi='$EDITOR'
 
+alias sx='startx'
 alias sdn='sudo shutdown -h now'
 alias sdr='sudo shutdown -r now'
 alias bat='batcat'
@@ -69,6 +70,8 @@ mdn() {
     fi
 }
 
+# dwm mdnotes
+alias mdd='/home/steve/.scripts/md-notes-dwm.sh'
 
 # Update jrnl entries
 alias jpl='source /home/steve/.scripts/pull_jrnl.sh'
@@ -158,6 +161,9 @@ findir() {
     fi
 }
 
+# To add support for TTYs this line can be optionally added.
+source ~/.cache/wal/colors-tty.sh
+
 # Colored man with bat
 #export MANPAGER="less -R --use-color -Dd+g -Du+b"
 #export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
@@ -165,4 +171,4 @@ findir() {
 figlet SwineID
 #pfetch
 
-#eval "$(starship init bash)"
+eval "$(starship init bash)"
