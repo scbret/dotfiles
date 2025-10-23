@@ -56,18 +56,18 @@ wind_dir=$(get_wind_direction "$wind_deg")
 
 
 # Display the weather information
-echo -e "Weather in ${city_name}, ${STATE}:${RESET}"
-echo -e "Temperature:${RESET} ${temperature}°F${RESET}"
-echo -e "Description:${RESET} ${weather_description}"
-echo -e "Humidity:${RESET} ${humidity}%"
-echo -e "Wind:${RESET} ${wind_speed} mph from ${wind_dir}"
-echo -e "Wind Gust:${RESET} ${wind_gust} mph"
-echo -e "Visibility:${RESET} ${visibility_miles} miles"
-echo -e "Cloud Cover:${RESET} ${cloud_cover}%"
+echo -e "Weather in ${city_name}, ${STATE}:  ${RESET}"
+echo -e "Temperature:${RESET} ${temperature}°F  ${RESET}"
+echo -e "Description:${RESET} ${weather_description}  "
+echo -e "Humidity:${RESET} ${humidity}%  "
+echo -e "Wind:${RESET} ${wind_speed} mph from ${wind_dir}  "
+echo -e "Wind Gust:${RESET} ${wind_gust} mph  "
+echo -e "Visibility:${RESET} ${visibility_miles} miles  "
+echo -e "Cloud Cover:${RESET} ${cloud_cover}%  "
 
 # --- AIR QUALITY SECTION ---
 echo
-echo -e "Fetching Air Quality Data...${RESET}"
+echo -e "Fetching Air Quality Data...${RESET}  "
 
 aq_url="http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${API_KEY}"
 aq_response=$(curl -s "$aq_url")
@@ -88,12 +88,12 @@ if echo "$aq_response" | grep -q '"list"'; then
     *) aqi_desc="Unknown";  ;;
   esac
 
-  echo -e "Air Quality Index:${RESET} ${color}${aqi} (${aqi_desc})${RESET}"
-  echo -e "Fine Particles (PM2.5):${RESET} ${pm2_5} µg/m³"
-  echo -e "Coarse Particles (PM10):${RESET} ${pm10} µg/m³"
-  echo -e "Ozone (O3):${RESET} ${o3} µg/m³"
-  echo -e "Carbon Monoxide (CO):${RESET} ${co} µg/m³"
+  echo -e "Air Quality Index:${RESET} ${color}${aqi} (${aqi_desc})${RESET}  "
+  echo -e "Fine Particles (PM2.5):${RESET} ${pm2_5} µg/m³  "
+  echo -e "Coarse Particles (PM10):${RESET} ${pm10} µg/m³  "
+  echo -e "Ozone (O3):${RESET} ${o3} µg/m³  "
+  echo -e "Carbon Monoxide (CO):${RESET} ${co} µg/m³  "
 else
-  echo -e "\033[1;31mAir quality data unavailable.\033[0m"
+  echo -e "\033[1;31mAir quality data unavailable.\033[0m  "
 fi
 
