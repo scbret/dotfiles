@@ -107,7 +107,8 @@ Plugins will auto-install on first launch.
 | Previous buffer      | `<S-Tab>`          | Buffer backward                      |
 | Horizontal split     | `<leader>s`        | Open horizontal split                |
 | Vertical split       | `<leader>v`        | Open vertical split                  |
-| Resize splits        | `<C-Left/Right>`   | Adjust vertical split width          |
+| Resize splits-       | `<C-Left/Right>`   | Adjust vertical split width          |
+| Resize splits-h      | `<C-Up/Down>`      | Adjust horizontal split width        |
 | **Markdown Preview** | `<leader>md`       | Open Markdown in browser             |
 | **Prettier Format**  | `<leader>mp`       | Format Markdown (optional Prettier)  |
 
