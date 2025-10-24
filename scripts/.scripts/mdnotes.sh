@@ -1,7 +1,8 @@
 #!/usr/bin/env sh
 set -eu
 
-folder="$HOME/repos/linux/mdnotes" # no trailing slash
+#folder="$HOME/repos/linux/mdnotes" # no trailing slash
+folder="$HOME/repos/zk-notes/notes" # no trailing slash
 mkdir -p "$folder"
 
 open_note() {

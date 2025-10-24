@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 
 folder=/home/steve/repos/linux/mdnotes/
+#folder=/home/steve/repos/zk-notes/notes/
 
 newnote () { \
 	name="$(echo "" | dmenu -sb "#a3be8c" -nf "#d8dee9" -p "Enter a name: " <&- )"
