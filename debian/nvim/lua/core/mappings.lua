@@ -31,6 +31,8 @@ keymap.set("n", "<leader>s", ":split", opts)			-- space+s creates a horizontal s
 -- adjust split sizes easier
 keymap.set("n", "<C-Left>", ":vertical resize +3<cr>")		-- Control+Left resizes vertical split +
 keymap.set("n", "<C-Right>", ":vertical resize -3<cr>")	-- Control+Right resizes vertical split -
+keymap.set("n", "<C-Up>", ":horizontal resize +3<cr>")		-- Control+Up resizes horizonta split +
+keymap.set("n", "<C-Down>", ":horizontal resize -3<cr>")	-- Control+Down resizes horizontal split -
 
 -- Oil.nvim
 keymap.set("n", "<leader>e", function()
