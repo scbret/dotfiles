@@ -32,7 +32,9 @@ return
       [[  Next Buffer:  Spacebar + Tab           ||     Prev Buffer: Spacebar + Shift+Tab        ]],
       [[  Split Horiz:  Spacebar + s             ||      Split Vert: Spacebar + v                ]],
       [[  Resize Left:  Spacebar + Ctrl + Left   ||    Resize Right: Spacebar + Ctrl + Right     ]],
+      [[    Resize Up:  Spacebar + Ctrl + Up     ||     Resize Down: Spacebar + Ctrl + Down      ]],
       [[                                                                                         ]],
+      [[                         Ctrl+w +arrow to switch between splits                          ]],
       [[                                  Files: Spacebar + e                                    ]],
     }
 
