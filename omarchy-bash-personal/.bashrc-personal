@@ -3,6 +3,9 @@
 export HISTCONTROL=ignoreboth:erasedups
 
 HISTIGNORE="$HISTIGNORE:jrnl *"
+export ZK_NOTEBOOK_DIR="$HOME/repos/zk-notes"
+HISTIGNORE="$HISTIGNORE:zk *"
+
 alias v='$EDITOR'
 alias vi='$EDITOR'
 alias ll='eza -alh --icons'
@@ -120,6 +123,10 @@ alias dps='source /home/steve/.scripts/push_dots.sh'
 # Update mdnotes entries
 alias npl='source /home/steve/.scripts/pull_mdnotes.sh'
 alias nps='source /home/steve/.scripts/push_mdnotes.sh'
+
+# Update mdnotes entries
+alias zkl='source /home/steve/.scripts/pull_zknotes.sh'
+alias zks='source /home/steve/.scripts/push_zknotes.sh'
 
 # kill conky
 alias kc='killall -9 conky'
