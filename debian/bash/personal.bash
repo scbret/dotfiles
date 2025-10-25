@@ -1,6 +1,8 @@
 # my aliases -----------------------------------------
 export EDITOR='nvim'
+export ZK_NOTEBOOK_DIR="$HOME/repos/zk-notes"
 HISTIGNORE="$HISTIGNORE:jrnl *"
+HISTIGNORE="$HISTIGNORE:zk *"
 alias v='$EDITOR'
 alias vi='$EDITOR'
 
@@ -11,6 +13,9 @@ alias bat='batcat'
 
 #alias update='sudo pacman -Syyu'
 alias fupdate='sudo apt update && sudo apt full-upgrade'
+
+# zk notes
+#alias zk='zk --working-dir=/home/steve/repos/zk-notes/'
 
 # View images in current folder with wezterm + fzf
 wiv() {
@@ -89,6 +94,10 @@ alias dps='source /home/steve/.scripts/push_dots.sh'
 alias npl='source /home/steve/.scripts/pull_mdnotes.sh'
 alias nps='source /home/steve/.scripts/push_mdnotes.sh'
 
+# Update mdnotes entries
+alias zkl='source /home/steve/.scripts/pull_zknotes.sh'
+alias zks='source /home/steve/.scripts/push_zknotes.sh'
+
 # git section
 alias g='git'
 alias ga='g add .'
@@ -123,7 +132,7 @@ alias ftf='fastfetch'
 alias nf='neofetch'
 alias pf='pfetch'
 alias zl='zellij'
-alias qn='$EDITOR ~/repos/linux/mdnotes/qnotes.md'
+alias qn='$EDITOR ~/repos/zk-notes/notes/2025_10_24-qnotes.md'
 alias yy='yazi'
 alias gt='python3 ~/repos/tasks/getTagIDsV3.py'
 alias hx='helix'
