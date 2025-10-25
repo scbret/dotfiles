@@ -12,7 +12,8 @@ lxpolkit &
 
 #feh --bg-scale ~/.config/suckless/wallpaper/wallhaven-218x7m_3440x1440.png &
 #feh --bg-scale ~/.config/suckless/wallpaper/wallhaven-9mq26d_3440x1440.png &
-feh --bg-scale ~/.config/suckless/wallpaper/wallhaven-3q9vmd_3440x1440.png &
+##feh --bg-scale ~/.config/suckless/wallpaper/wallhaven-3q9vmd_3440x1440.png &
+feh --bg-scale ~/wallpaper/iconic-boss302.jpg &
 #feh --bg-scale ~/.config/suckless/wallpaper/wallhaven-85erok_3440x1440.png &
 #feh --bg-scale ~/wallpaper/pfback-titles.jpg &
 
@@ -24,5 +25,7 @@ if hash sxhkd >/dev/null 2>&1; then
 	sxhkd -c "$HOME/.config/suckless/sxhkd/sxhkdrc" &
 fi
 xfce4-power-manager &
+meteo-qt &
+'~/.scripts/start_meteo.sh &'
 dunst -config ~/.config/suckless/dunst/dunstrc &
 picom --config ~/.config/suckless/picom/picom.conf --animations -b &
