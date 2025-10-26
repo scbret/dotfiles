@@ -1,7 +1,6 @@
 #!/bin/bash
 # DESC: Install Geany text editor - choice of APT package (2.0) or source compilation (2.1)
-
-# Geany Installation Script with Version Choice
+#       Also includes an Uninstall option for the source-built install.
 
 set -e
 
@@ -233,6 +232,108 @@ fi
     if ask_yes_no "Apply butterscripts configuration?"; then
         apply_butterscripts_config
     fi
+}
+
+# Function to uninstall Geany built from source into ~/.local
+uninstall_geany_source() {
+    echo -e "${CYAN}Uninstalling Geany (source install under ~/.local)...${NC}"
+    echo
+
+    USER_BIN="$HOME/.local/bin/geany"
+    USER_LIB_DIR="$HOME/.local/lib/geany"
+    USER_INCLUDE_DIR="$HOME/.local/include/geany"
+    USER_SHARE_DIR="$HOME/.local/share/geany"
+    USER_PKGCONFIG_DIR="$HOME/.local/lib/pkgconfig"
+    USER_APPS_DIR="$HOME/.local/share/applications"
+    DESKTOP_FILES=("$USER_APPS_DIR/geany.desktop" "$USER_APPS_DIR/geany-2.1.desktop")
+    CONFIG_DIR="$HOME/.config/geany"
+    BUILD_GLOBS=("$HOME/build-geany-"*)
+    GLOBAL_SYMLINK="/usr/local/bin/geany"
+    PATH_LINE='export PATH="$HOME/.local/bin:$PATH"'
+
+    echo -e "${YELLOW}Planned actions:${NC}"
+    echo " - Remove user-local files under ~/.local (bin/lib/include/share) related to Geany"
+    echo " - Remove desktop entries under: $USER_APPS_DIR"
+    echo " - Remove config: $CONFIG_DIR"
+    echo " - Remove build directories: ${BUILD_GLOBS[*]}"
+    echo " - Remove global symlink if it points to ~/.local/bin/geany: $GLOBAL_SYMLINK"
+    echo " - Clean PATH edit from ~/.bashrc and ~/.zshrc"
+    echo
+
+    if ! ask_yes_no "Proceed with uninstall?"; then
+        echo -e "${YELLOW}Uninstall cancelled.${NC}"
+        return 0
+    fi
+
+    # 1) Remove user-local install
+    [ -e "$USER_BIN" ]         && rm -f  "$USER_BIN"
+    [ -d "$USER_LIB_DIR" ]     && rm -rf "$USER_LIB_DIR"
+    [ -d "$USER_INCLUDE_DIR" ] && rm -rf "$USER_INCLUDE_DIR"
+    [ -d "$USER_SHARE_DIR" ]   && rm -rf "$USER_SHARE_DIR"
+
+    # 1a) Remove pkg-config files like geany.pc
+    if [ -d "$USER_PKGCONFIG_DIR" ]; then
+        find "$USER_PKGCONFIG_DIR" -maxdepth 1 -type f -name 'geany*.pc' -print -exec rm -f {} \; 2>/dev/null
+    fi
+
+    # 2) Remove desktop entries
+    for df in "${DESKTOP_FILES[@]}"; do
+        [ -f "$df" ] && rm -f "$df"
+    done
+    if command -v update-desktop-database >/dev/null 2>&1; then
+        update-desktop-database "$USER_APPS_DIR" >/dev/null 2>&1 || true
+    fi
+    if command -v gtk-update-icon-cache >/dev/null 2>&1; then
+        gtk-update-icon-cache -q "$HOME/.local/share/icons/hicolor" 2>/dev/null || true
+    fi
+
+    # 3) Remove config
+    [ -d "$CONFIG_DIR" ] && rm -rf "$CONFIG_DIR"
+
+    # 4) Remove build directories
+    for glob in "${BUILD_GLOBS[@]}"; do
+        [ -e "$glob" ] && rm -rf "$glob"
+    done
+
+    # 5) Remove global symlink if it points to ~/.local/bin/geany
+    if [ -L "$GLOBAL_SYMLINK" ]; then
+        TARGET="$(readlink -f "$GLOBAL_SYMLINK" 2>/dev/null || true)"
+        if [ "$TARGET" = "$USER_BIN" ]; then
+            echo -e "${YELLOW}Removing global symlink: $GLOBAL_SYMLINK -> $TARGET${NC}"
+            sudo rm -f "$GLOBAL_SYMLINK"
+        else
+            echo -e "${YELLOW}Leaving $GLOBAL_SYMLINK (points to something else).${NC}"
+        fi
+    fi
+
+    # 6) Clean PATH edit from ~/.bashrc and ~/.zshrc (only exact line this installer adds)
+    for rc in "$HOME/.bashrc" "$HOME/.zshrc"; do
+      if [ -f "$rc" ]; then
+        if grep -Fxq "$PATH_LINE" "$rc"; then
+            sed -i "\|^$PATH_LINE$|d" "$rc"
+            echo -e "${YELLOW}Removed PATH line from $rc. Reload your shell to apply.${NC}"
+        fi
+      fi
+    done
+
+    # 7) Optional: offer to purge APT package too
+    if command -v apt >/dev/null 2>&1; then
+        if ask_yes_no "Also purge distro packages (apt) for geany and geany-plugins?"; then
+            sudo apt purge -y geany geany-plugins && sudo apt autoremove -y || true
+        fi
+    fi
+
+    echo
+    echo -e "${CYAN}Verification:${NC}"
+    command -v geany || true
+    which geany 2>/dev/null || true
+    find "$HOME/.local"  -maxdepth 3 -iname 'geany*' 2>/dev/null || true
+    find "$HOME/.config" -maxdepth 2 -iname 'geany*' 2>/dev/null || true
+    [ -e "$GLOBAL_SYMLINK" ] && ls -l "$GLOBAL_SYMLINK" || true
+
+    echo
+    echo -e "${GREEN}Geany source install removed.${NC}"
+    echo -e "${YELLOW}If 'geany' still resolves, open a new terminal or run: source ~/.bashrc${NC}"
 }
 
 # Function to apply butterscripts configuration
@@ -696,7 +797,6 @@ rename_refresh=
 track_current=
 EOF
 
-    # Plugin configs
     mkdir -p "$CONFIG_DIR/plugins/markdown"
     cat > "$CONFIG_DIR/plugins/markdown/markdown.conf" << 'EOF'
 [markdown]
@@ -764,7 +864,7 @@ EOF
 
 # Main menu
 show_header
-echo -e "${YELLOW}Choose your Geany installation method:${NC}"
+echo -e "${YELLOW}Choose your Geany action:${NC}"
 echo
 echo -e "${CYAN}1.${NC} Install from APT ${GREEN}(RECOMMENDED)${NC}"
 echo -e "   - Geany 2.0 on Debian 13 (Trixie) / 1.38 on Debian 12"
@@ -778,7 +878,9 @@ echo -e "   - Latest editor improvements"
 echo
 echo -e "${CYAN}3.${NC} Exit"
 echo
-read -p "Enter your choice [1-3]: " choice
+echo -e "${CYAN}4.${NC} ${RED}Uninstall Geany (remove source-built install)${NC}"
+echo
+read -p "Enter your choice [1-4]: " choice
 
 case $choice in
     1)
@@ -791,6 +893,9 @@ case $choice in
         echo -e "${YELLOW}Installation cancelled.${NC}"
         exit 0
         ;;
+    4)
+        uninstall_geany_source
+        ;;
     *)
         echo -e "${RED}Invalid option. Exiting.${NC}"
         exit 1
@@ -802,3 +907,4 @@ echo -e "${GREEN}Done!${NC}"
 if [[ $choice == "2" ]]; then
     echo -e "${YELLOW}Run 'source ~/.bashrc' if needed for PATH updates.${NC}"
 fi
+
