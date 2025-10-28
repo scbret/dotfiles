@@ -128,6 +128,10 @@ alias nps='source /home/steve/.scripts/push_mdnotes.sh'
 alias zkl='source /home/steve/.scripts/pull_zknotes.sh'
 alias zks='source /home/steve/.scripts/push_zknotes.sh'
 
+# Update mdnotes entries
+alias tkl='source /home/steve/.scripts/pull_tasks.sh'
+alias tks='source /home/steve/.scripts/push_tasks.sh'
+
 # kill conky
 alias kc='killall -9 conky'
 
