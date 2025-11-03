@@ -98,6 +98,10 @@ alias nps='source /home/steve/.scripts/push_mdnotes.sh'
 alias zkl='source /home/steve/.scripts/pull_zknotes.sh'
 alias zks='source /home/steve/.scripts/push_zknotes.sh'
 
+# Update mdnotes entries
+alias tkl='source /home/steve/.scripts/pull_tasks.sh'
+alias tks='source /home/steve/.scripts/push_tasks.sh'
+
 # git section
 alias g='git'
 alias ga='g add .'
@@ -124,6 +128,7 @@ alias cputemp='sensors | grep Core'
 alias fp="\$(fzf --reverse --preview 'batcat --style=numbers --color=always --line-range :500 {}')"
 alias fp1="fzf --reverse --preview='batcat --color=always --line-range :500 {}' --.scriptsd shift-up:preview-page-up,shift-down:preview-page-down"
 alias fd='findir'
+alias tt='taskwarrior-tui'
 alias tl='task list'
 alias tw='task waiting'
 alias tm='tmux'
