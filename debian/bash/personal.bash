@@ -94,11 +94,11 @@ alias dps='source /home/steve/.scripts/push_dots.sh'
 alias npl='source /home/steve/.scripts/pull_mdnotes.sh'
 alias nps='source /home/steve/.scripts/push_mdnotes.sh'
 
-# Update mdnotes entries
+# Update zk-notes entries
 alias zkl='source /home/steve/.scripts/pull_zknotes.sh'
 alias zks='source /home/steve/.scripts/push_zknotes.sh'
 
-# Update mdnotes entries
+# Update tasks entries
 alias tkl='source /home/steve/.scripts/pull_tasks.sh'
 alias tks='source /home/steve/.scripts/push_tasks.sh'
 
