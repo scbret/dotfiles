@@ -186,3 +186,4 @@ figlet SwineID
 #pfetch
 
 eval "$(starship init bash)"
+source "$HOME/.cargo/env"
