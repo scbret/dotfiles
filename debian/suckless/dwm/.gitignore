@@ -1,9 +1,0 @@
-
-# Ignore build objects
-*.o
-
-# Ignore executable
-dwm
-
-# Protect Makefile
-!Makefile

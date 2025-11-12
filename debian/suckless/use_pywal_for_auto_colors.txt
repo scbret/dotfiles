@@ -1,3 +1,0 @@
-Follow this youtube guide to change dwm and st with pywal
-
-https://www.youtube.com/watch?v=mtFQ6t6c_Uc&t=617s
